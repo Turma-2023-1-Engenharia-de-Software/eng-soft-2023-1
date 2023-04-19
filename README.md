@@ -25,7 +25,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ## Casos de uso e user stories
 
-## **RF01 - título do requisito**
+## **RF01 - Inserir nome de usuário**
 
 #### Autor: [autor](link_do_perfil_do_autor)
 
