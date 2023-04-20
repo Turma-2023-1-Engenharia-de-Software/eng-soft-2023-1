@@ -33,3 +33,4 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 √
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
+## **RF08 - Inserir nome de usu√°rio**
