@@ -33,3 +33,10 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 Ã
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
+# **RF02 - Visualizar saldo**
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+---
+
+#### Revisor: [revisor](link_do_perfil_do_revisor)
