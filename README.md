@@ -33,7 +33,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
-<br/>
+
 
 # **RF02 - Visualizar saldo**
 
@@ -50,7 +50,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Item            | Descrição                                                                           |
 | --------------- | ----------------------------------------------------------------------------------- |
 | Caso de uso     | RF02 - Visualizar o saldo;                                                       |
-| Resumo          | Visualiza o saldo para que possa saber suas situação bancaria; |
+| Resumo          | Visualiza o saldo para que possa saber sua situação bancaria; |
 | Ator principal  | Usuário - Vizualiza seu saldo                                                    |
 | Ator secundário | -                                                                                   |
 | Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
@@ -67,7 +67,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 
 
-# User story
+## User story
 
 **Persona um, usuário comum.**
 
