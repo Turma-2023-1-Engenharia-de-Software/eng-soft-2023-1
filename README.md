@@ -76,3 +76,69 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
+
+## **RF05 - Inserir Receita**
+<br />
+
+#### Autor: Icaro Mesquita Ponce[@icarompo](https://github.com/icarompo)
+#### Revisor: Caio Henrique Pinho Santos[@CaioHPS3](https://github.com/CaioHPS3)  
+<br />
+
+### Casos de Uso
+<br />
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Inserir receita                                                   |
+| Resumo          | É esperado que o usuário tenha a possibilidade de inserir as receitas|
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma          |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login |
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Entrar na seção de Receitas               |
+| Passo 3 | Clicar no botão "Inserir"                 |
+| Passo 4 | Inserir campos do formulário              |
+| Passo 5 | Salvar                                    |
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Nome             | Sim          | Sim       | Texto        |
+| Data             | Sim          | Sim       | Data         |
+| Conta            | Sim          | Sim       | Texto        |
+| Tipo             | Sim          | Sim       | Texto        |
+| Valor            | Sim          | Sim       | Numérico     |
+<br />
+
+#### Opções do usuário
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Inserir receita | Confirmar dados inseridos |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Receita inserido com sucesso | Isso confirma e garante todo êxito na operação de inserção de receita   | Texto   |
+<br />
+
+#### Fluxo alternativo
+
+| Não Possui                                 |
+<br /><br />
+
+#### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "poder entrar no aplicativo e inserir minhas receitas" | Enquanto "usuário comum" preciso ter minhas dados de receitas salvos na plataforma para ter um controle dos meus gastos| Certificar que todos campos estão preenchidos
