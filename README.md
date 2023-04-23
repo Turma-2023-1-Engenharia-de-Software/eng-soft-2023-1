@@ -33,3 +33,44 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
+
+
+# **RF13 - Editar receitas.** 
+
+### Autor: [Mateus Alves Araujo](https://github.com/MateusAlvez) 
+
+---
+
+### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+
+<br/>
+## Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF13 - Editar receita;                                       |
+| Resumo          | Responsável pela mudança de receita do usuário; |
+| Ator principal  | Usuário- Editar receita;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, e ter saldo adicionado.;                          |
+| Pós-condição    | -                                                                                   |
+<br/>
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
+| Passo 2 | O usuário seleciona a opção de modificar o saldo
+ |
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
