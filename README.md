@@ -43,7 +43,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
 
-<br/>
+
 ## Caso de uso
 
 | Item            |Descrição                                                |
@@ -54,7 +54,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | -                                                                                   |
 | Pré-condição    | Ter acesso ao aplicativo, e ter saldo adicionado.;                          |
 | Pós-condição    | -                                                                                   |
-<br/>
+
 #### Fluxo principal
 
 | Passos  | Descrição                                           |
@@ -73,4 +73,3 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
-<br/>
