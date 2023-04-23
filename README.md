@@ -33,3 +33,51 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
+
+## **RF07 - Visualizar despesas (valor) no mês**
+
+#### Autor: [João Pedro Noronha](https://github.com/jpnoronhaa)
+
+---
+#### Revisor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) 
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Visualizar despesas (valor) no mês                                |
+| Resumo          | Visualiza o somatório das despesas que o usário teve no mês       |
+| Ator principal  | Usuário que faz uso da plataforma                                 |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e adicionado alguma despesa                                                                               |
+| Pós-condição    | Não possui                                                        | 
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Visualizar o valor das despesas           |
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Despesas         | Não          | Não       | Texto        |
+#### Opções do usuário
+| Opção             | Descrição                                                         | Atalho |
+| ----------------- | ----------------------------------------------------------------- | ------ |
+| Esconder despesas | Trocar o texto que mostra o valor das despesas por um alternativo |        |
+#### Relatório de usuário
+
+| Campo      | Descrição  | Formato |
+| ---------- | ---------- | ------- |
+| Não possui |            |         |
+#### Fluxo alternativo
+| Passos    | Descrição                                               |
+| --------  | ------------------------------------------------------- |
+| Passo 1.1 | O ator não cadastrou nenhuma despesa                    |
+| Passo 1.2 | O sistema informa que não existem despesas cadastradas  |
+# User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto **usuario comum** quero **visualizar o valor das minhas despesas do mês** para **ter mais controle com meus próximos gastos**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
+
