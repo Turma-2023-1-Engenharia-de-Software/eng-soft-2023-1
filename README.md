@@ -48,7 +48,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 |Item             | Descrição                                                           |
 | --------------- | -----------------------------------------------------------------   |
 | Caso de uso     | Inserir despesa                                                     |
-| Resumo          | É esperado que o usuário tenha a possibilidade de iserir as despesas|
+| Resumo          | É esperado que o usuário tenha a possibilidade de inserir as despesas|
 | Ator principal  | Usuário que faz uso da plataforma                                   |
 | Ator secundário | Não possui                                                          | 
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
