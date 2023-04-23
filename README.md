@@ -76,6 +76,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
+
 ## RF08 - Inserir Conta Bancaria
 
 #### Autor: [@98loann](https://github.com/98loann)
