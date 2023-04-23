@@ -51,7 +51,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | --------------- | ----------------------------------------------------------------------------------- |
 | Caso de uso     | RF02 - Visualizar o saldo;                                                       |
 | Resumo          | Visualiza o saldo para que possa saber sua situação bancaria; |
-| Ator principal  | Usuário - Vizualiza seu saldo;                                                    |
+| Ator principal  | Usuário - Visualiza seu saldo;                                                    |
 | Ator secundário | -                                                                                   |
 | Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
 | Pós-condição    | -                                                                                   |
