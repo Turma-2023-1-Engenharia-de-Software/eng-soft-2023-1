@@ -43,8 +43,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
 
-<br/>
-## Caso de uso
+
+###  Caso de uso
 
 | Item            |Descrição                                                |
 | --------------- | ----------------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | -                                                                                   |
 | Pré-condição    | Ter acesso ao aplicativo, e ter saldo adicionado.;                          |
 | Pós-condição    | -                                                                                   |
-<br/>
+
 #### Fluxo principal
 
 | Passos  | Descrição                                           |
