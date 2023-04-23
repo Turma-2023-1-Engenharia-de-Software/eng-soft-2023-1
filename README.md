@@ -34,8 +34,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
 
-=======
-'# **RF02 - Visualizar saldo**
+
+# **RF02 - Visualizar saldo**
 
 #### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
 
@@ -49,7 +49,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 | Item            | Descrição                                                                           |
 | --------------- | ----------------------------------------------------------------------------------- |
-| Caso de uso     || RF02 - Visualizar o saldo;                                                       |
+| Caso de uso     | RF02 - Visualizar o saldo;                                                       |
 | Resumo          | Visualiza o saldo para que possa saber sua situação bancaria; |
 | Ator principal  | Usuário - Visualiza seu saldo;                                                    |
 | Ator secundário | -                                                                                   |
