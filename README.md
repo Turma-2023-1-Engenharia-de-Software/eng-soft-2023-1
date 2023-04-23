@@ -33,3 +33,46 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
 
+
+
+# **RF02 - Visualizar saldo**
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+---
+
+#### Revisor: [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF02 - Visualizar o saldo;                                                       |
+| Resumo          | Visualiza o saldo para que possa saber sua situação bancaria; |
+| Ator principal  | Usuário - Visualiza seu saldo;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
+| Passo 2 | O sistema exibe o saldo atual do usuário. |
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
