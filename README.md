@@ -203,6 +203,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 ## RF08 - Inserir Conta Bancaria
 
 #### Autor: [@98loann](https://github.com/98loann)
+---
 #### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 
 |Item             | Descrição                                                         |
