@@ -422,6 +422,62 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | ----- | --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus bancos para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
+## RF09 - Inserir Cartão de crédito
+
+#### Autor: [@luisfilipebandeira](https://github.com/luisfilipebandeira)
+---
+#### Revisor: [Erick Marçal](https://github.com/erarich)
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Inserir cartão de crédito                                         |
+| Resumo          | É esperado que o usuário tenha a possibilidade de inserir o cartão de crédito que ele quer ter controle|
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma          |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login |
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Estar no aplicativo e clicar no botão adicionar cartão   |
+| Passo 3 | Digitar o número do cartão |
+| Passo 4 | Digitar o nome que está impresso no cartão |
+| Passo 5 | Digitar a data de vencimento do cartão |
+| Passo 6 | Digitar o CVV do cartão |
+| Passo 7 | Salvar                                    |
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Nome             | Sim          | Sim       | Texto        |
+| Numero do cartão            | Sim          | Sim       | Texto        |
+| Data de validade    | Sim          | Sim       | Texto        |
+| CVV            | Sim          | Sim       | Texto     |
+#### Opções do usuário
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Inserir Cartão | Confirmar dados inseridos |        |
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão inserido com sucesso | Isso confirma e garante todo êxito na operação de cadastro dp cartão   | Texto   |
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O ator tenta adicionar um cartão que já foi cadastrado                                |
+| Passo 1.2 | O sistema acusa que o cartão em questão já existe                                              |
+| Passo 2.1 | O ator tenta adicionar um novo cartão                                                          |
+| Passo 2.2 | O sistema exibe que não foi possível concluir a operação                                      |
+# User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus cartões para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
+
 # **RF11 - Visualizar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
