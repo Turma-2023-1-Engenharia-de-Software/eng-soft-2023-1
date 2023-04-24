@@ -146,3 +146,46 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
+
+# **RF11 - Visualizar contas de Crédito**
+
+#### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
+
+---
+
+#### Revisor: [Luan Porto](https://github.com/98loann)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF11 - Visualizar contas de crédito;                                                |
+| Resumo          | O usuário pode ver o saldo atual da sua conta de crédito e monitorar seus gastos;   |
+| Ator principal  | Usuário do aplicativo de controle financeiro;                                       |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Usuário já deve ter uma conta de crédito cadastrada no aplicativo;                  |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar "contas de crédito" no menu principal.            |
+| Passo 2 | O aplicativo exibe uma lista de todas as contas de crédito associadas à conta do usuário.   |
+| Passo 3 | O usuário seleciona a conta de crédito específica para ver mais detalhes, como saldo atual, limite de crédito e data de vencimento da próxima fatura;   |
+
+
+
+## User story
+
+*Persona um, usuário comum.*
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como um usuário do aplicativo de controle financeiro eu quero visualizar minhas contas de crédito para que eu possa ter mais detalhes como saldo, limite de crédito, data de vencimento da próxima fatura.” | "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
+
+<br/>
