@@ -201,7 +201,6 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus bancos para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
   
-=======
 # **RF11 - Visualizar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
