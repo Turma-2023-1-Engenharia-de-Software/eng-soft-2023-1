@@ -8,6 +8,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ## Iteração 1
 
+
 - [ ] RF01 - Inserir nome de usuário. [Benedito](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
 - [ ] RF02 - Visualizar saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
 - [ ] RF03 - Visualizar extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
@@ -27,11 +28,45 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ## **RF01 - Inserir nome de usuário**
 
-#### Autor: [autor](link_do_perfil_do_autor)
+#### Autor: [Benedito Jaime](https://github.com/beneX90)
 
 ---
 
-#### Revisor: [revisor](link_do_perfil_do_revisor)
+#### Revisor: [Jeová de Sousa](link_do_perfil_do_revisor)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF01 - Inserir nome do usuário;                                                       |
+| Resumo          | Adicionar o nome que será usado pelo usuário da conta bancária; |
+| Ator principal  | Usuário - Colocará o nome;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | O nome deverá ficar salvo na conta                                             |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de inserir o nome no menu principal.            |
+| Passo 2 | O sistema exibe o nome do usuário. |
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **inserir o meu nome na conta** para que **esse dado pessoal fique salvo na minha conta**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **inserir o meu nome** para que **eu tenha conhecimento de que esta é a minha conta** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+
 <br />
 
 ---
