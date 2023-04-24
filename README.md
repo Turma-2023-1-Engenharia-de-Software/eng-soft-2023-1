@@ -82,6 +82,10 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 #### Autor: [@jeovazin1v9](https://github.com/jeovazin1v9) - Jeová de Sousa Barbosa
 ---
 #### Revisor: [@jpnoronhaa](https://github.com/jpnoronhaa) - João Pedro Noronha
+
+<br/>
+
+## Caso de uso
 |Item             | Descrição                                                         |
 | --------------- | ----------------------------------------------------------------- |
 | Caso de uso     | RF06 - Visualizar o valor das receitas  do mês                                              |
@@ -91,21 +95,29 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e ter inserido alguma receita         |
 | Pós-condição    | Não possui |
 
+<br/>
+
 #### Fluxo principal
 | Passos  | Descrição                                 |
 | ------- | ----------------------------------------- |
 | Passo 1 | Entrar no aplicativo e fazer login        |
 | Passo 2 | Estar no aplicativo e clicar no botão 'Visualizar receitas'|
 
+<br/>
+
 #### Campos do formulário
 | Campo            | Obrigatório? | Editável? | Formato      |
 | ---------------- | ------------ | --------- | ------------ |
 | Receitas         | Não          | Não       | Texto        |
 
+<br/>
+
 #### Opções do usuário
 | Opção             | Descrição                 | Atalho |
 | -------------     | ------------------------- | ------ |
 | Ocultar receitas | Trocar o texto que mostra o valor das receitas por um alternativo |        |
+
+<br/>
 
 #### Relatório de usuário
 
@@ -113,11 +125,15 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | ---------- | ----------- |---------|
 | Não possui |             |         |
 
+<br/>
+
 #### Fluxo alternativo
 | Passos    | Descrição |
 | --------  | --------------------------------------------------------------------------------------------- |
 | Passo 1.1 | O usuário não cadastrou nenhuma receita                                                         |
 | Passo 1.2 | O sistema informa que não há receitas cadastradas                                             |
+
+<br/>
 
 # User Story
 
