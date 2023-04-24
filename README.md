@@ -76,3 +76,53 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
+
+## **RF06 - Visualizar receitas (valor) no mês.**
+
+#### Autor: [@jeovazin1v9](https://github.com/jeovazin1v9) - Jeová de Sousa Barbosa
+---
+#### Revisor: [@jpnoronhaa](https://github.com/jpnoronhaa) - João Pedro Noronha
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | RF06 - Visualizar o valor das receitas  do mês                                              |
+| Resumo          | É esperado que o usuário tenha a possibilidade de visualizar o valor das receitas do mês                                                                     |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e ter inserido alguma receita         |
+| Pós-condição    | Não possui |
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Estar no aplicativo e clicar no botão 'Visualizar receitas'|
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Receitas         | Não          | Não       | Texto        |
+
+#### Opções do usuário
+| Opção             | Descrição                 | Atalho |
+| -------------     | ------------------------- | ------ |
+| Ocultar receitas | Trocar o texto que mostra o valor das receitas por um alternativo |        |
+
+#### Relatório de usuário
+
+| Campo      | Descrição   | Formato |
+| ---------- | ----------- |---------|
+| Não possui |             |         |
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O usuário não cadastrou nenhuma receita                                                         |
+| Passo 1.2 | O sistema informa que não há receitas cadastradas                                             |
+
+# User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| -----| --------- | --------------------- |
+| Eu enquanto **usuário comum** quero **poder visualizar o valor das minhas receitas do mês** para **ter um maior controle sobre meus lucros de cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o valor das minhas receitas ou ocultá-las** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o valor das receitas do mês ou ocultá-las, se preferir, utilizando um botão ao lado.
