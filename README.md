@@ -93,24 +93,22 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
 | Pós-condição    | -                                                                                   |
 
-<br/>
 
 #### Fluxo principal
 
 | Passos  | Descrição                                           |
 | ------- | --------------------------------------------------- |
 | Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
-| Passo 2 | O sistema exibe o saldo atual do usuário. |
+| Passo 2 | O usuário seleciona a opção de modificar o saldo
 
 
-
-## User story
+ ## User story
 
 **Persona um, usuário comum.**
 
 | Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **visualizar o meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -394,6 +392,47 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | “Como um usuário do aplicativo de controle financeiro eu quero visualizar minhas contas de crédito para que eu possa ter mais detalhes como saldo, limite de crédito, data de vencimento da próxima fatura.” | "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
+
+<br/>
+
+
+# **RF13 - Editar receitas.** 
+
+### Autor: [Mateus Alves Araujo](https://github.com/MateusAlvez) 
+
+---
+
+### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+
+
+###  Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF13 - Editar receita;                                       |
+| Resumo          | Responsável pela mudança de receita do usuário; |
+| Ator principal  | Usuário- Editar receita;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, e ter saldo adicionado.;                          |
+| Pós-condição    | -                                                                                   |
+
+#### Fluxo principal
+
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.        |  
+| Passo 2 | O usuário seleciona a opção de modificar o saldo
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
