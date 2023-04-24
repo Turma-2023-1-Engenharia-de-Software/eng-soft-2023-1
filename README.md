@@ -32,6 +32,76 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 ---
 
 #### Revisor: [revisor](link_do_perfil_do_revisor)
+<br />
+
+---
+## **RF04 - Inserir Despesas**
+<br />
+
+#### Autor: [Érick Santos Marçal](https://github.com/erarich)
+#### Revisor: [Gabriel Tavares](https://github.com/GabrielUFT)
+<br />
+
+### Casos de Uso
+<br />
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Inserir despesa                                                     |
+| Resumo          | É esperado que o usuário tenha a possibilidade de inserir as despesas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Despesas                                                 |
+| Passo 3 | Clicar no botão "Inserir"                                                   |
+| Passo 4 | Inserir campos do formulário                                                |
+| Passo 5 | Salvar                                                                      |
+<br />
+
+#### Campos do formulário
+
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Nome             | Sim          | Sim       | Texto        |
+| Data             | Sim          | Sim       | Data         |
+| Conta            | Sim          | Sim       | Texto        |
+| Tipo             | Sim          | Sim       | Texto        |
+| Valor            | Sim          | Sim       | Numérico     |
+
+<br />
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Inserir despesa | Confirmar dados inseridos |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Despesa inserida com sucesso | Isso confirma e garante todo êxito na operação de inserção de despesa   | Texto   |
+<br />
+
+                                   
+### User Story
+<br />
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e inserir minhas despesas".| Enquanto "usuário comum" preciso ter minhas despesas salvas na plataforma a fim de ter um controle sobre os meus gastos | Certificar que todos campos estao preenchidos
 
 
 
@@ -79,6 +149,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 <br/>
 
+
 ## **RF07 - Visualizar despesas (valor) no mês**
 
 <br/>
@@ -96,6 +167,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | Não possui                                                        | 
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e adicionado alguma despesa                                                                               |
 | Pós-condição    | Não possui                                                        | 
+
 
 #### Fluxo principal
 | Passos  | Descrição                                 |
@@ -120,6 +192,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | --------  | ------------------------------------------------------- |
 | Passo 1.1 | O ator não cadastrou nenhuma despesa                    |
 | Passo 1.2 | O sistema informa que não existem despesas cadastradas  |
+
 # User Story
 
 **Persona um, usuário comum.**
@@ -129,3 +202,4 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Eu enquanto **usuario comum** quero **visualizar o valor das minhas despesas do mês** para **ter mais controle com meus próximos gastos**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
 
 <br/>
+
