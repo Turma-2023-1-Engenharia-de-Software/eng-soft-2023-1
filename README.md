@@ -668,3 +668,46 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
+
+# **RF12 - Editar despesas**
+
+#### Autor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) 
+
+---
+
+#### Revisor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+
+## Caso de uso
+<br/>
+
+Item	          |Descrição
+:----------------:|:--------------------------------:
+Caso de uso	Editar| despesas do usuário.
+Resumo	O usuário | deseja editar as suas despesas.
+Ator principal	  |Usuário
+Pré-condição	  |Existam despesas constando para o usuário em seu histórico.
+Pós-condição	  |O usuário consegue editar suas despesas da forma desejada.
+
+## Fluxo principal
+<br/>
+
+Passos	  |Descrição
+:--------:|:-----------------------------------------------:
+Passo 01  |O usuário acessa o app.
+Passo 02  |O usuário abre as suas despesas
+Passo 03  |O usuário seleciona a opção de editar a despesa.
+Passo 04  |O usuário abre a edição de sua despesa.
+
+## Opções de usuário
+<br/>
+
+Opção          |Descrição
+---------------|----------------
+Editar despesas|Edita a despesa.
+
+## User Story
+<br/>
+
+Epic | User story|	Critério de aceitação
+------|-------------|--------------------
+Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ator necessita ter despesas para editar.
