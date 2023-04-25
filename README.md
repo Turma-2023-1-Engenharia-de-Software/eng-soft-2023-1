@@ -478,6 +478,48 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | ----- | --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus cartões para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
+<br/>
+
+# **RF10 - Visualizar Contas Bancárias.** 
+
+### Autor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+
+---
+
+### Revisor: [Benedito](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+
+
+###  Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF10 - Visualizar Contas Bancárias;                                       |
+| Resumo          | Responsável pela visualização de contas bancárias do usuário; |
+| Ator principal  | Usuário - Vizualizador da conta;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, e ter pelo menos uma conta adicionada;                          |
+| Pós-condição    | -                                                                                   |
+
+#### Fluxo principal
+
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar suas contas bancárias         |  
+| Passo 2 | O usuário seleciona a opção de visualizar uma conta especifica
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo de controle financeiro** eu quero **Visualizar minhas contas bancárias** para que **eu possa ter uma visão sobre as contas bancárias que possuo .**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Verificar minhas contas bancárias ** para que **eu tenha uma controle da minha atual situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
 # **RF11 - Visualizar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
