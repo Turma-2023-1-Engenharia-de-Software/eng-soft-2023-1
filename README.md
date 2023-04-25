@@ -570,6 +570,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 #### Revisor: [Luis FilipeBandeira](https://github.com/luisfilipebandeira) 
 
 <br/>
+
 ## Caso de uso
 
 | Item            |Descrição                                                |
@@ -580,7 +581,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | -                                                                                   |
 | Pré-condição    | Ter acesso ao aplicativo, e ter uma conta adicionada.;                          |
 | Pós-condição    | -                                                                                   |
+
 <br/>
+
 #### Fluxo principal
 
 | Passos  | Descrição                                           |
@@ -592,10 +595,11 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 5 | O usuário clica em salvar conta bancária|
 
 <br/>
+
 #### Campos do Formulário
 
 | Campo  | Obrigatório | Formato |
-| ------- | --------------------------------------------------- |
+| ------- | ---------------------------|----------------------- |
 | Nome   | Sim          | Texto    |
 | Banco   | Sim          | Texto    |
 | Tipo de Conta   | Sim          | Texto    |
@@ -603,23 +607,6 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 
 ## User story
-
-**Persona um, usuário comum.**
-
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
-
-<br/>
-| Campo      | Descrição  | Formato |
-| ---------- | ---------- | ------- |
-| Não possui |            |         |
-#### Fluxo alternativo
-| Passos    | Descrição                                               |
-| --------  | ------------------------------------------------------- |
-| Passo 1.1 | O ator não cadastrou nenhuma despesa                    |
-| Passo 1.2 | O sistema informa que não existem despesas cadastradas  |
-# User Story
 
 **Persona um, usuário comum.**
 
