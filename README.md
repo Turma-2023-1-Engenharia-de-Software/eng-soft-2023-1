@@ -561,3 +561,68 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
+
+## **RF14 - Editar conta bancária**
+
+#### Autor: [Gabriel Tavares dos Santos](https://github.com/GabrielUFT)
+
+---
+#### Revisor: [Luis FilipeBandeira](https://github.com/luisfilipebandeira) 
+
+<br/>
+## Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF13 - Editar conta bancária;                                       |
+| Resumo          | Responsável pela alteração de dados da conta bancária; |
+| Ator principal  | Usuário- Editar conta bancária;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, e ter uma conta adicionada.;                          |
+| Pós-condição    | -                                                                                   |
+<br/>
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário faz login no aplicativo             |
+| Passo 2 | O usuário seleciona a opção de visualizar conta bancária no menu principal.|
+| Passo 3 | O usuário clica em editar conta bancária            |
+| Passo 4 | O usuário preenche o formulário com as informações que deseja alterar|
+| Passo 5 | O usuário clica em salvar conta bancária|
+
+<br/>
+#### Campos do Formulário
+
+| Campo  | Obrigatório | Formato |
+| ------- | --------------------------------------------------- |
+| Nome   | Sim          | Texto    |
+| Banco   | Sim          | Texto    |
+| Tipo de Conta   | Sim          | Texto    |
+| Saldo   | Sim          | Numérico    |
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+| Campo      | Descrição  | Formato |
+| ---------- | ---------- | ------- |
+| Não possui |            |         |
+#### Fluxo alternativo
+| Passos    | Descrição                                               |
+| --------  | ------------------------------------------------------- |
+| Passo 1.1 | O ator não cadastrou nenhuma despesa                    |
+| Passo 1.2 | O sistema informa que não existem despesas cadastradas  |
+# User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
