@@ -9,7 +9,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 ## Iteração 1
 
 
-- [ ] RF01 - Inserir nome de usuário. [Benedito](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
+- [ ] RF01 - Inserir nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
 - [ ] RF02 - Visualizar saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
 - [ ] RF03 - Visualizar extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
 - [ ] RF04 - Inserir despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
@@ -18,7 +18,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 - [ ] RF07 - Visualizar despesas (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
 - [ ] RF08 - Inserir conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 - [ ] RF09 - Inserir cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
-- [ ] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+- [ ] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
 - [ ] RF11 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
 - [ ] RF12 - Editar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
 - [ ] RF13 - Editar receitas. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
@@ -582,7 +582,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 ### Autor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
 
-### Revisor: [Benedito](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+### Revisor: [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
 
 <br/>
 
