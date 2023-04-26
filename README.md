@@ -112,6 +112,49 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 <br/>
 
+# **RF03 - Visualizar extrato**
+
+#### Autor: [@DioguBrabo](https://github.com/DioguBrabo) - Diogo Eduardo da Silva
+
+---
+
+#### Revisor: [Mateus Alves Araujo](https://github.com/MateusAlvez)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF03 - Visualizar o extrato;                                                       |
+| Resumo          | Visualiza o extrato bancário de um determinado período; |
+| Ator principal  | Usuário - Visualiza seu extrato;                                                    |
+| Ator secundário | -                                                                             |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar o extrato no menu principal.            |
+| Passo 2 | O sistema pede para o usuário informar um período relativo ao qual deseja visualizar o extrato. |
+| Passo 3 | O sistema exibe o extrato do usuário no período informado. |
+
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                   | User Story                                        | Critério de aceitação                                 |
+| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Visualizar meu extrato num determinado período** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato num período específico**, para que **eu tenha um controle melhor das minhas transações.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
 ## **RF04 - Inserir Despesas**
 <br />
 
