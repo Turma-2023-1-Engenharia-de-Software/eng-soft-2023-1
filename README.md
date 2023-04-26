@@ -9,20 +9,20 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 ## Iteração 1
 
 
-- [ ] RF01 - Inserir nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
-- [ ] RF02 - Visualizar saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
-- [ ] RF03 - Visualizar extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
-- [ ] RF04 - Inserir despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
-- [ ] RF05 - Inserir receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
-- [ ] RF06 - Visualizar receitas (valor) no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
-- [ ] RF07 - Visualizar despesas (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
-- [ ] RF08 - Inserir conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
-- [ ] RF09 - Inserir cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
-- [ ] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
-- [ ] RF11 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
-- [ ] RF12 - Editar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
-- [ ] RF13 - Editar receitas. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
-- [ ] RF14 - Editar conta bancária. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+- [X] RF01 - Inserir nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
+- [X] RF02 - Visualizar saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+- [X] RF03 - Visualizar extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
+- [X] RF04 - Inserir despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
+- [X] RF05 - Inserir receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
+- [X] RF06 - Visualizar receitas (valor) no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
+- [X] RF07 - Visualizar despesas (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+- [X] RF08 - Inserir conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+- [X] RF09 - Inserir cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
+- [X] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+- [X] RF11 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
+- [X] RF12 - Editar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+- [X] RF13 - Editar receitas. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
+- [X] RF14 - Editar conta bancária. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
 
 <br/>
 
@@ -387,6 +387,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
 
+<br/>
+
 ### Caso de uso
 
 |Item             | Descrição                                                         |
@@ -435,6 +437,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | --------  | ------------------------------------------------------- |
 | Passo 1.1 | O ator não cadastrou nenhuma despesa                    |
 | Passo 1.2 | O sistema informa que não existem despesas cadastradas  |
+<br />
+
 
 ### User Story
 
@@ -456,6 +460,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 
+<br/>
+
 ### Caso de uso
 
 |Item             | Descrição                                                         |
@@ -466,6 +472,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | Não possui                                                        | 
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma          |
 | Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login |
+<br />
 
 #### Fluxo principal
 | Passos  | Descrição                                 |
@@ -475,6 +482,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 3 | Digitar o nome do banco e o tipo de conta |
 | Passo 4 | Inserir o saldo total da conta            |
 | Passo 5 | Salvar                                    |
+<br />
+
 #### Campos do formulário
 | Campo            | Obrigatório? | Editável? | Formato      |
 | ---------------- | ------------ | --------- | ------------ |
@@ -482,15 +491,21 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Banco            | Sim          | Sim       | Texto        |
 | Tipo de Conta    | Sim          | Sim       | Texto        |
 | Saldo            | Sim          | Sim       | Numérico     |
+<br />
+
 #### Opções do usuário
 | Opção         | Descrição                 | Atalho |
 | ------------- | ------------------------- | ------ |
 | Inserir banco | Confirmar dados inseridos |        |
+<br />
+
 #### Relatório de usuário
 
 | Campo                      | Descrição                                                             | Formato |
 | -------------------------- | --------------------------------------------------------------------- | ------- |
 | Banco inserido com sucesso | Isso confirma e garante todo êxito na operação de cadastro de banco   | Texto   |
+<br />
+
 #### Fluxo alternativo
 | Passos    | Descrição |
 | --------  | --------------------------------------------------------------------------------------------- |
@@ -498,6 +513,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 1.2 | O sistema acusa que a conta em questão já existe                                              |
 | Passo 2.1 | O ator tenta adicionar um novo banco                                                          |
 | Passo 2.2 | O sistema exibe que não foi possível concluir a operação                                      |
+<br />
 
 ### User Story
 
@@ -519,6 +535,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 #### Revisor: [Erick Marçal](https://github.com/erarich)
 
+<br/>
+
 ### Caso de uso
 
 |Item             | Descrição                                                         |
@@ -529,6 +547,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Ator secundário | Não possui                                                        | 
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma          |
 | Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login |
+<br />
 
 #### Fluxo principal
 | Passos  | Descrição                                 |
@@ -540,6 +559,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 5 | Digitar a data de vencimento do cartão |
 | Passo 6 | Digitar o CVV do cartão |
 | Passo 7 | Salvar                                    |
+<br />
+
 #### Campos do formulário
 | Campo            | Obrigatório? | Editável? | Formato      |
 | ---------------- | ------------ | --------- | ------------ |
@@ -547,15 +568,21 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Numero do cartão            | Sim          | Sim       | Texto        |
 | Data de validade    | Sim          | Sim       | Texto        |
 | CVV            | Sim          | Sim       | Texto     |
+<br />
+
 #### Opções do usuário
 | Opção         | Descrição                 | Atalho |
 | ------------- | ------------------------- | ------ |
 | Inserir Cartão | Confirmar dados inseridos |        |
+<br />
+
 #### Relatório de usuário
 
 | Campo                      | Descrição                                                             | Formato |
 | -------------------------- | --------------------------------------------------------------------- | ------- |
 | Cartão inserido com sucesso | Isso confirma e garante todo êxito na operação de cadastro dp cartão   | Texto   |
+<br />
+
 #### Fluxo alternativo
 | Passos    | Descrição |
 | --------  | --------------------------------------------------------------------------------------------- |
@@ -563,6 +590,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 1.2 | O sistema acusa que o cartão em questão já existe                                              |
 | Passo 2.1 | O ator tenta adicionar um novo cartão                                                          |
 | Passo 2.2 | O sistema exibe que não foi possível concluir a operação                                      |
+<br />
 
 ### User Story
 
@@ -648,7 +676,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passo 1 | O usuário seleciona a opção de visualizar "contas de crédito" no menu principal.            |
 | Passo 2 | O aplicativo exibe uma lista de todas as contas de crédito associadas à conta do usuário.   |
 | Passo 3 | O usuário seleciona a conta de crédito específica para ver mais detalhes, como saldo atual, limite de crédito e data de vencimento da próxima fatura;   |
-
+<br />
 
 
 ### User story
@@ -702,9 +730,9 @@ Passo 04  |O usuário abre a edição de sua despesa.
 Opção          |Descrição
 ---------------|----------------
 Editar despesas|Edita a despesa.
+<br />
 
 ### User Story
-<br/>
 
 Epic | User story|	Critério de aceitação
 ------|-------------|--------------------
@@ -718,9 +746,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
-### Autor: [Mateus Alves Araujo](https://github.com/MateusAlvez) 
+#### Autor: [Mateus Alves Araujo](https://github.com/MateusAlvez) 
 
-### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+#### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
 
 <br/>
 
@@ -734,6 +762,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Ator secundário | -                                                                                   |
 | Pré-condição    | Ter acesso ao aplicativo, e ter saldo adicionado.;                          |
 | Pós-condição    | -                                                                                   |
+<br />
 
 #### Fluxo principal
 
@@ -742,7 +771,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ------- | --------------------------------------------------- |
 | Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.        |  
 | Passo 2 | O usuário seleciona a opção de modificar o saldo
-
+<br />
 
 
 ### User story
@@ -800,7 +829,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Banco   | Sim          | Texto    |
 | Tipo de Conta   | Sim          | Texto    |
 | Saldo   | Sim          | Numérico    |
-
+<br />
 
 ### User story
 
