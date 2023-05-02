@@ -26,6 +26,26 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 <br/>
 
+## Iteração 2
+
+
+- [ ] RF15 - Editar nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
+- [ ] RF16 - Esconder saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+- [ ] RF17 - Esconder extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
+- [ ] RF18 - Buscar despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
+- [ ] RF19 - Buscar receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
+- [ ] RF20 - Visualizar extrato no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
+- [ ] RF21 - Deletar conta (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+- [ ] RF22 - Deletar conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+- [ ] RF23 - Deletar cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
+- [ ] RF24 - Sair do aplicativo. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+- [ ] RF25 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
+- [ ] RF26 - Deletar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+- [ ] RF27 - Editar cartão de crédito. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
+- [ ] RF28 - Exportar conteúdo. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+
+<br/>
+
 ---
 ## **RF01 - Inserir nome de usuário**
 
