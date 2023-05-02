@@ -305,7 +305,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 #### Relatório de usuário
 
 | Campo                      | Descrição                                                             | Formato |
-| -------------------------- | --------------------------------------------------------------------- | ------- |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
 | Receita inserido com sucesso | Isso confirma e garante todo êxito na operação de inserção de receita   | Texto   |
 <br />
 
@@ -858,3 +858,55 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
+
+## **RF17 - Esconder extrato**
+
+<br/>
+
+#### Autor: [@DioguBrabo](https://github.com/DioguBrabo) - Diogo Eduardo da Silva
+
+#### Revisor: [Mateus Alves Araujo](https://github.com/MateusAlvez)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF17 - Esconder o extrato;                                                       |
+| Resumo          | Alterna o estado de visualização do extrato na home da aplicação; |
+| Ator principal  | Usuário;                                                    |
+| Ator secundário | -                                                                             |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder a view do extrato do menu principal.            |
+| Passo 2 | O sistema esconde a view do extrato habilitado que apareceria no menu principal. |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |                                                      |
+| Passo 1 | O sistema pede para o usuário escolher um período ao qual será mostrato um novo extrato correspondente na home da aplicação.        
+| Passo 2 | O sistema habilita a visualização do extrato referente ao período informado na tela inicial.                                 |
+
+<br/>
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                   | User Story                                        | Critério de aceitação                                 |
+| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| “Mostrar ou esconder o extrato na home do aplicação.” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
