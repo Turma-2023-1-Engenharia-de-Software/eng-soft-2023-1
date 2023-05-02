@@ -873,7 +873,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 | Item            | Descrição                                                                           |
 | --------------- | ----------------------------------------------------------------------------------- |
-| Caso de uso     | RF17 - Esconder o extrato;                                                       |
+| Caso de uso     | RF17 - Esconder o extrato do menu principal;                                                       |
 | Resumo          | Alterna o estado de visualização do extrato na home da aplicação; |
 | Ator principal  | Usuário;                                                    |
 | Ator secundário | -                                                                             |
