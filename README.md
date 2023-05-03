@@ -860,9 +860,66 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
 
+## **RF18 - Buscar despesas**
+
+<br/>
+
+#### Autor: [Érick Santos Marçal](https://github.com/erarich)
+#### Revisor: [Gabriel Tavares](https://github.com/GabrielUFT)
+
+<br />
+
+### Casos de Uso
 
 
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar despesas                                                    |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as despesas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
 
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Despesas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar despesa | Clicar no ícone de pesquisar  |        |
+
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
 
 ## RF22 - Deletar Conta Bancaria
 
@@ -916,7 +973,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 <br />
 
 #### Fluxo alternativo
+
 | Não possui |
+
 <br />
 
 ### User Story
