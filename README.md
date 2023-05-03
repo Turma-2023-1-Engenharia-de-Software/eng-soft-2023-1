@@ -862,6 +862,49 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 <br/>
 
 ---
+## **RF16 - Esconder saldo**
+
+<br/>
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+#### Revisor: [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF02 - Esconder o saldo;                                                       |
+| Resumo          | Esconder o saldo para que possa ter uma privacidade sobre sua situação bancaria; |
+| Ator principal  | Usuário - Esconder seu saldo;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder o saldo no menu principal.            |
+| Passo 2 | O sistema oculta o saldo do usuario
+
+<br/>
+
+ ### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
 
 ## **RF18 - Buscar despesas**
 
