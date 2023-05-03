@@ -120,7 +120,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passos  | Descrição                                           |
 | ------- | --------------------------------------------------- |
 | Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
-| Passo 2 | O usuário seleciona a opção de modificar o saldo
+| Passo 2 | O sistema exibe o saldo altual do usuário.
 
 <br/>
 
@@ -130,7 +130,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 | Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| “Como **um usuário do aplicativo financeiro** eu quero **vizualizar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
