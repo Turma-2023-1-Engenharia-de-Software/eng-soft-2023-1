@@ -956,7 +956,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 ---
 
-=======
+
 ## **RF18 - Buscar despesas**
 
 <br/>
@@ -1019,11 +1019,15 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 <br/>
 
 ## RF22 - Deletar Conta Bancaria
+
 <br/>
+
 #### Autor: [@98loann](https://github.com/98loann)
 #### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 <br/>
+
 ### Caso de uso
+
 |Item             | Descrição                                                         |
 | --------------- | ----------------------------------------------------------------- |
 | Caso de uso     | Deletar conta Bancária                                            |
@@ -1032,7 +1036,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Ator secundário | Não possui                                                        | 
 | Pré-condição    | É necessário que o usuário tenha uma conta bancaria ja inserida          |
 | Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
 <br />
+
 #### Fluxo principal
 | Passos  | Descrição                                 |
 | ------- | ----------------------------------------- |
@@ -1040,29 +1046,42 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Passo 2 | Abrir a conta na qual ele quer excluir    |
 | Passo 3 | Clicar nas opções e selecionar excluir    |
 | Passo 4 | Confirmar a exclusão                      |
+
 <br />
+
 #### Campos do formulário
 | Campo            | Obrigatório? | Editável? | Formato      |
 | ---------------- | ------------ | --------- | ------------ |
 | Banco            | Sim          | Sim       | Texto        |
 | Confirmar exclusão          | Sim          | Sim       | Texto     |
+
 <br />
+
 #### Opções do usuário
+
 | Opção         | Descrição                 | Atalho |
 | ------------- | ------------------------- | ------ |
 | Deletar banco | Confirmar a exclusão      |        |
+
 <br />
+
 #### Relatório de usuário
 | Campo                      | Descrição                                                             | Formato |
 | -------------------------- | --------------------------------------------------------------------- | ------- |
 | Banco deletado com sucesso | Isso confirma e garante todo êxito na operação de exclusão do banco   | Texto   |
+
 <br />
+
 #### Fluxo alternativo
 | Não possui |
+
 <br />
+
 ### User Story
+
 **Persona um, usuário comum.**
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
 <br/>
