@@ -858,9 +858,3 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
-
-
-
-
-
-
