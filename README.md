@@ -906,6 +906,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 ---
 
+
 ## **RF17 - Esconder extrato**
 
 <br/>
@@ -958,6 +959,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 ---
 
+=======
 ## **RF18 - Buscar despesas**
 
 <br/>
