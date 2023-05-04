@@ -959,7 +959,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 ---
 
-=======
+
 ## **RF18 - Buscar despesas**
 
 <br/>
@@ -1018,5 +1018,67 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+---
+
+## **RF27-Editar cartão de crédito**
+
+<br/>
+
+#### Autor: [Mateus Alves Araújo](https://github.com/MateusAlvez)
+#### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Editar cartão de crédito                                                   |
+| Resumo          | Edição dos dados de cartão de crédito 
+| Ator principal  | Usuário que faz uso da plataforma  -Editar cartão                                 |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | Ter acesso ao aplicativo, e ter pelo menos um cartão adicionado.|
+| Pós-condição    | - |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | O usuário acessa o sistema de gerenciamento de cartões de crédito                                         |
+| Passo 2 | O usuário seleciona a opção "Meus cartões de crédito" na página inicial do sistema                                                 |
+| Passo 3 | O usuário localiza o cartão de crédito que deseja editar na lista de cartões e clica no botão "Editar"                                                 |
+| Passo 4 | O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição                                             |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar cartão | Clicar no ícone de editar cartão  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão editado com sucesso | Isso confirma e garante todo êxito na operação de edição de cartão   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+|O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
 
 <br/>
