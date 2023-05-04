@@ -954,7 +954,6 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
----
 
 
 ## **RF18 - Buscar despesas**
@@ -1024,6 +1023,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 #### Autor: [@98loann](https://github.com/98loann)
 #### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+
 <br/>
 
 ### Caso de uso
