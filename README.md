@@ -120,7 +120,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passos  | Descrição                                           |
 | ------- | --------------------------------------------------- |
 | Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
-| Passo 2 | O usuário seleciona a opção de modificar o saldo
+| Passo 2 | O sistema exibe o saldo altual do usuário.
 
 <br/>
 
@@ -130,7 +130,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 | Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| “Como **um usuário do aplicativo financeiro** eu quero **vizualizar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -305,7 +305,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 #### Relatório de usuário
 
 | Campo                      | Descrição                                                             | Formato |
-| -------------------------- | --------------------------------------------------------------------- | ------- |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
 | Receita inserido com sucesso | Isso confirma e garante todo êxito na operação de inserção de receita   | Texto   |
 <br />
 
@@ -859,6 +859,53 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
+<br/>
+
+---
+## **RF16 - Esconder saldo**
+
+<br/>
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+#### Revisor: [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF02 - Esconder o saldo;                                                       |
+| Resumo          | Esconder o saldo para que possa ter uma privacidade sobre sua situação bancaria; |
+| Ator principal  | Usuário - Esconder seu saldo;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder o saldo no menu principal.            |
+| Passo 2 | O sistema oculta o saldo do usuario
+
+<br/>
+
+ ### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
+
 ## **RF17 - Esconder extrato**
 
 <br/>
@@ -910,3 +957,64 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 <br/>
 
 ---
+
+## **RF18 - Buscar despesas**
+
+<br/>
+
+#### Autor: [Érick Santos Marçal](https://github.com/erarich)
+#### Revisor: [Gabriel Tavares](https://github.com/GabrielUFT)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar despesas                                                    |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as despesas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Despesas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar despesa | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
