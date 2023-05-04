@@ -859,8 +859,210 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
+## **RF16 - Esconder saldo**
+
+<br/>
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+#### Revisor: [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF02 - Esconder o saldo;                                                       |
+| Resumo          | Esconder o saldo para que possa ter uma privacidade sobre sua situação bancaria; |
+| Ator principal  | Usuário - Esconder seu saldo;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder o saldo no menu principal.            |
+| Passo 2 | O sistema oculta o saldo do usuario
+
+<br/>
+
+ ### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
 
 
+## **RF17 - Esconder extrato**
+
+<br/>
+
+#### Autor: [@DioguBrabo](https://github.com/DioguBrabo) - Diogo Eduardo da Silva
+
+#### Revisor: [Mateus Alves Araujo](https://github.com/MateusAlvez)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF17 - Esconder o extrato do menu principal;                                                       |
+| Resumo          | Alterna o estado de visualização do extrato na home da aplicação; |
+| Ator principal  | Usuário;                                                    |
+| Ator secundário | -                                                                             |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder a view do extrato do menu principal.            |
+| Passo 2 | O sistema esconde a view do extrato habilitado que apareceria no menu principal. |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |                                                      |
+| Passo 1 | O sistema pede para o usuário escolher um período ao qual será mostrato um novo extrato correspondente na home da aplicação.        
+| Passo 2 | O sistema habilita a visualização do extrato referente ao período informado na tela inicial.                                 |
+
+<br/>
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                   | User Story                                        | Critério de aceitação                                 |
+| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| “Mostrar ou esconder o extrato na home do aplicação.” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
+
+=======
+## **RF18 - Buscar despesas**
+
+<br/>
+
+#### Autor: [Érick Santos Marçal](https://github.com/erarich)
+#### Revisor: [Gabriel Tavares](https://github.com/GabrielUFT)
+
+<br />
+
+### Casos de Uso
 
 
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar despesas                                                    |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as despesas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
 
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Despesas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar despesa | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+## RF22 - Deletar Conta Bancaria
+<br/>
+#### Autor: [@98loann](https://github.com/98loann)
+#### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+<br/>
+### Caso de uso
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar conta Bancária                                            |
+| Resumo          | É esperado que o usuário tenha a possibilidade de remover as conta bancárias que ele já inseriu                                                                              |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta bancaria ja inserida          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+<br />
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta na qual ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+<br />
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Banco            | Sim          | Sim       | Texto        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+<br />
+#### Opções do usuário
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar banco | Confirmar a exclusão      |        |
+<br />
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Banco deletado com sucesso | Isso confirma e garante todo êxito na operação de exclusão do banco   | Texto   |
+<br />
+#### Fluxo alternativo
+| Não possui |
+<br />
+### User Story
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+<br/>
