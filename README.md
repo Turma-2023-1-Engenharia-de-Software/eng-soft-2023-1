@@ -859,9 +859,6 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
-<br/>
-
----
 ## **RF16 - Esconder saldo**
 
 <br/>
@@ -957,7 +954,6 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
----
 
 
 ## **RF18 - Buscar despesas**
@@ -1008,6 +1004,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Campo                      | Descrição                                                             | Formato |
 | -------------------------- | --------------------------------------------------------------------- | ------- |
 | Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+
 <br />
 
                                    
@@ -1020,8 +1017,6 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
-
----
 
 ## **RF19 - Buscar receitas**
 
@@ -1043,6 +1038,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Ator secundário | Não possui                                                          | 
 | Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
 | Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
 
 <br />
 
@@ -1084,7 +1080,74 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
----
+## RF22 - Deletar Conta Bancaria
+
+<br/>
+
+#### Autor: [@98loann](https://github.com/98loann)
+#### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar conta Bancária                                            |
+| Resumo          | É esperado que o usuário tenha a possibilidade de remover as conta bancárias que ele já inseriu                                                                              |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta bancaria ja inserida          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta na qual ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Banco            | Sim          | Sim       | Texto        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar banco | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Banco deletado com sucesso | Isso confirma e garante todo êxito na operação de exclusão do banco   | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
 
 # **RF25 - Filtrar contas de Crédito**
 
@@ -1188,5 +1251,6 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 |O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
+
 
 <br/>
