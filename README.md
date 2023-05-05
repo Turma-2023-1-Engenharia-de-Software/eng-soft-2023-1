@@ -39,7 +39,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 - [ ] RF22 - Deletar conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 - [ ] RF23 - Deletar cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
 - [ ] RF24 - Sair do aplicativo. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
-- [ ] RF25 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
+- [ ] RF25 - Filtrar Contas de Crédito [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
 - [ ] RF26 - Deletar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
 - [ ] RF27 - Editar cartão de crédito. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
 - [ ] RF28 - Exportar conteúdo. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
@@ -1004,6 +1004,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Campo                      | Descrição                                                             | Formato |
 | -------------------------- | --------------------------------------------------------------------- | ------- |
 | Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+
 <br />
 
                                    
@@ -1014,6 +1015,68 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+## **RF19 - Buscar receitas**
+
+<br/>
+
+#### Autor: [Ícaro Mesquita Ponce](https://github.com/icaromp)
+#### Revisor: [Caio Henrique Pinho](https://github.com/CaioHPS3)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar receitas                                                     |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as receitas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Receitas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar receita | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Receitas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de receitas   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas receitas registradas na plataforma para verificar meu histórico de ganhos"| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
 
@@ -1083,5 +1146,111 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
+# **RF25 - Filtrar contas de Crédito**
+
+#### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
+
+---
+
+#### Revisor: [Luan Porto](https://github.com/98loann)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF25 - Filtragem das contas de Crédito;                                             |
+| Resumo          | O usuário pode filtrar suas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura;   |
+| Ator principal  | Usuário do aplicativo de controle financeiro;                                       |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Usuário já deve ter uma conta de crédito cadastrada no aplicativo;                  |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar "contas de crédito" no menu principal;            |
+| Passo 2 | O aplicativo exibe uma lista de todas as contas de crédito associadas à conta do usuário;   |
+| Passo 3 | O usuário seleciona a opção de filtragem desejada: por saldo, por limite de crédito ou por data de vencimento da próxima fatura; |
+| Passo 4 | O usuário insere o critério de filtro desejado, como um valor mínimo ou máximo de saldo ou limite de crédito, ou uma data de vencimento específica; |
+| Passo 5 | O aplicativo filtra as contas de crédito com base nos critérios inseridos pelo usuário e exibe apenas as contas que atendem aos critérios de filtro; |
+
+
+## User story
+
+*Persona um, usuário comum.*
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como usuário do aplicativo de controle financeiro, eu gostaria de ter a capacidade de filtrar e ordenar minhas contas de crédito para que eu possa visualizar e gerenciar minha situação financeira de forma mais eficiente e eficaz.” | "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+
+<br/>
+
+
+## **RF27-Editar cartão de crédito**
+
+<br/>
+
+#### Autor: [Mateus Alves Araújo](https://github.com/MateusAlvez)
+#### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Editar cartão de crédito                                                   |
+| Resumo          | Edição dos dados de cartão de crédito 
+| Ator principal  | Usuário que faz uso da plataforma  -Editar cartão                                 |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | Ter acesso ao aplicativo, e ter pelo menos um cartão adicionado.|
+| Pós-condição    | - |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | O usuário acessa o sistema de gerenciamento de cartões de crédito                                         |
+| Passo 2 | O usuário seleciona a opção "Meus cartões de crédito" na página inicial do sistema                                                 |
+| Passo 3 | O usuário localiza o cartão de crédito que deseja editar na lista de cartões e clica no botão "Editar"                                                 |
+| Passo 4 | O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição                                             |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar cartão | Clicar no ícone de editar cartão  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão editado com sucesso | Isso confirma e garante todo êxito na operação de edição de cartão   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+|O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
+
 
 <br/>
