@@ -1023,6 +1023,69 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 ---
 
+## **RF19 - Buscar receitas**
+
+<br/>
+
+#### Autor: [Ícaro Mesquita Ponce](https://github.com/icaromp)
+#### Revisor: [Caio Henrique Pinho](https://github.com/CaioHPS3)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar receitas                                                     |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as receitas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Receitas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar receita | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Receitas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de receitas   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas receitas registradas na plataforma para verificar meu histórico de ganhos"| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+---
+
 ## **RF27-Editar cartão de crédito**
 
 <br/>
