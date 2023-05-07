@@ -895,6 +895,17 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+#### Campos do Formulário
+
+| Campo  | Obrigatório | Formato |
+| ------- | ---------------------------|----------------------- |
+| Nome   | Sim          | Texto    |
+| Banco   | Sim          | Texto    |
+| Tipo de Conta   | Sim          | Texto    |
+| Saldo   | Sim          | Numérico    |
+
+<br />
+
 ### User story
 
 **Persona um, usuário comum.**
