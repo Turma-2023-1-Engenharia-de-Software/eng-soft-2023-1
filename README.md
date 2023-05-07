@@ -1149,6 +1149,67 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+## RF23 - Deletar cartão de crédito
+
+<br/>
+
+#### Autor: [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+#### Revisor: [Érick Santos Marçal](https://github.com/erarich)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar cartão de crédito                                           |
+| Resumo          | O usuário deve poder remover o cartão de crédito do app             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido um cartão de crédito          |
+| Pós-condição    | É necessário que para remover um cartão de crédito, ele já deva estar previamente cadastrado |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Editar cartões    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar cartão | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão excluído com sucesso | Isso confirma e garante todo êxito na operação de exclusão do cartão  | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os cartões de crédito que já cadastrei" | Certificar de confirmar a exclusão
+
+<br/>
+
 # **RF25 - Filtrar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
