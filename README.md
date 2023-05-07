@@ -1080,6 +1080,76 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+## RF21 - Deletar Conta (valor) no mês
+
+<br/>
+
+#### Autor: [João Pedro Noronha](https://github.com/jpnoronhaa)
+#### Revisor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar Conta (valor) no mês                                            |
+| Resumo          | O usuário deve poder remover o valor da conta em um determinado mês             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido uma conta no mês em que está          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta e o mês que ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Conta            | Sim          | Sim       | Texto        |
+| Mês            | Sim          | Sim       | Data        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar conta | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Conta excluída com sucesso | Isso confirma e garante todo êxito na operação de exclusão de conta   | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir as contas do mês que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
 ## RF22 - Deletar Conta Bancaria
 
 <br/>
