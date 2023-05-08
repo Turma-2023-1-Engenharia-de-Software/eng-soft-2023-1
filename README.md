@@ -859,6 +859,65 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
+
+---
+
+## **RF15 - Editar nome de usuário**
+
+<br/>
+
+#### Autor: [Benedito Jaime](https://github.com/beneX90)
+
+#### Revisor: [Jeová de Sousa](https://github.com/jeovazin1v9)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | R151 - Editar nome do usuário;                                                       |
+| Resumo          | Alterar e salvar o nome que será usado pelo usuário da conta bancária; |
+| Ator principal  | Usuário - Mudará o nome;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | O nome deve ser alterado após a ação.                                            |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de editar o nome no menu principal.            |
+| Passo 2 | O sistema exibe o ícone para alterar o nome do usuário. |
+| Passo 3 | O usuário digita o novo nome. |
+| Passo 4 | O sistema salva o novo nome na conta bancária. |
+
+<br/>
+
+#### Campos do Formulário
+
+| Campo  | Obrigatório | Formato |
+| ------- | ---------------------------|----------------------- |
+| Nome   | Sim          | Texto    |
+| Banco   | Sim          | Texto    |
+| Tipo de Conta   | Sim          | Texto    |
+| Saldo   | Sim          | Numérico    |
+
+<br />
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **alterar o meu nome da minha conta** para que **meu nome permaneça correto**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+
+<br />
+
 ## **RF16 - Esconder saldo**
 
 <br/>
@@ -1080,6 +1139,148 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+## **RF20 - Visualizar extrato no mês.**
+
+<br/>
+
+#### Autor: [@jeovazin1v9](https://github.com/jeovazin1v9) - Jeová de Sousa Barbosa
+
+#### Revisor: [@jpnoronhaa](https://github.com/jpnoronhaa) - João Pedro Noronha
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | RF20 - Visualizar extrato no mês                                              |
+| Resumo          | É esperado que o usuário tenha a possibilidade de visualizar o extrato no mês que desejar     |
+| Ator principal  | Usuário que faz uso da plataforma                                                             |
+| Ator secundário | Não possui                                                                                    | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e ter inserido receitas e/ou despesas|
+| Pós-condição    | Não possui |
+
+<br/>
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Estar no aplicativo e clicar no botão 'Visualizar extrato'|
+| Passo 3 | Selecionar a opção de filtragem e escolher o mês|
+
+<br/>
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Extrato          | Não          | Não       | Texto        |
+
+<br/>
+
+#### Opções do usuário
+| Opção             | Descrição                 | Atalho |
+| -------------     | ------------------------- | ------ |
+| Alterar o mês | Alterar o mês que deseja visualizar o extrato   |        |
+
+<br/>
+
+#### Relatório de usuário
+
+| Campo      | Descrição   | Formato |
+| ---------- | ----------- |---------|
+| Não possui |             |         |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O usuário não possui nenhuma receita e nenhuma despesa no mês selecionado                                                       |
+| Passo 1.2 | O sistema informa que não há extrato naquele mês                                            |
+
+<br/>
+
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| -----| --------- | --------------------- |
+| Eu enquanto **usuário comum** quero **poder visualizar o extrato do mês que desejar** para **ter um maior controle sobre minhas finanças em cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
+
+<br/>
+
+## RF21 - Deletar Conta (valor) no mês
+
+<br/>
+
+#### Autor: [João Pedro Noronha](https://github.com/jpnoronhaa)
+#### Revisor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar Conta (valor) no mês                                            |
+| Resumo          | O usuário deve poder remover o valor da conta em um determinado mês             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido uma conta no mês em que está          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta e o mês que ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Conta            | Sim          | Sim       | Texto        |
+| Mês            | Sim          | Sim       | Data        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar conta | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Conta excluída com sucesso | Isso confirma e garante todo êxito na operação de exclusão de conta   | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir as contas do mês que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
 ## RF22 - Deletar Conta Bancaria
 
 <br/>
@@ -1146,6 +1347,67 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
+## RF23 - Deletar cartão de crédito
+
+<br/>
+
+#### Autor: [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+#### Revisor: [Érick Santos Marçal](https://github.com/erarich)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar cartão de crédito                                           |
+| Resumo          | O usuário deve poder remover o cartão de crédito do app             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido um cartão de crédito          |
+| Pós-condição    | É necessário que para remover um cartão de crédito, ele já deva estar previamente cadastrado |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Editar cartões    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar cartão | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão excluído com sucesso | Isso confirma e garante todo êxito na operação de exclusão do cartão  | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os cartões de crédito que já cadastrei" | Certificar de confirmar a exclusão
 
 <br/>
 
