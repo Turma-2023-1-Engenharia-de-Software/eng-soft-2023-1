@@ -1339,6 +1339,65 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+## **RF24 - Sair do Aplicativo**
+
+<br/>
+
+#### Autor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+#### Revisor: [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Sair do aplicativo                                                    |
+| Resumo          | Usuário deve ter a possibilidade de sair do aplicativo|
+| Ator principal  | Usuário que utiliza a plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário esteja no aplicativo            |
+| Pós-condição    | É necessário que para sair da conta o usuário tenha aberto o aplicativo  |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo (Login não é obrigatório)                                     |
+| Passo 2 | Sair do aplicativo atráves da opção de saída(Ícone seguido por nome)                                    |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Sair do aplicativo | Clicar no nome/ícone de saída   |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Saindo do aplicativo... | Isso confirma e garante todo êxito na operação de saída do aplicativo, encerramento o mesmo.   | Texto   |
+
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder sair do aplicativo em qualquer momento"| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
+
+<br/>
+
 # **RF25 - Filtrar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
