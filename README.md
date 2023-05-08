@@ -1623,3 +1623,41 @@ Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar min
 
 
 <br/>
+
+## **RF28 - Exportar conteúdo**
+
+#### Autor: [Gabriel Tavares dos Santos](https://github.com/GabrielUFT)
+
+---
+#### Revisor: [Luis FilipeBandeira](https://github.com/luisfilipebandeira) 
+
+<br/>
+## Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF28 - Exportar conteúdo;                                       |
+| Resumo          | Responsável por salvar os dados do aplicativo em um arquivo externo; |
+| Ator principal  | Usuário- Exportar conteúdo;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, ter uma conta adicionada, ter dados para serem salvos.;                          |
+| Pós-condição    | -                                                                                   |
+<br/>
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário faz login no aplicativo             |
+| Passo 2 | O usuário seleciona a opção de configurações no menu principal.|
+| Passo 3 | O usuário clica em exportar conteúdo |
+| Passo 4 | O usuário seleciona o endereço onde o arquivo deve ser salvo|
+| Passo 5 | O usuário clica em confirmar exportação de conteúdo|
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Exportar conteudo** para que **eu possa ter um arquivo externo contendo meus dados de utilização que possa usar para importar novamente esses dados para o aplicativo.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
