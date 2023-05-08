@@ -1443,6 +1443,54 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 <br/>
 
 
+## **RF26-Deletar despesas**
+<br/>
+
+#### Autor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) 
+
+#### Revisor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+
+<br/>
+
+### Caso de uso
+
+Item	          |Descrição
+:----------------:|:--------------------------------:
+Caso de uso	      | Deletar despesas do usuário.
+Resumo            | O usuário deseja deletar as suas despesas.
+Ator principal	  | Usuário
+Pré-condição	  | Existam despesas constando para o usuário em seu histórico.
+Pós-condição	  | O usuário consegue deletar suas despesas da forma desejada.
+
+<br/>
+
+#### Fluxo principal
+
+Passos	  |Descrição
+:--------:|:-----------------------------------------------:
+Passo 01  |O usuário acessa o app.
+Passo 02  |O usuário abre as suas despesas
+Passo 03  |O usuário seleciona a opção de deletar a despesa.
+Passo 04  |O usuário comfirma a opção.
+
+<br/>
+
+#### Opções de usuário
+
+
+Opção          |Descrição
+---------------|----------------
+Deletar despesas|Deleta a despesa.
+<br />
+
+### User Story
+
+Epic | User story|	Critério de aceitação
+------|-------------|--------------------
+Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
+
+<br/>
+
 ## **RF27-Editar cartão de crédito**
 
 <br/>
