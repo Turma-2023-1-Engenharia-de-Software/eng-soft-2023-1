@@ -859,6 +859,65 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
+
+---
+
+## **RF15 - Editar nome de usuário**
+
+<br/>
+
+#### Autor: [Benedito Jaime](https://github.com/beneX90)
+
+#### Revisor: [Jeová de Sousa](https://github.com/jeovazin1v9)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | R151 - Editar nome do usuário;                                                       |
+| Resumo          | Alterar e salvar o nome que será usado pelo usuário da conta bancária; |
+| Ator principal  | Usuário - Mudará o nome;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | O nome deve ser alterado após a ação.                                            |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de editar o nome no menu principal.            |
+| Passo 2 | O sistema exibe o ícone para alterar o nome do usuário. |
+| Passo 3 | O usuário digita o novo nome. |
+| Passo 4 | O sistema salva o novo nome na conta bancária. |
+
+<br/>
+
+#### Campos do Formulário
+
+| Campo  | Obrigatório | Formato |
+| ------- | ---------------------------|----------------------- |
+| Nome   | Sim          | Texto    |
+| Banco   | Sim          | Texto    |
+| Tipo de Conta   | Sim          | Texto    |
+| Saldo   | Sim          | Numérico    |
+
+<br />
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **alterar o meu nome da minha conta** para que **meu nome permaneça correto**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+
+<br />
+
 ## **RF16 - Esconder saldo**
 
 <br/>
