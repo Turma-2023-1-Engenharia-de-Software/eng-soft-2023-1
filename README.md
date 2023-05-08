@@ -1149,6 +1149,78 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
+## **RF20 - Visualizar extrato no mês.**
+
+<br/>
+
+#### Autor: [@jeovazin1v9](https://github.com/jeovazin1v9) - Jeová de Sousa Barbosa
+
+#### Revisor: [@jpnoronhaa](https://github.com/jpnoronhaa) - João Pedro Noronha
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | RF02 - Visualizar extrato no mês                                              |
+| Resumo          | É esperado que o usuário tenha a possibilidade de visualizar o extrato no mês que desejar     |
+| Ator principal  | Usuário que faz uso da plataforma                                                             |
+| Ator secundário | Não possui                                                                                    | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e ter inserido receitas e/ou despesas|
+| Pós-condição    | Não possui |
+
+<br/>
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Estar no aplicativo e clicar no botão 'Visualizar extrato'|
+| Passo 3 | Selecionar a opção de filtragem e escolher o mês|
+
+<br/>
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Receitas         | Não          | Não       | Texto        |
+
+<br/>
+
+#### Opções do usuário
+| Opção             | Descrição                 | Atalho |
+| -------------     | ------------------------- | ------ |
+| Ocultar receitas | Trocar o texto que mostra o valor das receitas por um alternativo |        |
+
+<br/>
+
+#### Relatório de usuário
+
+| Campo      | Descrição   | Formato |
+| ---------- | ----------- |---------|
+| Não possui |             |         |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O usuário não possui nenhuma receita e nenhuma despesa no mês selecionado                                                       |
+| Passo 1.2 | O sistema informa que não há extrato naquele mês                                            |
+
+<br/>
+
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| -----| --------- | --------------------- |
+| Eu enquanto **usuário comum** quero **poder visualizar o extrato do mês que desejar** para **ter um maior controle sobre minha renda em cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o extrato do mês ou ocultá-lo, se preferir, utilizando um botão ao lado.
+
+<br/>
+
 # **RF25 - Filtrar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
