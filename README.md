@@ -26,6 +26,26 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 <br/>
 
+## Iteração 2
+
+
+- [ ] RF15 - Editar nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
+- [ ] RF16 - Esconder saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+- [ ] RF17 - Esconder extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
+- [ ] RF18 - Buscar despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
+- [ ] RF19 - Buscar receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
+- [ ] RF20 - Visualizar extrato no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
+- [ ] RF21 - Deletar conta (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+- [ ] RF22 - Deletar conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+- [ ] RF23 - Deletar cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
+- [ ] RF24 - Sair do aplicativo. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+- [ ] RF25 - Filtrar Contas de Crédito [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
+- [ ] RF26 - Deletar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+- [ ] RF27 - Editar cartão de crédito. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
+- [ ] RF28 - Exportar conteúdo. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+
+<br/>
+
 ---
 ## **RF01 - Inserir nome de usuário**
 
@@ -100,7 +120,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 | Passos  | Descrição                                           |
 | ------- | --------------------------------------------------- |
 | Passo 1 | O usuário seleciona a opção de visualizar o saldo no menu principal.            |
-| Passo 2 | O usuário seleciona a opção de modificar o saldo
+| Passo 2 | O sistema exibe o saldo altual do usuário.
 
 <br/>
 
@@ -110,7 +130,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 | Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| “Como **um usuário do aplicativo financeiro** eu quero **vizualizar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -838,3 +858,807 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 | Epic | User Story | Critério de aceitação |
 | ----- | --------- | --------------------- |
 | Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
+
+
+---
+
+## **RF15 - Editar nome de usuário**
+
+<br/>
+
+#### Autor: [Benedito Jaime](https://github.com/beneX90)
+
+#### Revisor: [Jeová de Sousa](https://github.com/jeovazin1v9)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | R151 - Editar nome do usuário;                                                       |
+| Resumo          | Alterar e salvar o nome que será usado pelo usuário da conta bancária; |
+| Ator principal  | Usuário - Mudará o nome;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | O nome deve ser alterado após a ação.                                            |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de editar o nome no menu principal.            |
+| Passo 2 | O sistema exibe o ícone para alterar o nome do usuário. |
+| Passo 3 | O usuário digita o novo nome. |
+| Passo 4 | O sistema salva o novo nome na conta bancária. |
+
+<br/>
+
+#### Campos do Formulário
+
+| Campo  | Obrigatório | Formato |
+| ------- | ---------------------------|----------------------- |
+| Nome   | Sim          | Texto    |
+| Banco   | Sim          | Texto    |
+| Tipo de Conta   | Sim          | Texto    |
+| Saldo   | Sim          | Numérico    |
+
+<br />
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **alterar o meu nome da minha conta** para que **meu nome permaneça correto**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+
+<br />
+
+## **RF16 - Esconder saldo**
+
+<br/>
+
+#### Autor: [@CaioHPS3](https://github.com/CaioHPS3) - Caio Henrique Pinho Santos
+
+#### Revisor: [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF02 - Esconder o saldo;                                                       |
+| Resumo          | Esconder o saldo para que possa ter uma privacidade sobre sua situação bancaria; |
+| Ator principal  | Usuário - Esconder seu saldo;                                                    |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder o saldo no menu principal.            |
+| Passo 2 | O sistema oculta o saldo do usuario
+
+<br/>
+
+ ### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+---
+
+
+## **RF17 - Esconder extrato**
+
+<br/>
+
+#### Autor: [@DioguBrabo](https://github.com/DioguBrabo) - Diogo Eduardo da Silva
+
+#### Revisor: [Mateus Alves Araujo](https://github.com/MateusAlvez)
+
+<br/>
+
+### Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF17 - Esconder o extrato do menu principal;                                                       |
+| Resumo          | Alterna o estado de visualização do extrato na home da aplicação; |
+| Ator principal  | Usuário;                                                    |
+| Ator secundário | -                                                                             |
+| Pré-condição    | O(s) ator(es) deve ter acessado o sistema do aplicativo;                          |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de esconder a view do extrato do menu principal.            |
+| Passo 2 | O sistema esconde a view do extrato habilitado que apareceria no menu principal. |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1 | O sistema pede para o usuário escolher um período ao qual será mostrato um novo extrato correspondente na home da aplicação.                                                |
+| Passo 2 | O sistema habilita a visualização do extrato referente ao período informado na tela inicial.                                                 |
+
+<br/>
+
+### User story
+
+**Persona um, usuário comum.**
+
+| Epic                                   | User Story                                        | Critério de aceitação                                 |
+| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| “Mostrar ou esconder o extrato na home do aplicação.” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+
+<br/>
+
+
+
+## **RF18 - Buscar despesas**
+
+<br/>
+
+#### Autor: [Érick Santos Marçal](https://github.com/erarich)
+#### Revisor: [Gabriel Tavares](https://github.com/GabrielUFT)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar despesas                                                    |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as despesas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Despesas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar despesa | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Despesas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de despesas   | Texto   |
+
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+## **RF19 - Buscar receitas**
+
+<br/>
+
+#### Autor: [Ícaro Mesquita Ponce](https://github.com/icaromp)
+#### Revisor: [Caio Henrique Pinho](https://github.com/CaioHPS3)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Buscar receitas                                                     |
+| Resumo          | É esperado que o usuário tenha a possibilidade de buscar as receitas|
+| Ator principal  | Usuário que faz uso da plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma            |
+| Pós-condição    | É necessário que para inserir a conta o usuário tenha feito login   |
+
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo e fazer login                                          |
+| Passo 2 | Entrar na seção de Receitas                                                 |
+| Passo 3 | Clicar no barra de pesquisa                                                 |
+| Passo 4 | Digitar texto que deseja buscar                                             |
+| Passo 5 | Clicar no ícone de pesquisar (uma lupa)                                     |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar receita | Clicar no ícone de pesquisar  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Receitas encontradas com sucesso | Isso confirma e garante todo êxito na operação de busca de receitas   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder acessar minhas receitas registradas na plataforma para verificar meu histórico de ganhos"| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+
+<br/>
+
+## **RF20 - Visualizar extrato no mês.**
+
+<br/>
+
+#### Autor: [@jeovazin1v9](https://github.com/jeovazin1v9) - Jeová de Sousa Barbosa
+
+#### Revisor: [@jpnoronhaa](https://github.com/jpnoronhaa) - João Pedro Noronha
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | RF20 - Visualizar extrato no mês                                              |
+| Resumo          | É esperado que o usuário tenha a possibilidade de visualizar o extrato no mês que desejar     |
+| Ator principal  | Usuário que faz uso da plataforma                                                             |
+| Ator secundário | Não possui                                                                                    | 
+| Pré-condição    | É necessário que o usuário tenha uma conta na plataforma e ter inserido receitas e/ou despesas|
+| Pós-condição    | Não possui |
+
+<br/>
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo e fazer login        |
+| Passo 2 | Estar no aplicativo e clicar no botão 'Visualizar extrato'|
+| Passo 3 | Selecionar a opção de filtragem e escolher o mês|
+
+<br/>
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Extrato          | Não          | Não       | Texto        |
+
+<br/>
+
+#### Opções do usuário
+| Opção             | Descrição                 | Atalho |
+| -------------     | ------------------------- | ------ |
+| Alterar o mês | Alterar o mês que deseja visualizar o extrato   |        |
+
+<br/>
+
+#### Relatório de usuário
+
+| Campo      | Descrição   | Formato |
+| ---------- | ----------- |---------|
+| Não possui |             |         |
+
+<br/>
+
+#### Fluxo alternativo
+| Passos    | Descrição |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O usuário não possui nenhuma receita e nenhuma despesa no mês selecionado                                                       |
+| Passo 1.2 | O sistema informa que não há extrato naquele mês                                            |
+
+<br/>
+
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| -----| --------- | --------------------- |
+| Eu enquanto **usuário comum** quero **poder visualizar o extrato do mês que desejar** para **ter um maior controle sobre minhas finanças em cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
+
+<br/>
+
+## **RF21 - Deletar Conta (valor) no mês.**
+
+<br/>
+
+#### Autor: [João Pedro Noronha](https://github.com/jpnoronhaa)
+#### Revisor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar Conta (valor) no mês                                            |
+| Resumo          | O usuário deve poder remover o valor da conta em um determinado mês             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido uma conta no mês em que está          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta e o mês que ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Conta            | Sim          | Sim       | Texto        |
+| Mês            | Sim          | Sim       | Data        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar conta | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Conta excluída com sucesso | Isso confirma e garante todo êxito na operação de exclusão de conta   | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir as contas do mês que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
+## **RF22 - Deletar Conta Bancaria**
+
+<br/>
+
+#### Autor: [@98loann](https://github.com/98loann)
+#### Revisor: [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar conta Bancária                                            |
+| Resumo          | É esperado que o usuário tenha a possibilidade de remover as conta bancárias que ele já inseriu                                                                              |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha uma conta bancaria ja inserida          |
+| Pós-condição    | É necessário que para remover uma conta, ela já deva estar previamente cadastrada |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Abrir a conta na qual ele quer excluir    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Campos do formulário
+| Campo            | Obrigatório? | Editável? | Formato      |
+| ---------------- | ------------ | --------- | ------------ |
+| Banco            | Sim          | Sim       | Texto        |
+| Confirmar exclusão          | Sim          | Sim       | Texto     |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar banco | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Banco deletado com sucesso | Isso confirma e garante todo êxito na operação de exclusão do banco   | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+
+<br/>
+
+## **RF23 - Deletar cartão de crédito**
+
+<br/>
+
+#### Autor: [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+#### Revisor: [Érick Santos Marçal](https://github.com/erarich)
+
+<br/>
+
+### Caso de uso
+
+|Item             | Descrição                                                         |
+| --------------- | ----------------------------------------------------------------- |
+| Caso de uso     | Deletar cartão de crédito                                           |
+| Resumo          | O usuário deve poder remover o cartão de crédito do app             |
+| Ator principal  | Usuário que faz uso da plataforma |
+| Ator secundário | Não possui                                                        | 
+| Pré-condição    | É necessário que o usuário tenha inserido um cartão de crédito          |
+| Pós-condição    | É necessário que para remover um cartão de crédito, ele já deva estar previamente cadastrado |
+
+<br />
+
+#### Fluxo principal
+| Passos  | Descrição                                 |
+| ------- | ----------------------------------------- |
+| Passo 1 | Entrar no aplicativo                      |
+| Passo 2 | Editar cartões    |
+| Passo 3 | Clicar nas opções e selecionar excluir    |
+| Passo 4 | Confirmar a exclusão                      |
+
+<br />
+
+#### Opções do usuário
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Deletar cartão | Confirmar a exclusão      |        |
+
+<br />
+
+#### Relatório de usuário
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão excluído com sucesso | Isso confirma e garante todo êxito na operação de exclusão do cartão  | Texto   |
+
+<br />
+
+#### Fluxo alternativo
+| Não possui |
+
+<br />
+
+### User Story
+
+**Persona um, usuário comum.**
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os cartões de crédito que já cadastrei" | Certificar de confirmar a exclusão
+
+<br/>
+
+## **RF24 - Sair do Aplicativo**
+
+<br/>
+
+#### Autor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+#### Revisor: [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Sair do aplicativo                                                    |
+| Resumo          | Usuário deve ter a possibilidade de sair do aplicativo|
+| Ator principal  | Usuário que utiliza a plataforma                                   |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | É necessário que o usuário esteja no aplicativo            |
+| Pós-condição    | É necessário que para sair da conta o usuário tenha aberto o aplicativo  |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | Entrar no aplicativo (Login não é obrigatório)                                     |
+| Passo 2 | Sair do aplicativo atráves da opção de saída(Ícone seguido por nome)                                    |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Sair do aplicativo | Clicar no nome/ícone de saída   |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Saindo do aplicativo... | Isso confirma e garante todo êxito na operação de saída do aplicativo, encerramento o mesmo.   | Texto   |
+
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+| Eu, como "usuário comum", quero "poder sair do aplicativo em qualquer momento"| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
+
+<br/>
+
+## **RF25 - Filtrar contas de Crédito**
+
+#### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
+
+
+#### Revisor: [Luan Porto](https://github.com/98loann)
+
+<br/>
+
+## Caso de uso
+
+| Item            | Descrição                                                                           |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF25 - Filtragem das contas de Crédito;                                             |
+| Resumo          | O usuário pode filtrar suas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura;   |
+| Ator principal  | Usuário do aplicativo de controle financeiro;                                       |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Usuário já deve ter uma conta de crédito cadastrada no aplicativo;                  |
+| Pós-condição    | -                                                                                   |
+
+<br/>
+
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário seleciona a opção de visualizar "contas de crédito" no menu principal;            |
+| Passo 2 | O aplicativo exibe uma lista de todas as contas de crédito associadas à conta do usuário;   |
+| Passo 3 | O usuário seleciona a opção de filtragem desejada: por saldo, por limite de crédito ou por data de vencimento da próxima fatura; |
+| Passo 4 | O usuário insere o critério de filtro desejado, como um valor mínimo ou máximo de saldo ou limite de crédito, ou uma data de vencimento específica; |
+| Passo 5 | O aplicativo filtra as contas de crédito com base nos critérios inseridos pelo usuário e exibe apenas as contas que atendem aos critérios de filtro; |
+
+
+## User story
+
+*Persona um, usuário comum.*
+
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como usuário do aplicativo de controle financeiro, eu gostaria de ter a capacidade de filtrar e ordenar minhas contas de crédito para que eu possa visualizar e gerenciar minha situação financeira de forma mais eficiente e eficaz.” | "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+
+<br/>
+
+
+## **RF26-Deletar despesas**
+<br/>
+
+#### Autor: [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) 
+
+#### Revisor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+
+<br/>
+
+
+
+### Caso de uso
+
+Item	          |Descrição
+:----------------:|:--------------------------------:
+Caso de uso	      | Deletar despesas do usuário.
+Resumo            | O usuário deseja deletar as suas despesas.
+Ator principal	  | Usuário
+Pré-condição	  | Existam despesas constando para o usuário em seu histórico.
+Pós-condição	  | O usuário consegue deletar suas despesas da forma desejada.
+
+<br/>
+
+#### Fluxo principal
+
+Passos	  |Descrição
+:--------:|:-----------------------------------------------:
+Passo 01  |O usuário acessa o app.
+Passo 02  |O usuário abre as suas despesas
+Passo 03  |O usuário seleciona a opção de deletar a despesa.
+Passo 04  |O usuário comfirma a opção.
+
+<br/>
+
+#### Opções de usuário
+
+
+Opção          |Descrição
+---------------|----------------
+Deletar despesas|Deleta a despesa.
+<br />
+
+### User Story
+
+Epic | User story|	Critério de aceitação
+------|-------------|--------------------
+Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
+
+<br/>
+
+## **RF27-Editar cartão de crédito**
+
+<br/>
+
+#### Autor: [Mateus Alves Araújo](https://github.com/MateusAlvez)
+#### Revisor: [Ícaro Mesquita Ponce](https://github.com/icarompo)
+
+<br />
+
+### Casos de Uso
+
+
+|Item             | Descrição                                                           |
+| --------------- | -----------------------------------------------------------------   |
+| Caso de uso     | Editar cartão de crédito                                                   |
+| Resumo          | Edição dos dados de cartão de crédito 
+| Ator principal  | Usuário que faz uso da plataforma  -Editar cartão                                 |
+| Ator secundário | Não possui                                                          | 
+| Pré-condição    | Ter acesso ao aplicativo, e ter pelo menos um cartão adicionado.|
+| Pós-condição    | - |
+
+<br />
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                   |
+| ------- | -----------------------------------------                                   |
+| Passo 1 | O usuário acessa o sistema de gerenciamento de cartões de crédito                                         |
+| Passo 2 | O usuário seleciona a opção "Meus cartões de crédito" na página inicial do sistema                                                 |
+| Passo 3 | O usuário localiza o cartão de crédito que deseja editar na lista de cartões e clica no botão "Editar"                                                 |
+| Passo 4 | O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição                                             |
+<br />
+
+
+#### Opções do usuário
+
+
+| Opção         | Descrição                 | Atalho |
+| ------------- | ------------------------- | ------ |
+| Buscar cartão | Clicar no ícone de editar cartão  |        |
+<br />
+
+#### Relatório de usuário
+
+| Campo                      | Descrição                                                             | Formato |
+| -------------------------- | --------------------------------------------------------------------- | ------- |
+| Cartão editado com sucesso | Isso confirma e garante todo êxito na operação de edição de cartão   | Texto   |
+<br />
+
+                                   
+### User Story
+
+**Persona um, usuário comum.**
+
+| Epic | User Story | Critério de aceitação |
+| ----- | --------- | --------------------- |
+|O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
+
+
+<br/>
+
+## **RF28 - Exportar conteúdo**
+
+#### Autor: [Gabriel Tavares dos Santos](https://github.com/GabrielUFT)
+
+#### Revisor: [Luis FilipeBandeira](https://github.com/luisfilipebandeira) 
+
+<br/>
+## Caso de uso
+
+| Item            |Descrição                                                |
+| --------------- | ----------------------------------------------------------------------------------- |
+| Caso de uso     | RF28 - Exportar conteúdo;                                       |
+| Resumo          | Responsável por salvar os dados do aplicativo em um arquivo externo; |
+| Ator principal  | Usuário- Exportar conteúdo;                               |
+| Ator secundário | -                                                                                   |
+| Pré-condição    | Ter acesso ao aplicativo, ter uma conta adicionada, ter dados para serem salvos.;                          |
+| Pós-condição    | -                                                                                   |
+<br/>
+#### Fluxo principal
+
+| Passos  | Descrição                                           |
+| ------- | --------------------------------------------------- |
+| Passo 1 | O usuário faz login no aplicativo             |
+| Passo 2 | O usuário seleciona a opção de configurações no menu principal.|
+| Passo 3 | O usuário clica em exportar conteúdo |
+| Passo 4 | O usuário seleciona o endereço onde o arquivo deve ser salvo|
+| Passo 5 | O usuário clica em confirmar exportação de conteúdo|
+
+
+## User story
+
+**Persona um, usuário comum.**
+
+| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| “Como **um usuário do aplicativo financeiro** eu quero **Exportar conteudo** para que **eu possa ter um arquivo externo contendo meus dados de utilização que possa usar para importar novamente esses dados para o aplicativo.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
