@@ -997,9 +997,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 #### Fluxo alternativo
 | Passos    | Descrição |
-| --------  | --------------------------------------------------------------------------------------------- |                                                      |
-| Passo 1 | O sistema pede para o usuário escolher um período ao qual será mostrato um novo extrato correspondente na home da aplicação.        
-| Passo 2 | O sistema habilita a visualização do extrato referente ao período informado na tela inicial.                                 |
+| --------  | --------------------------------------------------------------------------------------------- |
+| Passo 1 | O sistema pede para o usuário escolher um período ao qual será mostrato um novo extrato correspondente na home da aplicação.                                                |
+| Passo 2 | O sistema habilita a visualização do extrato referente ao período informado na tela inicial.                                                 |
 
 <br/>
 
@@ -1211,7 +1211,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
-## RF21 - Deletar Conta (valor) no mês
+## **RF21 - Deletar Conta (valor) no mês.**
 
 <br/>
 
@@ -1281,7 +1281,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
-## RF22 - Deletar Conta Bancaria
+## **RF22 - Deletar Conta Bancaria**
 
 <br/>
 
@@ -1350,7 +1350,7 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
-## RF23 - Deletar cartão de crédito
+## **RF23 - Deletar cartão de crédito**
 
 <br/>
 
@@ -1470,11 +1470,10 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 <br/>
 
-# **RF25 - Filtrar contas de Crédito**
+## **RF25 - Filtrar contas de Crédito**
 
 #### Autor: [@SophiaMenezes](https://github.com/SophiaMenezes) - Sophia Menezes Pontes
 
----
 
 #### Revisor: [Luan Porto](https://github.com/98loann)
 
@@ -1628,7 +1627,6 @@ Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar min
 
 #### Autor: [Gabriel Tavares dos Santos](https://github.com/GabrielUFT)
 
----
 #### Revisor: [Luis FilipeBandeira](https://github.com/luisfilipebandeira) 
 
 <br/>
