@@ -1,4 +1,4 @@
-# Relatório Especificação de Requisitos fulano
+# Relatório Especificação de Requisitos
 
 ## Engenharia de software 2023.1 | Universidade Federal do Tocantins - Palmas, 2023
 
