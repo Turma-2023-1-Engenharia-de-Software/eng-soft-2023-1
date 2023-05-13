@@ -247,9 +247,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e inserir minhas despesas".| Enquanto "usuário comum" preciso ter minhas despesas salvas na plataforma a fim de ter um controle sobre os meus gastos | Certificar que todos campos estao preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas despesas salvas na plataforma a fim de ter um controle sobre os meus gastos | Certificar que todos campos estao preenchidos
 
 <br/>
 
@@ -1071,9 +1071,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
 
