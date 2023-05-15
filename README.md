@@ -703,9 +703,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 *Persona um, usuário comum.*
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como um usuário do aplicativo de controle financeiro eu quero visualizar minhas contas de crédito para que eu possa ter mais detalhes como saldo, limite de crédito, data de vencimento da próxima fatura.” | "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
 
 <br/>
 
@@ -1506,9 +1506,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 *Persona um, usuário comum.*
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como usuário do aplicativo de controle financeiro, eu gostaria de ter a capacidade de filtrar e ordenar minhas contas de crédito para que eu possa visualizar e gerenciar minha situação financeira de forma mais eficiente e eficaz.” | "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
 
 <br/>
 
