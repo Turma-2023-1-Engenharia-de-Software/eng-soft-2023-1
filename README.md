@@ -391,9 +391,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| -----| --------- | --------------------- |
-| Eu enquanto **usuário comum** quero **poder visualizar o valor das minhas receitas do mês** para **ter um maior controle sobre meus lucros de cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o valor das minhas receitas ou ocultá-las** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o valor das receitas do mês ou ocultá-las, se preferir, utilizando um botão ao lado.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o valor das minhas receitas ou ocultá-las** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o valor das receitas do mês ou ocultá-las, se preferir, utilizando um botão ao lado.
 
 <br/>
 
