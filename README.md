@@ -318,9 +318,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "poder entrar no aplicativo e inserir minhas receitas" | Enquanto "usuário comum" preciso ter minhas dados de receitas salvos na plataforma para ter um controle dos meus gastos| Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas dados de receitas salvos na plataforma para ter um controle dos meus gastos| Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -464,9 +464,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto **usuario comum** quero **visualizar o valor das minhas despesas do mês** para **ter mais controle com meus próximos gastos**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
 
 <br/>
 
@@ -616,9 +616,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus cartões para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -855,9 +855,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
 
 ---
@@ -1006,9 +1006,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic                                   | User Story                                        | Critério de aceitação                                 |
-| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| “Mostrar ou esconder o extrato na home do aplicação.” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                        | Critério de aceitação                                 |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -1132,9 +1132,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder acessar minhas receitas registradas na plataforma para verificar meu histórico de ganhos"| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
 
@@ -1274,9 +1274,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir as contas do mês que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
 
 <br/>
 
@@ -1404,8 +1404,8 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os cartões de crédito que já cadastrei" | Certificar de confirmar a exclusão
 
 <br/>
@@ -1655,6 +1655,6 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	At
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Exportar conteudo** para que **eu possa ter um arquivo externo contendo meus dados de utilização que possa usar para importar novamente esses dados para o aplicativo.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
