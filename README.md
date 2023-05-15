@@ -83,9 +83,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **inserir o meu nome na conta** para que **esse dado pessoal fique salvo na minha conta**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **inserir o meu nome** para que **eu tenha conhecimento de que esta é a minha conta** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**.
 
 
 <br />
@@ -911,9 +911,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **alterar o meu nome da minha conta** para que **meu nome permaneça correto**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. 
 
 
 <br />
