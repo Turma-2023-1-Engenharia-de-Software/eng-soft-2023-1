@@ -955,9 +955,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.**| Certificar que todos campos estao preenchidos |
 
 <br/>
 
