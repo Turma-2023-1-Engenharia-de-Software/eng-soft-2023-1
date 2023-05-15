@@ -539,9 +539,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus bancos para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -1344,9 +1344,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
 
 <br/>
 
