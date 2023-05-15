@@ -173,9 +173,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                   | User Story                                        | Critério de aceitação                                 |
-| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Visualizar meu extrato num determinado período** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato num período específico**, para que **eu tenha um controle melhor das minhas transações.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+|  User Story                                        | Critério de aceitação                                 |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato num período específico**, para que **eu tenha um controle melhor das minhas transações.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
