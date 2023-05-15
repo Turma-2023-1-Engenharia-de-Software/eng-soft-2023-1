@@ -798,9 +798,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+ |----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+ Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -1615,9 +1615,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	At
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-|O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
 
 
 <br/>
