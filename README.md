@@ -658,9 +658,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo de controle financeiro** eu quero **Visualizar minhas contas bancárias** para que **eu possa ter uma visão sobre as contas bancárias que possuo .**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Verificar minhas contas bancárias ** para que **eu tenha uma controle da minha atual situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Verificar minhas contas bancárias ** para que **eu tenha uma controle da minha atual situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -1463,9 +1463,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder sair do aplicativo em qualquer momento"| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
 
 <br/>
 
