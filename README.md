@@ -1204,9 +1204,9 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| -----| --------- | --------------------- |
-| Eu enquanto **usuário comum** quero **poder visualizar o extrato do mês que desejar** para **ter um maior controle sobre minhas finanças em cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
 
 <br/>
 
