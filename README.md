@@ -754,9 +754,9 @@ Editar despesas|Edita a despesa.
 
 ### User Story
 
-Epic | User story|	Critério de aceitação
-------|-------------|--------------------
-Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ator necessita ter despesas para editar.
+User story|	Critério de aceitação
+-------------|--------------------
+Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ator necessita ter despesas para editar.
 
 <br/>
 
@@ -1556,9 +1556,9 @@ Deletar despesas|Deleta a despesa.
 
 ### User Story
 
-Epic | User story|	Critério de aceitação
-------|-------------|--------------------
-Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
+User story|	Critério de aceitação
+-------------|--------------------
+Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
 
 <br/>
 
