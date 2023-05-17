@@ -1515,9 +1515,11 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 
 *Persona um, usuário comum.*
 
+
 | User Story                                                                                                                                                              | Critério de aceitação                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+
 
 <br/>
 
@@ -1530,6 +1532,8 @@ Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ato
 #### Revisor: [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
 
 <br/>
+
+
 
 ### Caso de uso
 
