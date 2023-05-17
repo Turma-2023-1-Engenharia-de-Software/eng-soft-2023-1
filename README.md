@@ -6,6 +6,15 @@
 
 O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 é dividido em etapas. Primeiramente, os integrantes descrevem os casos expandidos de uso e user stories dos requisitos funcionais do sistema. Foi combinado a utilização da plataforma GitHub para gerenciar e controlar as versões do projeto, além do método Kanban para gestão ágil, por meio da ferramenta Trello. Todo o trabalho será desenvolvido no formato markdown.
 
+### Escopo:
+Sistema de gestão financeira pessoal que permita aos usuários gerenciar suas finanças de forma eficiente. O sistema deve permitir que os usuários insiram suas informações pessoais e financeiras, como nome de usuário, contas bancárias e cartões de crédito. Além disso, o sistema deve permitir que os usuários insiram despesas e receitas e visualizem seu saldo e extrato financeiro. Os usuários também devem poder editar e excluir informações inseridas anteriormente, como despesas, receitas, contas bancárias e cartões de crédito.
+
+### Épico 1: Gerenciamento de Usuário -> RF01, RF15, R24
+### Épico 2: Gerenciamento de Contas Bancárias -> RF08, RF10, RF14, RF22
+### Épico 3: Gerenciamento de Cartões de Crédito -> RF09, RF11, RF23, RF27
+### Épico 4: Gerenciamento de Saldo e Extrato -> RF02, RF03, RF06, RF07, RF16, RF17, RF20, RF21, RF25, RF28
+### Épico 5: Gerenciamento de Despesas e Receitas -> RF04, RF05, RF12, RF13, RF18, RF19, RF26
+
 ## Iteração 1
 
 
@@ -18,7 +27,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 - [X] RF07 - Visualizar despesas (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
 - [X] RF08 - Inserir conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
 - [X] RF09 - Inserir cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
-- [X] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
+- [X] RF10 - Visualizar contas bancárias. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/beneX90))
 - [X] RF11 - Visualizar contas de crédito. [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
 - [X] RF12 - Editar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
 - [X] RF13 - Editar receitas. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
@@ -29,20 +38,20 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 ## Iteração 2
 
 
-- [ ] RF15 - Editar nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
-- [ ] RF16 - Esconder saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
-- [ ] RF17 - Esconder extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
-- [ ] RF18 - Buscar despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
-- [ ] RF19 - Buscar receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
-- [ ] RF20 - Visualizar extrato no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
-- [ ] RF21 - Deletar conta (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
-- [ ] RF22 - Deletar conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
-- [ ] RF23 - Deletar cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
-- [ ] RF24 - Sair do aplicativo. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/orgs/Turma-2023-1-Engenharia-de-Software/people/beneX90)
-- [ ] RF25 - Filtrar Contas de Crédito [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
-- [ ] RF26 - Deletar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
-- [ ] RF27 - Editar cartão de crédito. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
-- [ ] RF28 - Exportar conteúdo. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
+- [X] RF15 - Editar nome de usuário. [Benedito Jaime](https://github.com/beneX90) Revisado por [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9)
+- [X] RF16 - Esconder saldo. [Caio Henrique Pinho Santos](https://github.com/CaioHPS3) Revisado por [Diogo Eduardo da Silva](https://github.com/DioguBrabo)
+- [X] RF17 - Esconder extrato. [Diogo Eduardo da Silva](https://github.com/DioguBrabo) Revisado por [Mateus Alves Araujo](https://github.com/MateusAlvez)
+- [X] RF18 - Buscar despesas. [Érick Santos Marçal](https://github.com/erarich) Revisado por [Gabriel Tavares](https://github.com/GabrielUFT)
+- [X] RF19 - Buscar receita. [Ícaro Mesquita Ponce](https://github.com/icarompo) Revisado por [Caio Henrique Pinho Santos](https://github.com/CaioHPS3)
+- [X] RF20 - Visualizar extrato no mês. [Jeová de Sousa Barbosa](https://github.com/jeovazin1v9) Revisado por [João Pedro Noronha](https://github.com/jpnoronhaa)
+- [X] RF21 - Deletar conta (valor) no mês. [João Pedro Noronha](https://github.com/jpnoronhaa) Revisado por [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM)
+- [X] RF22 - Deletar conta bancária. [Luan Porto](https://github.com/98loann) Revisado por [Sophia Menezes Pontes](https://github.com/SophiaMenezes)
+- [X] RF23 - Deletar cartão de crédito. [Luis Filipe Bandeira](https://github.com/luisfilipebandeira) Revisado por [Érick Santos Marçal](https://github.com/erarich)
+- [X] RF24 - Sair do aplicativo. [Marcos Vinicius Barbosa e Silva](https://github.com/eziors) Revisado por [Benedito Jaime](https://github.com/beneX90))
+- [X] RF25 - Filtrar Contas de Crédito [Sophia Menezes Pontes](https://github.com/SophiaMenezes) Revisado por [Luan Porto](https://github.com/98loann)
+- [X] RF26 - Deletar despesas. [Wilque Muriel do Nascimento Coelho](https://github.com/uiuqM) Revisado por [Marcos Vinicius Barbosa e Silva](https://github.com/eziors)
+- [X] RF27 - Editar cartão de crédito. [Mateus Alves Araujo](https://github.com/MateusAlvez) Revisado por [Ícaro Mesquita Ponce](https://github.com/icarompo)
+- [X] RF28 - Exportar conteúdo. [Gabriel Tavares](https://github.com/GabrielUFT) Revisado por [Luis Filipe Bandeira](https://github.com/luisfilipebandeira)
 
 <br/>
 
@@ -83,10 +92,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **inserir o meu nome na conta** para que **esse dado pessoal fique salvo na minha conta**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **inserir o meu nome** para que **eu tenha conhecimento de que esta é a minha conta** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
-
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**.
 
 <br />
 
@@ -128,9 +136,10 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **vizualizar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **vizualizar meu saldo** para que **eu tenha um controle da minha situação financeira.**| Certificar que todos campos estao preenchidos |
+
 
 <br/>
 
@@ -173,9 +182,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                   | User Story                                        | Critério de aceitação                                 |
-| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Visualizar meu extrato num determinado período** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato num período específico**, para que **eu tenha um controle melhor das minhas transações.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+|  User Story                                        | Critério de aceitação                                 |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato num período específico**, para que **eu tenha um controle melhor das minhas transações.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -247,9 +256,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e inserir minhas despesas".| Enquanto "usuário comum" preciso ter minhas despesas salvas na plataforma a fim de ter um controle sobre os meus gastos | Certificar que todos campos estao preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas despesas salvas na plataforma a fim de ter um controle sobre os meus gastos | Certificar que todos campos estao preenchidos
 
 <br/>
 
@@ -318,9 +327,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "poder entrar no aplicativo e inserir minhas receitas" | Enquanto "usuário comum" preciso ter minhas dados de receitas salvos na plataforma para ter um controle dos meus gastos| Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas dados de receitas salvos na plataforma para ter um controle dos meus gastos| Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -391,9 +400,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| -----| --------- | --------------------- |
-| Eu enquanto **usuário comum** quero **poder visualizar o valor das minhas receitas do mês** para **ter um maior controle sobre meus lucros de cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o valor das minhas receitas ou ocultá-las** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o valor das receitas do mês ou ocultá-las, se preferir, utilizando um botão ao lado.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o valor das minhas receitas ou ocultá-las** para que **eu tenha um controle maior da minha situação financeira** | O usário poderá ver o valor das receitas do mês ou ocultá-las, se preferir, utilizando um botão ao lado.
 
 <br/>
 
@@ -464,9 +473,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto **usuario comum** quero **visualizar o valor das minhas despesas do mês** para **ter mais controle com meus próximos gastos**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto um **usuário do aplicativo** eu preciso ser capaz de **visualizar o valor das minhas despesas ou ocultá-las** para que **eu tenha um controle da minha situação financeira**. | O usário poderá ver o valor das despesas do mês ou ocultá-las, se preferir, utilizando um botão ao lado. 
 
 <br/>
 
@@ -539,9 +548,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus bancos para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -616,9 +625,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e cadastrar meus cartões para ter um melhor controle de meus gastos" para "ter mais segurança e uma experiência mais satisfatória" | Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações salvas na plataforma através de uma conta a fim de ter mais praticidade | Certificar que todos campos estão preenchidos
 
 <br/>
 
@@ -658,9 +667,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo de controle financeiro** eu quero **Visualizar minhas contas bancárias** para que **eu possa ter uma visão sobre as contas bancárias que possuo .**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Verificar minhas contas bancárias ** para que **eu tenha uma controle da minha atual situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Verificar minhas contas bancárias ** para que **eu tenha uma controle da minha atual situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -703,9 +712,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.1 �
 
 *Persona um, usuário comum.*
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como um usuário do aplicativo de controle financeiro eu quero visualizar minhas contas de crédito para que eu possa ter mais detalhes como saldo, limite de crédito, data de vencimento da próxima fatura.” | "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| "Enquanto um *usuário do aplicativo de controle financeiro*, eu preciso visualizar minhas contas de crédito e seus respectivos saldos para poder monitorar meus gastos e manter meu orçamento sob controle." | O usuário poderá selecionar uma conta de crédito específica para ver mais detalhes. |
 
 <br/>
 
@@ -754,9 +763,9 @@ Editar despesas|Edita a despesa.
 
 ### User Story
 
-Epic | User story|	Critério de aceitação
-------|-------------|--------------------
-Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ator necessita ter despesas para editar.
+User story|	Critério de aceitação
+-------------|--------------------
+Enquanto ator quando visualizo minhas despesas gostaria de poder edita-las.|	Ator necessita ter despesas para editar.
 
 <br/>
 
@@ -798,9 +807,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Modificar meu saldo atual** para que **eu possa ter uma visão geral da minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+ |----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+ Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Modificar meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -855,9 +864,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto **usuario comum** quero ter o poder de **editar os dados das minhas contas bancárias inseridas** para **poder atualizar, alterar ou corrigir dados inseridos anteriormente**. | Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto um **usuário do aplicativo** eu preciso ser capaz de **editar os dados das minhas contas bancárias** para que **eu possa garantir a veracidade dos dados**. | Certifique-se de que o usuário preencheu corretamente os campos do formulário. 
 
 
 ---
@@ -911,10 +920,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **alterar o meu nome da minha conta** para que **meu nome permaneça correto**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
-
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **alterar o meu nome** para que **eu possa consertar o meu nome, caso eu o tenha errado** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. 
 
 <br />
 
@@ -954,9 +962,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Esconder meu saldo atual** para que **eu possa ter privacidade sobre minha situação financeira em um único lugar.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Esconder meu saldo** para que **eu tenha um controle da minha situação financeira.**| Certificar que todos campos estao preenchidos |
 
 <br/>
 
@@ -1007,9 +1015,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic                                   | User Story                                        | Critério de aceitação                                 |
-| -------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| “Mostrar ou esconder o extrato na home do aplicação.” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
+| User Story                                        | Critério de aceitação                                 |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **visualizar o  meu extrato na home da aplicação**, para que **eu tenha um acesso rápido aos meus gastos num determinado período.** | Certifique-se de que o usuário é capaz de **acessar o aplicativo**. |
 
 <br/>
 
@@ -1071,9 +1079,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder acessar minhas despesas registradas na plataforma para verificar meu histórico de gastos"| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso às minhas despesas registradas na plataforma a fim de visualizar e monitorar meu histórico de gastos | Certificar que a busca retorna as despesas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
 
@@ -1133,9 +1141,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder acessar minhas receitas registradas na plataforma para verificar meu histórico de ganhos"| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso às minhas receitas registradas na plataforma a fim de visualizar e monitorar meu histórico de entradas | Certificar que a busca retorna as receitas corretas de acordo com os filtros selecionados, como data, categoria ou valor.
 
 <br/>
 
@@ -1205,9 +1213,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| -----| --------- | --------------------- |
-| Eu enquanto **usuário comum** quero **poder visualizar o extrato do mês que desejar** para **ter um maior controle sobre minhas finanças em cada mês** | Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto **usuário do aplicativo** preciso ser capaz de **visualizar o extrato do mês que eu necessitar ver** para que **eu tenha um controle maior da minha situação financeira** | O extrato financeiro exibido deve incluir todas as transações que ocorreram durante o mês selecionado, incluindo a data da transação, o valor e uma breve descrição.
 
 <br/>
 
@@ -1275,9 +1283,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir as contas do mês que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
 
 <br/>
 
@@ -1344,9 +1352,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os bancos que já cadastrei" | Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter minhas informações deletadas com garantia de que nada ficou | Certificar de confirmar a exclusão
 
 <br/>
 
@@ -1405,8 +1413,8 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 ### User Story
 
 **Persona um, usuário comum.**
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
 | Eu enquanto "usuário comum" quero "ter o poder de entrar no aplicativo e excluir os cartões de crédito que já cadastrei" | Certificar de confirmar a exclusão
 
 <br/>
@@ -1464,9 +1472,9 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-| Eu, como "usuário comum", quero "poder sair do aplicativo em qualquer momento"| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+| Enquanto "usuário comum" preciso ter acesso a alguma opção de saída do aplicativo. | Certificar de que usuário conseguiu sair do aplicativo.
 
 <br/>
 
@@ -1508,9 +1516,10 @@ Eu como ator gostaria de editar minhas despesas para assim poder acompanhar minh
 *Persona um, usuário comum.*
 
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como usuário do aplicativo de controle financeiro, eu gostaria de ter a capacidade de filtrar e ordenar minhas contas de crédito para que eu possa visualizar e gerenciar minha situação financeira de forma mais eficiente e eficaz.” | "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| "Como usuário do aplicativo de controle financeiro, eu gostaria de filtrar minhas contas de crédito por saldo, limite de crédito e data de vencimento da próxima fatura, para que eu possa visualizar apenas as contas que atendem aos meus critérios de filtro e ter uma melhor compreensão da minha situação financeira em relação a cada conta de crédito." | O aplicativo deve permitir a seleção de uma ou mais opções de filtro para as contas de crédito: saldo, limite de crédito e data de vencimento da próxima fatura. |
+
 
 <br/>
 
@@ -1559,9 +1568,9 @@ Deletar despesas|Deleta a despesa.
 
 ### User Story
 
-Epic | User story|	Critério de aceitação
-------|-------------|--------------------
-Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar minhas economias melhor.|	Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
+User story|	Critério de aceitação
+-------------|--------------------
+Enquanto ator quando visualizo minhas despesas gostaria de poder deleta-las.|	Ator necessita ter despesas para deletar.
 
 <br/>
 
@@ -1619,9 +1628,9 @@ Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar min
 
 **Persona um, usuário comum.**
 
-| Epic | User Story | Critério de aceitação |
-| ----- | --------- | --------------------- |
-|O sistema exibe uma página de edição para o cartão de crédito selecionado, com todos os campos disponíveis para edição|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
+| User Story | Critério de aceitação |
+| --------- | --------------------- |
+|<br> Como usuário, eu quero ser capaz de acessar minha lista de cartões de crédito existentes dentro do sistema e selecionar o cartão que desejo editar. Eu quero ter a opção de editar todas as informações do cartão de crédito, incluindo o número do cartão, nome do titular do cartão, data de vencimento, endereço de cobrança, informações de segurança, limite de crédito e outros detalhes importantes.| Certifique-se de que o usuário é capaz de acessar o aplicativo, ter um cartão já cadastrado
 
 
 <br/>
@@ -1659,6 +1668,6 @@ Eu como ator gostaria de deletar minhas despesas para assim poder acompanhar min
 
 **Persona um, usuário comum.**
 
-| Epic                                                                                                                                    | User Story                                                                                                                                                              | Critério de aceitação                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| “Como **um usuário do aplicativo financeiro** eu quero **Exportar conteudo** para que **eu possa ter um arquivo externo contendo meus dados de utilização que possa usar para importar novamente esses dados para o aplicativo.**” | Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
+| User Story                                                                                                                                                              | Critério de aceitação                                         |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Enquanto **um usuário do aplicativo** eu preciso ser capaz de **Exportar conteúdo** para que **eu possa fazer backup dos meus dados por meio do arquivo gerado da exportação.** | Certifique-se de que o usuário selecionou um **endereço válido** para o salvamento do arquivo. |
