@@ -41,7 +41,7 @@ Instale as dependências
 Inicie o servidor de desenvolvimento
 
 ```bash
-  npx expo start -->
+  npx expo start
 ```
 
 ## Licença
