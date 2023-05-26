@@ -1,11 +1,9 @@
-import { View, Text } from 'react-native';
-import { type } from '@react-navigation/native';
-import { AppStackParamList } from '../../routes/app.routes'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { View, Text, Button } from 'react-native';
+import styles from './styles.js'
 
 export default function Home() {
     return (
-        <View style={{flex: 1, backgroundColor: '#000'}}>
+        <View style={styles.container}>
             <Text>Eu sou um texto!</Text>
         </View>
     );
