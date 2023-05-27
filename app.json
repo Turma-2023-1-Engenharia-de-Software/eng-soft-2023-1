@@ -30,7 +30,7 @@
     },
     "plugins": [
       [
-        "./plugins/withDisableForcedDarkModeAndroid.js",
+        "./plugin/withDisableForcedDarkModeAndroid.js",
         {}
       ]
     ]
