@@ -4,6 +4,7 @@ import styles from './styles.js';
 import FormularioD from './FormularioDespesa.js';
 import FormularioR from './FormularioReceita.js';
 
+
 export default function Adicionar() {
 
     const [opcaoSelecionada, setOpcaoSelecionada] = useState('');
@@ -27,7 +28,7 @@ export default function Adicionar() {
     return (
         <View style={styles.container}>
 
-            <Text>Adcionar Receita ou Despesa ?</Text>
+            <Text>Adicionar Receita ou Despesa ?</Text>
             <TouchableOpacity
                 style={[
                     styles.button,
