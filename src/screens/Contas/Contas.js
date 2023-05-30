@@ -7,9 +7,9 @@ export default function Contas() {
         <View style={styles.container}>
             <ScrollView>
                 <View>
-            {contas.map((conta) => {
+            {contas.map((conta, index) => {
                 return(
-                    <View>
+                    <View key={index}>
                         <Text style={styles.conta_bancaria}>{conta.banco}: {conta.saldo}</Text>
                     </View>
                 );
