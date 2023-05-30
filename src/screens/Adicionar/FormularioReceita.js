@@ -62,7 +62,7 @@ export default function FormularioR() {
             ></TextInput>
             
             <TouchableOpacity
-                style={styles.input}
+                style={styles.inputAdicionar}
                 onPress={handleSubmit} 
             >
                 <Text

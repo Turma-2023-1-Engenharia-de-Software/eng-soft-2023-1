@@ -72,7 +72,7 @@ export default function FormularioD() {
             ></TextInput>
 
             <TouchableOpacity
-                style={styles.input}
+                style={styles.inputAdicionar}
                 onPress={handleSubmit}
             >
                 <Text
