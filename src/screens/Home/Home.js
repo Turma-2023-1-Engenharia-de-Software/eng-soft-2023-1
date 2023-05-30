@@ -51,11 +51,10 @@ export default function Home() {
                 
                     onPress={fecharApp}
                     title="Fechar saveMe"
-                    color="#B50000"
+                    color="#B51000"
                     buttonStyle={{ width: 70 }}
                     
                 />
-                
 
             </View>
         </View>
