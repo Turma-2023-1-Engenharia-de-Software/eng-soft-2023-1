@@ -10,6 +10,9 @@ import AddIcon from './src/assets/add.svg'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+
+import { LogoTitle } from "./src/screens/Home/Home.js"
 
 const Tab = createBottomTabNavigator();
 
@@ -54,6 +57,7 @@ export default function App() {
               headerTitleStyle: {
                 fontWeight: 'bold',
               },
+              headerTitle: (props) => <LogoTitle {...props} /> 
             }}
           />
           <Tab.Screen name="Extrato" component={Extrato} />
