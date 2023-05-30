@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, SafeAreaView} from 'react-native';
 import styles from './styles.js'
 
+
 export default function Contas() {
     return (
        
@@ -46,8 +47,18 @@ const contas =[
     {
         id: '3',
         nome: 'conta 04',
-        banco: 'Banco Itau',
+        id: "0",
+        nome: 'Conta 00',
+        banco: 'Banco do Brasil',
+        saldo: 1002.89,
+        tipo_conta: 'poupança',
+      
+    },
+    {
+        id: "1", banco: 'Banco Itau',
         saldo: 69.85,
         tipo_conta: 'Corrente', 
-    }
+    },
+
 ]
+ 
