@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 80,
+        paddingTop: 15,
         margin: 5,
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -19,7 +19,7 @@ export default styles = StyleSheet.create({
     
     button:{
         flex: 1,
-        backgroundColor: 'blue',
+        backgroundColor: '#1a7bd5',
         padding: 10,
         margin: 10,
         borderRadius: 10,
@@ -28,7 +28,7 @@ export default styles = StyleSheet.create({
     },
 
     inputAdicionar: {
-        backgroundColor: 'blue',
+        backgroundColor: '#1a7bd5',
         color: 'white',
         alignItems: 'center',
         padding: 10,
@@ -45,12 +45,27 @@ export default styles = StyleSheet.create({
         color: 'white',
     },
 
+    label: {
+        paddingTop: 50,
+        fontSize: 30,
+        alignItems: 'center',
+    },
+
+    text: {
+        fontSize: 20,
+    },
+
     input: {
-       height: 49,
-       margin: 12,
-       borderWidth: 1,
-       borderRadius: 10,
-       padding: 10, 
+        paddingVertical: 15,
+        paddingHorizontal: 20,
+        fontSize: 16,
+        fontWeight: 'bold',
+        borderRadius: 10,
+        borderColor: 'black',
+        borderWidth:1,
+        marginVertical: 5,
+        marginHorizontal: 1,
+        backgroundColor: '#D9D9D9',
     },
 
 });

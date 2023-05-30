@@ -35,8 +35,12 @@ export default function Adicionar() {
                 <View style={styles.handleOpcaoSelecionada}>
                     {exibirForm()}
                 </View>
+
+                <View style={styles.label}> 
+
+                    <Text style={styles.text}>Selecione o tipo da transação </Text>
+                </View>
                 <View style={styles.fixToText}>
-                    
                     <TouchableOpacity
                         style={[styles.button,
                         opcaoSelecionada === 'Receita' && styles.buttonSelecionado,
