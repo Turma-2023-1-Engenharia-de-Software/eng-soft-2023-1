@@ -1,9 +1,20 @@
-import { View, Text, Button, TouchableOpacity, TextInput } from 'react-native';
+import { BackHandler, Alert, View, Text, Button, TouchableOpacity, TextInput } from 'react-native';
 import styles from './styles.js'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState, useEffect } from 'react';
 
 const defaultName = 'unknown'
+
+const fecharApp = () => {
+  Alert.alert(
+      'Fechar App',
+      'Você deseja sair do app?',
+     [
+        {text: 'Não', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'Sim', onPress: () => BackHandler.exitApp()},
+      ],
+      { cancelable: false });
+}
 
 export function LogoTitle() {
   const [nomeUsuario, setNomeUsuario] = useState('');
@@ -104,6 +115,14 @@ export default function Home() {
             <Text style={styles.text}>R$ 20,00</Text>
           </View>
         </View>
+        <Button
+                
+                    onPress={fecharApp}
+                    title="Fechar saveMe"
+                    color="#B51000"
+                    buttonStyle={{ width: 70 }}
+                    
+                />
       </View>
     </View>
   );
