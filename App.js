@@ -13,34 +13,16 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator                
           screenOptions={{
-              headerShown:true, 
-              tabBarActiveTintColor: 'white',
-              tabBarActiveBackgroundColor: '#757de8',
-              tabBarInactiveTintColor: 'white',
-              tabBarStyle: {
-                backgroundColor: '#2196f3',
-                color: 'white',
-              }
+              headerShown:false
           }}
           initialRouteName='Home'
       >
-          <Tab.Screen 
-            name="Home" 
-            component={Home} 
-            options={{
-              headerStyle: {
-                backgroundColor: '#2196f3',
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-            }}
-          />
+          <Tab.Screen name="Home" component={Home} />
           <Tab.Screen name="Extrato" component={Extrato} />
           <Tab.Screen name="Contas" component={Contas} />
           <Tab.Screen name="Adicionar" component={Adicionar} />
       </Tab.Navigator>
   </NavigationContainer>
+
   );
 }

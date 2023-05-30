@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native';
+import { BackHandler, Alert, View, Text, Button } from 'react-native';
 import styles from './styles.js'
 import { useState } from 'react';
 
@@ -16,9 +16,21 @@ export default function Home() {
         saldo = <View style={styles.rectangle}></View>
     }
 
+    const fecharApp = () => {
+        Alert.alert(
+            'Fechar App',
+            'Você deseja sair do app?',
+           [
+              {text: 'Não', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              {text: 'Sim', onPress: () => BackHandler.exitApp()},
+            ],
+            { cancelable: false });
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.container}> 
+
                 <Button
                     title="Exportar para PDF"
                     color="#841504"
@@ -35,7 +47,18 @@ export default function Home() {
                         <Text style={styles.text}>R$ 20,00</Text>
                     </View>
                 </View>
+                <Button
+                
+                    onPress={fecharApp}
+                    title="Fechar saveMe"
+                    color="#B50000"
+                    buttonStyle={{ width: 70 }}
+                    
+                />
+                
+
             </View>
         </View>
     );
 }
+
