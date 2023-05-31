@@ -2,16 +2,31 @@ import Home from "./src/screens/Home/Home.js"
 import Extrato from "./src/screens/Extrato/Extrato"
 import Contas from "./src/screens/Contas/Contas"
 import Adicionar from "./src/screens/Adicionar/Adicionar"
+import DetalheExtrato from "./src/screens/DetalheExtrato/DetalheExtrato"
 
 import HomeIcon from './src/assets/home.svg'
 import ExtratoIcon from './src/assets/extrato.svg'
 import ContasIcon from './src/assets/contas.svg'
 import AddIcon from './src/assets/add.svg'
+import { createStackNavigator } from "@react-navigation/stack";
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+
+import { LogoTitle } from "./src/screens/Home/Home.js"
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function ExtratoStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Extrato" component={Extrato} />
+      <Stack.Screen name="DetalheExtrato" component={DetalheExtrato} />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
   return (
@@ -54,9 +69,10 @@ export default function App() {
               headerTitleStyle: {
                 fontWeight: 'bold',
               },
+              headerTitle: (props) => <LogoTitle {...props} /> 
             }}
           />
-          <Tab.Screen name="Extrato" component={Extrato} />
+          <Tab.Screen name="Extrato" component={ExtratoStack} />
           <Tab.Screen name="Contas" component={Contas} />
           <Tab.Screen name="Adicionar" component={Adicionar} />
       </Tab.Navigator>
