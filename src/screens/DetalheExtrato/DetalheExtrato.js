@@ -1,4 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
+
 import styles from "./styles.js";
 
 export default function DetalheExtrato({ route }) {

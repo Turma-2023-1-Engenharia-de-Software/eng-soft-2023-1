@@ -6,7 +6,7 @@ import Home from "../screens/Home/Home.js";
 import Contas from "../screens/Contas/Contas";
 import Adicionar from "../screens/Adicionar/Adicionar";
 import { ExtratoRoute } from "./Extrato.js";
-import { LogoTitle } from "../screens/Home/Home.js";
+import { LogoTitle } from "../components/LogoTitle.js";
 
 import HomeIcon from "../assets/home.svg";
 import ExtratoIcon from "../assets/extrato.svg";
