@@ -25,10 +25,18 @@ export default styles = StyleSheet.create({
         width: 50,
         fontWeight: 'bold',
         borderRadius: 10,
-        
-        
-        
-
-    }
-
+    },
+    button: {
+        position: 'absolute',
+        width: 70,
+        height: 70,
+        borderRadius: 100 / 2,
+        alignItems: 'center',
+        alignContent: 'center',
+        justifyContent: 'center',
+        right: 10,
+        bottom: 10,
+        backgroundColor: '#1a7bd5',
+        borderColor: 'blue',
+      },
 });

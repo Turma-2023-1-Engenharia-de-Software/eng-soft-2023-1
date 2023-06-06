@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-
-import {
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
-
+import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
+import AddIcon from "../../assets/add.svg"
+import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
+import Adicionar from "./AdicionarContaBancaria";
+
+
+
+
+
 
 class Contas extends Component {
   constructor(props) {
@@ -53,6 +55,7 @@ class Contas extends Component {
       ],
     };
   }
+  
 
   onDelete = (id) => {
     this.setState((prevState) => {
@@ -61,9 +64,12 @@ class Contas extends Component {
     });
   };
 
+  
+
   render() {
     const { contas } = this.state;
-
+    //Stack = createStackNavigator();
+    //const navigation = useNavigation();
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -80,11 +86,17 @@ class Contas extends Component {
                   >
                     <Text>Delete</Text>
                   </TouchableOpacity>
+                  
                 </View>
               );
             })}
           </View>
         </ScrollView>
+        <TouchableOpacity style={styles.button}
+            onPress={() =>
+            useNavigation.navigate({ Adicionar })}>
+            <AddIcon width={24} height={24}/>
+          </TouchableOpacity>
       </View>
     );
   }
