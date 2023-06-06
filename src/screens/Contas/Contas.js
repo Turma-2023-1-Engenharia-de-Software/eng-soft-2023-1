@@ -6,7 +6,7 @@ import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
 import Adicionar from "./AdicionarContaBancaria";
 
-
+//FALTA DAR VIDA PRO BOTAO
 
 
 
