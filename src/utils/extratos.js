@@ -66,7 +66,7 @@ export const extratos = [
     id: "7",
     nome: "conta 04",
     banco: "Banco Itau",
-    valor: -69.85,
+    valor: -469.85,
     tipo: "pagamento",
     tipo_conta: "Corrente",
     natureza: "Transferência",

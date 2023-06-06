@@ -9,6 +9,8 @@ import {
 } from "react-native";
 
 import styles from "./styles.js";
+import { calcularSomaValores } from '../../utils/calculaSaldo.js';
+import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
 const fecharApp = () => {
   Alert.alert(
@@ -29,12 +31,15 @@ const fecharApp = () => {
 export default function Home() {
   const [saldoEscondido, esconderSaldo] = useState(false);
 
+  const extrato = useExtratoStore((state) => state.extrato);
+  let saldoValor = calcularSomaValores(extrato);
+
   const onPressEsconderSaldo = () => {
     esconderSaldo(!saldoEscondido);
   };
 
   if (saldoEscondido === false) {
-    saldo = <Text style={styles.text}>R$ 100,00</Text>;
+    saldo = <Text style={styles.text}>R$ {saldoValor.toFixed(2)}</Text>;
   } else {
     saldo = <View style={styles.rectangle}></View>;
   }
