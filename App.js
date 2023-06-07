@@ -3,6 +3,7 @@ import Extrato from "./src/screens/Extrato/Extrato"
 import Contas from "./src/screens/Contas/Contas"
 import Adicionar from "./src/screens/Adicionar/Adicionar"
 import DetalheExtrato from "./src/screens/DetalheExtrato/DetalheExtrato"
+import DetalheContaBancaria from "./src/screens/DetalheContaBancaria/DetalheContaBancaria.js"
 
 import HomeIcon from './src/assets/home.svg'
 import ExtratoIcon from './src/assets/extrato.svg'
@@ -26,6 +27,17 @@ function ExtratoStack() {
       <Stack.Screen name="DetalheExtrato" component={DetalheExtrato} />
     </Stack.Navigator>
   );
+}
+
+function HomeStack() {
+  return(
+    <Stack.Navigator
+      screenOptions={{headerShown: true}}
+    >
+      <Stack.Screen name="Home" component={Home}/>
+      <Stack.Screen name="DetalheContaBancaria" component={DetalheContaBancaria}/>
+    </Stack.Navigator>
+  )
 }
 
 export default function App() {
@@ -60,7 +72,7 @@ export default function App() {
       >
           <Tab.Screen 
             name="Home" 
-            component={Home} 
+            component={HomeStack} 
             options={{
               headerStyle: {
                 backgroundColor: '#2196f3',

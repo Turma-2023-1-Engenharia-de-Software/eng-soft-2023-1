@@ -2,6 +2,7 @@ import { BackHandler, Alert, View, Text, Button, TouchableOpacity, TextInput } f
 import styles from './styles.js'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState, useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const defaultName = 'unknown'
 
@@ -86,6 +87,8 @@ export function LogoTitle() {
 export default function Home() {
   const [saldoEscondido, esconderSaldo] = useState(false);
 
+  const navigation = useNavigation();
+
   const onPressEsconderSaldo = () => {
     esconderSaldo(!saldoEscondido)
   }
@@ -102,6 +105,12 @@ export default function Home() {
         <Button
           title="Exportar para PDF"
           color="#841504"
+        />
+        <Button
+          onPress={() => navigation.navigate("DetalheContaBancaria")}
+          title="Editar conta bancária"
+          color="#2196f3"
+          buttonStyle={{ width: 70 }}
         />
         <Button
           onPress={onPressEsconderSaldo}
