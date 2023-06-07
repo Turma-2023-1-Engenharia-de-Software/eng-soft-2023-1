@@ -4,11 +4,11 @@ import { useNavigation } from "@react-navigation/native";
 import AddIcon from "../../assets/add.svg"
 import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
-import Adicionar from "../AdicionarContaBancaria/AdicionarContaBancaria";
+import AdicionarContaBancaria from "./AdicionarContaBancaria";
+import { AdicionarConta } from "../../routes/AdicionarConta"
 
-//FALTA DAR VIDA PRO BOTAO
 
-
+const Stack = createStackNavigator();
 
 
 class Contas extends Component {
@@ -64,12 +64,14 @@ class Contas extends Component {
     });
   };
 
-  
+  /*navigateToAdicionarConta = () => {
+    this.props.navigation.navigate("AdicionarConta", {Contas});
+  };
+  */
 
   render() {
     const { contas } = this.state;
-    //Stack = createStackNavigator();
-    //const navigation = useNavigation();
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -86,17 +88,19 @@ class Contas extends Component {
                   >
                     <Text>Delete</Text>
                   </TouchableOpacity>
-                  
                 </View>
               );
             })}
           </View>
         </ScrollView>
-        <TouchableOpacity style={styles.button}
-            onPress={() =>
-            useNavigation.navigate({ Adicionar })}>
-            <AddIcon width={24} height={24}/>
-          </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            navigation.navigate("AdicionarConta", {AdicionarConta})
+          }
+        >
+          <AddIcon width={24} height={24} />
+        </TouchableOpacity>
       </View>
     );
   }
