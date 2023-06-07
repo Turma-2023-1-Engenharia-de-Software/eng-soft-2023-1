@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import AddIcon from "../../assets/add.svg"
 import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
-import Adicionar from "./AdicionarContaBancaria";
+import Adicionar from "../AdicionarContaBancaria/AdicionarContaBancaria";
 
 //FALTA DAR VIDA PRO BOTAO
 
