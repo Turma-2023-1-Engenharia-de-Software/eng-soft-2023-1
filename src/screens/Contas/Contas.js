@@ -4,10 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import AddIcon from "../../assets/add.svg"
 import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
-import AdicionarContaBancaria from "./AdicionarContaBancaria";
-import { AdicionarConta } from "../../routes/AdicionarConta"
-
-
 const Stack = createStackNavigator();
 
 
@@ -96,7 +92,7 @@ class Contas extends Component {
         <TouchableOpacity
           style={styles.button}
           onPress={() =>
-            navigation.navigate("AdicionarConta", {AdicionarConta})
+            navigation.navigate("AdicionarContaBancaria")
           }
         >
           <AddIcon width={24} height={24} />

@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./styles";
 
-function AdicionarCartao() {
+function AdicionarContaBancaria() {
   const [nome, setNome] = useState("");
   const [banco, setbanco] = useState("");
   const [saldo, setsaldo] = useState("");
@@ -36,7 +36,7 @@ function AdicionarCartao() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Adicionar Cartão de Crédito</Text>
+      <Text style={styles.heading}>Adicionar Conta Bancaria</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome"
@@ -66,4 +66,4 @@ function AdicionarCartao() {
   );
 }
 
-export default AdicionarCartao;
+export default AdicionarContaBancaria;
