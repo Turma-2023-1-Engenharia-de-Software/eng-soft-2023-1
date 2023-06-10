@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import { View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
-import styles from './styles.js';
+import React, { Component } from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
+import AddIcon from "../../assets/add.svg";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import styles from "./styles.js";
+const Stack = createStackNavigator();
 
 class Contas extends Component {
   constructor(props) {
@@ -9,54 +13,56 @@ class Contas extends Component {
       contas: [
         {
           id: "0",
-          nome: 'Conta 00',
-          banco: 'Banco do Brasil',
+          nome: "Conta 00",
+          banco: "Banco do Brasil",
           saldo: 1002.89,
-          tipo_conta: 'poupança',
+          tipo_conta: "poupança",
         },
         {
           id: "1",
-          nome: 'Conta 01',
-          banco: 'Bradesco',
+          nome: "Conta 01",
+          banco: "Bradesco",
           saldo: 322.89,
-          tipo_conta: 'conta corrente'
+          tipo_conta: "conta corrente",
         },
         {
-          id: '2',
-          nome: 'conta 03',
-          banco: 'Caixa Econômica Federal',
+          id: "2",
+          nome: "conta 03",
+          banco: "Caixa Econômica Federal",
           saldo: 124.54,
-          tipo_conta: 'Corrente',
+          tipo_conta: "Corrente",
         },
         {
-          id: '3',
-          nome: 'conta 04',
+          id: "3",
+          nome: "conta 04",
           id: "4",
-          nome: 'Conta 00',
-          banco: 'Banco do Brasil',
+          nome: "Conta 00",
+          banco: "Banco do Brasil",
           saldo: 1002.89,
-          tipo_conta: 'poupança',
+          tipo_conta: "poupança",
         },
         {
           id: "5",
-          banco: 'Banco Itau',
+          banco: "Banco Itau",
           saldo: 69.85,
-          tipo_conta: 'Corrente',
+          tipo_conta: "Corrente",
         },
       ],
     };
   }
 
   onDelete = (id) => {
-    this.setState(prevState => {
-      const updatedContas = prevState.contas.filter((conta) => conta.id !== id);
+    this.setState((prevState) => {
+      const updatedContas = prevState.contas.filter(
+        (conta) => conta.id !== id
+      );
       return { contas: updatedContas };
     });
   };
 
   render() {
     const { contas } = this.state;
-
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -78,6 +84,12 @@ class Contas extends Component {
             })}
           </View>
         </ScrollView>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("AdicionarContaBancaria")}
+        >
+          <AddIcon width={24} height={24} />
+        </TouchableOpacity>
       </View>
     );
   }
