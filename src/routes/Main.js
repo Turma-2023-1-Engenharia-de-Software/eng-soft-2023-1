@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Home from "../screens/Home/Home.js";
-import Contas from "../screens/Contas/Contas";
+import {AdicionarRoute} from "./AdicionarConta.js";
 import Adicionar from "../screens/Adicionar/Adicionar";
 import { ExtratoRoute } from "./Extrato.js";
 import { LogoTitle } from "../components/LogoTitle.js";
@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator();
 export function MainRoute() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
+      <Tab.Navigator 
         screenOptions={({ route }) => ({
           headerShown: true,
           tabBarActiveTintColor: "white",
@@ -60,7 +60,7 @@ export function MainRoute() {
           }}
         />
         <Tab.Screen name="Extrato" component={ExtratoRoute} />
-        <Tab.Screen name="Contas" component={Contas} />
+        <Tab.Screen name="Contas" component={AdicionarRoute} />
         <Tab.Screen name="Adicionar" component={Adicionar} />
       </Tab.Navigator>
     </NavigationContainer>
