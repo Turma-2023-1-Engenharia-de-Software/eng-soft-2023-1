@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
 import AddIcon from "../../assets/add.svg";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
@@ -75,6 +74,14 @@ class Contas extends Component {
                   </Text>
                   <TouchableOpacity
                     style={styles.btnStyle}
+                    onPress={() =>
+                      navigation.navigate("DetalheContaBancaria", { conta })
+                    }
+                  >
+                    <Text>Editar</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.btnStyle}
                     onPress={() => this.onDelete(conta.id)}
                   >
                     <Text>Delete</Text>
@@ -86,7 +93,7 @@ class Contas extends Component {
         </ScrollView>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("AdicionarContaBancaria")}
+          onPress={() => navigation.navigate("DetalheContaBancaria")}
         >
           <AddIcon width={24} height={24} />
         </TouchableOpacity>
