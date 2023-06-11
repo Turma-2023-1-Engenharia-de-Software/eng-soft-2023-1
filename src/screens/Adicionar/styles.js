@@ -42,7 +42,7 @@ export default styles = StyleSheet.create({
   },
 
   buttonLabel: {
-    color: "white",
+    color: "#000",
   },
 
   label: {
@@ -66,5 +66,20 @@ export default styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
+  },
+
+ // Essa parte eu fiz tentando arrumar os botoes mais não conseguir se quiser apagar 
+
+  buttonSelecionadoR: {
+    backgroundColor: "#00FF00",
+    paddingVertical: 35,
+    paddingHorizontal: 20,
+    color: "#000",
+  },
+  buttonSelecionadoD: {
+    backgroundColor: "#ff0000",
+    paddingVertical: 35,
+    paddingHorizontal: 20,
+    color: "#000",
   },
 });
