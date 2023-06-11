@@ -21,7 +21,7 @@ export default function FormularioD() {
       conta === "" ||
       date === "" ||
       tipo === "" ||
-      opcaoSelecionada === ""
+      opcaoSelecionada === null
     ) {
       alert("Preencha todos os campos");
       return;
@@ -36,6 +36,15 @@ export default function FormularioD() {
       opcaoSelecionada,
     };
     console.log(data);
+
+    setNome('');
+    setValor('');
+    setTipo('');
+    setConta('');
+    setDate('');
+    setOpcaoSelecionada(null);
+
+    Alert.alert('Sucesso', 'Os dados foram salvos com sucesso!');
   }
 
   return (
