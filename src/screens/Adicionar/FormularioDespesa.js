@@ -3,19 +3,25 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
 
 export default function FormularioD() {
+
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("");
   const [conta, setConta] = useState("");
   const [date, setDate] = useState("");
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
 
+  const handleOpcaoSelecionada = (opcao) => {
+    setOpcaoSelecionada(opcao);
+  };
   function handleSubmit() {
     if (
       nome === "" ||
       valor === "" ||
       conta === "" ||
       date === "" ||
-      tipo === ""
+      tipo === "" ||
+      opcaoSelecionada === ""
     ) {
       alert("Preencha todos os campos");
       return;
@@ -27,6 +33,7 @@ export default function FormularioD() {
       tipo,
       conta,
       date,
+      opcaoSelecionada,
     };
     console.log(data);
   }
@@ -63,6 +70,27 @@ export default function FormularioD() {
         placeholder="Data"
         onChangeText={setDate}
       ></TextInput>
+
+      <TouchableOpacity
+        style={[
+          styles.button,
+          opcaoSelecionada === "Receita", styles.buttonSelecionadoR,
+        ]}
+        onPress={() => handleOpcaoSelecionada("receita")}
+      >
+        <Text style={styles.buttonLabel}>Receita</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[
+          styles.button,
+          opcaoSelecionada === "Despesa",
+           styles.buttonSelecionadoD,
+        ]}
+        onPress={() => handleOpcaoSelecionada("despesa")}
+      >
+        <Text style={styles.buttonLabel}>Despesa</Text>
+      </TouchableOpacity>
+
 
       <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Adicionar</Text>
