@@ -6,7 +6,6 @@ import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
 import styles from "./styles.js";
 const Stack = createStackNavigator();
 
-
 class Contas extends Component {
   constructor(props) {
     super(props);
@@ -94,12 +93,23 @@ class Contas extends Component {
           onPress={() =>
             navigation.navigate("AdicionarContaBancaria")
           }
-        >
+       >
           <AddIcon width={24} height={24} />
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.button, {marginRight :300}]}
+          onPress={() =>
+            navigation.navigate("AdicionarCartaoCredito")
+          }
+       >
+          <AddIcon width={24} height={24} />
+        </TouchableOpacity>
+
       </View>
     );
   }
 }
+
 
 export default Contas;
