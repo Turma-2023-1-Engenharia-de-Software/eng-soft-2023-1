@@ -3,12 +3,12 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./styles";
 
-function AdicionarCartao() {
+function AdicionarCartaoCredito() {
   const [nome, setNome] = useState("");
   const [numero, setNumero] = useState("");
   const [vencimento, setVencimento] = useState("");
 
-  const handleAdicionarCartao = async () => {
+  const handleAdicionarCartaoCredito = async () => {
     if (nome && numero && vencimento) {
       const cartao = {
         nome,
@@ -53,9 +53,9 @@ function AdicionarCartao() {
         value={vencimento}
         onChangeText={(text) => setVencimento(text)}
       />
-      <Button title="Adicionar" onPress={handleAdicionarCartao} />
+      <Button title="Adicionar" onPress={handleAdicionarCartaoCredito} />
     </View>
   );
 }
 
-export default AdicionarCartao;
+export default AdicionarCartaoCredito;
