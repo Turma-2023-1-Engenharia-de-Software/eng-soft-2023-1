@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import styles from "./styles.js";
 
+
 export default function FormularioEdicao({ item, onSave }) {
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
@@ -17,7 +18,14 @@ export default function FormularioEdicao({ item, onSave }) {
     setConta(item.conta);
     setDate(item.date);
     setOpcaoSelecionada(item.opcaoSelecionada);
+
+    (async () => {
+      const data = await getReceitasEDespesas();
+      console.log(data)
+    })()
   }, [item]);
+
+  
 
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
