@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
+import { addReceitasEDespesas } from "../../utils/storage.js";
 
 export default function FormularioD() {
 
@@ -35,16 +36,7 @@ export default function FormularioD() {
       date,
       opcaoSelecionada,
     };
-    console.log(data);
-
-    setNome('');
-    setValor('');
-    setTipo('');
-    setConta('');
-    setDate('');
-    setOpcaoSelecionada(null);
-
-    Alert.alert('Sucesso', 'Os dados foram salvos com sucesso!');
+    addReceitasEDespesas(data);
   }
 
   return (

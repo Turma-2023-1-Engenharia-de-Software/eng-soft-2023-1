@@ -20,7 +20,7 @@ export default function FormularioR() {
       conta,
       date,
     };
-    console.log(data);
+    addReceitasEDespesas(data);
   }
 
   return (
