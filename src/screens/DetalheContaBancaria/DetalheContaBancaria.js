@@ -9,15 +9,17 @@ const DetalheContaBancaria = ({ route }) => {
   const [saldo, setSaldo] = useState(conta.saldo.toString());
   const [tipo_conta, setTipoConta] = useState(conta.tipo_conta);
 
-  const handleEditarConta = () => {
+  const handleEditarConta = async () => {
     if (nome && banco && saldo && tipo_conta) {
       const contaEditada = {
         id: conta.id,
-        nome,
+        nome: conta.nome,
         banco,
         saldo: parseFloat(saldo),
         tipo_conta,
       };
+    };
+    };
  return (
     <View style={styles.container}>
       <Text style={styles.heading}>Editar Conta Bancária</Text>
@@ -49,8 +51,4 @@ const DetalheContaBancaria = ({ route }) => {
     </View>
   );
 };
-      console.log("Conta editada com sucesso!");
-    }
-  };
-
 export default DetalheContaBancaria;
