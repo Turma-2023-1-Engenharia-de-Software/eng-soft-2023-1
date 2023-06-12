@@ -1,17 +1,41 @@
 import React, { useState, useEffect } from "react";
+import styles from "../screens/Home/styles";
 
 import {
   View,
   Text,
   TouchableOpacity,
   TextInput,
+  Button,
+  Alert,
 } from "react-native";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import AppIcon from "../assets/saveme.svg";
+import ExitIcon from "../assets/exit.svg";
+import ShowIcon from "../assets/show.svg";
+
 const defaultName = "unknown";
 
-export function LogoTitle() {
+const fecharApp = () => {
+  Alert.alert(
+    "Fechar App",
+    "Você deseja sair do app?",
+    [
+      {
+        text: "Não",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel",
+      },
+      { text: "Sim", onPress: () => BackHandler.exitApp() },
+    ],
+    { cancelable: false }
+  );
+};
+
+
+export function LogoTitle({ onToggleSaldo }) {
   const [nomeUsuario, setNomeUsuario] = useState("");
   const [nomeUsuarioEditavel, setNomeUsuarioEditavel] = useState(false);
 
@@ -68,10 +92,28 @@ export function LogoTitle() {
   } else {
     nomeUsuarioComponente = (
       <TouchableOpacity onPress={editarNomeUsuario}>
-        <Text style={styles.text}>Olá, mestre {nomeUsuario}!</Text>
+        <Text style={styles.text}>Olá, {nomeUsuario}!</Text>
       </TouchableOpacity>
     );
   }
+  return<View style={{ flexDirection: 'row', justifyContent: 'space-between',width:'100%' }}>
 
-  return <View>{nomeUsuarioComponente}</View>;
+      <View style = {{flexDirection: 'row',justifyContent: 'space-between', width:'45%'}}>
+      <AppIcon width={24} height={24} color={'#000000'}/>
+      {nomeUsuarioComponente}
+      </View>
+
+      <View style={{ flexDirection: 'row',justifyContent: 'space-between', width:'20%'}}>
+
+      <TouchableOpacity onPress={onToggleSaldo} style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <ShowIcon width={24} height={24} />
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={fecharApp} style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <ExitIcon width={24} height={24} />
+      </TouchableOpacity>
+
+      </View>
+
+    </View>;
 }

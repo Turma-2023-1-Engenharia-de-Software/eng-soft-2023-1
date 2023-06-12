@@ -12,47 +12,19 @@ import styles from "./styles.js";
 import { calcularSomaValores } from '../../utils/calculaSaldo.js';
 import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
-const fecharApp = () => {
-  Alert.alert(
-    "Fechar App",
-    "Você deseja sair do app?",
-    [
-      {
-        text: "Não",
-        onPress: () => console.log("Cancel Pressed"),
-        style: "cancel",
-      },
-      { text: "Sim", onPress: () => BackHandler.exitApp() },
-    ],
-    { cancelable: false }
-  );
-};
-
-export default function Home() {
-  const [saldoEscondido, esconderSaldo] = useState(false);
-
+export default function Home({saldoVisivel}) {
   const extrato = useExtratoStore((state) => state.extrato);
   let saldoValor = calcularSomaValores(extrato);
 
-  const onPressEsconderSaldo = () => {
-    esconderSaldo(!saldoEscondido);
-  };
-
-  if (saldoEscondido === false) {
+  if (saldoVisivel === false) {
     saldo = <Text style={styles.text}>R$ {saldoValor.toFixed(2)}</Text>;
   } else {
     saldo = <View style={styles.rectangle}></View>;
   }
-
   return (
     <View style={styles.container}>
       <View style={styles.container}>
         <Button title="Exportar para PDF" color="#841504" />
-        <Button
-          onPress={onPressEsconderSaldo}
-          title="Esconder Saldo"
-          color="#841584"
-        />
         <View style={styles.innerContainer}>
           {saldo}
           <View style={styles.receitaDespesaMensal}>
@@ -60,12 +32,6 @@ export default function Home() {
             <Text style={styles.text}>R$ 20,00</Text>
           </View>
         </View>
-        <Button
-          onPress={fecharApp}
-          title="Fechar saveMe"
-          color="#B51000"
-          buttonStyle={{ width: 70 }}
-        />
       </View>
     </View>
   );

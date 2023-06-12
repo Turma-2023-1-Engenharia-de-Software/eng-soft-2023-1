@@ -18,15 +18,7 @@ const DetalheContaBancaria = ({ route }) => {
         saldo: parseFloat(saldo),
         tipo_conta,
       };
-
-      // Lógica para salvar as alterações da conta
-      // (insira a lógica de salvamento aqui)
-
-      console.log("Conta editada com sucesso!");
-    }
-  };
-
-  return (
+ return (
     <View style={styles.container}>
       <Text style={styles.heading}>Editar Conta Bancária</Text>
       <TextInput
@@ -57,5 +49,8 @@ const DetalheContaBancaria = ({ route }) => {
     </View>
   );
 };
+      console.log("Conta editada com sucesso!");
+    }
+  };
 
 export default DetalheContaBancaria;

@@ -31,7 +31,7 @@ export default styles = StyleSheet.create({
     backgroundColor: "#1a7bd5",
     color: "white",
     alignItems: "center",
-    padding: 10,
+    padding: 15,
     margin: 10,
     borderRadius: 10,
     justifyContent: "center",
@@ -41,9 +41,6 @@ export default styles = StyleSheet.create({
     color: "white",
   },
 
-  buttonLabel: {
-    color: "#000",
-  },
 
   label: {
     paddingTop: 50,
@@ -68,18 +65,28 @@ export default styles = StyleSheet.create({
     backgroundColor: "#D9D9D9",
   },
 
- // Essa parte eu fiz tentando arrumar os botoes mais não conseguir se quiser apagar 
+  buttonRD: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+
+  },
 
   buttonSelecionadoR: {
-    backgroundColor: "#00FF00",
-    paddingVertical: 35,
-    paddingHorizontal: 20,
+    backgroundColor: "green",
+    paddingVertical: 15,
+    paddingHorizontal: 10,
     color: "#000",
   },
+
   buttonSelecionadoD: {
-    backgroundColor: "#ff0000",
-    paddingVertical: 35,
-    paddingHorizontal: 20,
+    backgroundColor: "red",
+    paddingVertical: 15,
+    paddingHorizontal: 10,
     color: "#000",
   },
+
+  buttonLabel: {
+    color: "white",
+  },
+
 });
