@@ -12,6 +12,10 @@ import {
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import AppIcon from "../assets/saveme.svg";
+import ExitIcon from "../assets/exit.svg";
+import ShowIcon from "../assets/show.svg";
+
 const defaultName = "unknown";
 
 const fecharApp = () => {
@@ -92,10 +96,24 @@ export function LogoTitle({ onToggleSaldo }) {
       </TouchableOpacity>
     );
   }
+  return<View style={{ flexDirection: 'row', justifyContent: 'space-between',width:'100%' }}>
 
-  return <View style={styles.receitaDespesaMensal}>
-    {nomeUsuarioComponente}
-    <Button title="Hide Balance" onPress={onToggleSaldo} color="#841584" />
-    <Button title="Leave" onPress={fecharApp} color="#B51000" />
-  </View>;
+      <View style = {{flexDirection: 'row',justifyContent: 'space-between', width:'45%'}}>
+      <AppIcon width={24} height={24} color={'#000000'}/>
+      {nomeUsuarioComponente}
+      </View>
+
+      <View style={{ flexDirection: 'row',justifyContent: 'space-between', width:'20%'}}>
+
+      <TouchableOpacity onPress={onToggleSaldo} style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <ShowIcon width={24} height={24} />
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={fecharApp} style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <ExitIcon width={24} height={24} />
+      </TouchableOpacity>
+
+      </View>
+
+    </View>;
 }
