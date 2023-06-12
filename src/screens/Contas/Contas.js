@@ -109,7 +109,7 @@ class Contas extends Component {
                     <TouchableOpacity
                       style={styles.btnStyleEdit}
                       onPress={() =>
-                        navigation.navigate("DetalheContaBancaria")
+                        navigation.navigate("DetalheContaBancaria", {conta})
                       }
                     >
                       <Text>Edit</Text>
