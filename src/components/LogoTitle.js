@@ -96,7 +96,6 @@ export function LogoTitle({ onToggleSaldo }) {
       </TouchableOpacity>
     );
   }
-
   return<View style={{ flexDirection: 'row', justifyContent: 'space-between',width:'100%' }}>
 
       <View style = {{flexDirection: 'row',justifyContent: 'space-between', width:'45%'}}>
