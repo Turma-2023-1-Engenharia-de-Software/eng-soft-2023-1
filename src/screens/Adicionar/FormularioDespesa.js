@@ -48,6 +48,7 @@ export default function FormularioD() {
         placeholder="Nome"
         onChangeText={setNome}
       ></TextInput>
+      
       <TextInput
         style={styles.input}
         value={valor}
@@ -72,7 +73,7 @@ export default function FormularioD() {
         placeholder="Data"
         onChangeText={setDate}
       ></TextInput>
-
+      <View style={styles.buttonRD}>
       <TouchableOpacity
         style={[
           styles.button,
@@ -92,8 +93,7 @@ export default function FormularioD() {
       >
         <Text style={styles.buttonLabel}>Despesa</Text>
       </TouchableOpacity>
-
-
+      </View>
       <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Adicionar</Text>
       </TouchableOpacity>
