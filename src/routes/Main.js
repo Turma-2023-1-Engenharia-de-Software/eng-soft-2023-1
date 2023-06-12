@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
@@ -16,6 +16,11 @@ import AddIcon from "../assets/add.svg";
 const Tab = createBottomTabNavigator();
 
 export function MainRoute() {
+  const [saldoVisivel, setSaldoVisivel] = useState(false);
+
+  const handleToggleSaldo = () => {
+    setSaldoVisivel(!saldoVisivel);
+  };
   return (
     <NavigationContainer>
       <Tab.Navigator 
@@ -47,7 +52,6 @@ export function MainRoute() {
       >
         <Tab.Screen
           name="Home"
-          component={Home}
           options={{
             headerStyle: {
               backgroundColor: "#2196f3",
@@ -56,9 +60,11 @@ export function MainRoute() {
             headerTitleStyle: {
               fontWeight: "bold",
             },
-            headerTitle: (props) => <LogoTitle {...props} />,
+            headerTitle: (props) => <LogoTitle onToggleSaldo={handleToggleSaldo} {...props} />
           }}
-        />
+          >
+          {(props) => <Home saldoVisivel={saldoVisivel} {...props} />}
+        </Tab.Screen>
         <Tab.Screen name="Extrato" component={ExtratoRoute} />
         <Tab.Screen name="Contas" component={AdicionarRoute} />
         <Tab.Screen name="Adicionar" component={Adicionar} />

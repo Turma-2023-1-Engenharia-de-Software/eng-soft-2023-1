@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import styles from "../screens/Home/styles";
+import {Button} from 'react-native';
 
 import {
   View,
@@ -11,7 +13,24 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const defaultName = "unknown";
 
-export function LogoTitle() {
+const fecharApp = () => {
+  Alert.alert(
+    "Fechar App",
+    "Você deseja sair do app?",
+    [
+      {
+        text: "Não",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel",
+      },
+      { text: "Sim", onPress: () => BackHandler.exitApp() },
+    ],
+    { cancelable: false }
+  );
+};
+
+
+export function LogoTitle({ onToggleSaldo }) {
   const [nomeUsuario, setNomeUsuario] = useState("");
   const [nomeUsuarioEditavel, setNomeUsuarioEditavel] = useState(false);
 
@@ -68,10 +87,14 @@ export function LogoTitle() {
   } else {
     nomeUsuarioComponente = (
       <TouchableOpacity onPress={editarNomeUsuario}>
-        <Text style={styles.text}>Olá, mestre {nomeUsuario}!</Text>
+        <Text style={styles.text}>Olá, {nomeUsuario}!</Text>
       </TouchableOpacity>
     );
   }
 
-  return <View>{nomeUsuarioComponente}</View>;
+  return <View style={styles.receitaDespesaMensal}>
+    {nomeUsuarioComponente}
+    <Button title="Hide Balance" onPress={onToggleSaldo} color="#841584" />
+    <Button title="Leave" onPress={fecharApp} color="#B51000" />
+  </View>;
 }
