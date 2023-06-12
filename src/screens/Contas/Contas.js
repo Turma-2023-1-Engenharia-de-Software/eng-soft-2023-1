@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import AddIcon from "../../assets/add.svg"
-import { View,Text,ScrollView,TouchableOpacity,} from "react-native";
+import { View,Text,ScrollView,TouchableOpacity, Alert,} from "react-native";
 import styles from "./styles.js";
 const Stack = createStackNavigator();
 
@@ -35,14 +35,13 @@ class Contas extends Component {
         {
           id: "3",
           nome: "conta 04",
-          id: "4",
-          nome: "Conta 00",
           banco: "Banco do Brasil",
           saldo: 1002.89,
           tipo_conta: "poupança",
         },
         {
           id: "5",
+          nome: "conta 09",
           banco: "Banco Itau",
           saldo: 69.85,
           tipo_conta: "Corrente",
@@ -59,6 +58,28 @@ class Contas extends Component {
     });
   };
 
+  dialogDetails = (conta) =>{
+    return Alert.alert(
+      conta.nome,
+      conta.tipo_conta
+    )
+  }
+
+  dialogDelete = (id) =>{
+    return Alert.alert(
+      "Deletar conta",
+      "Deseja realmente deletar?",
+      [
+        {
+          text: "Cancelar"
+        },
+        {
+          text: "Confirmar",
+          onPress: () => this.onDelete(id)
+        }
+      ]
+    )
+  }
   /*navigateToAdicionarConta = () => {
     this.props.navigation.navigate("AdicionarConta", {Contas});
   };
@@ -74,15 +95,25 @@ class Contas extends Component {
             {contas.map((conta, index) => {
               return (
                 <View key={index}>
+                  <TouchableOpacity onPress={() => this.dialogDetails(conta)}>
                   <Text style={styles.conta_bancaria}>
                     {conta.banco}: {conta.saldo}
                   </Text>
-                  <TouchableOpacity
-                    style={styles.btnStyle}
-                    onPress={() => this.onDelete(conta.id)}
-                  >
-                    <Text>Delete</Text>
-                  </TouchableOpacity>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={styles.btnStyle}
+                      onPress={() => this.dialogDelete(conta.id)}
+                    >
+                      <Text>Delete</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={styles.btnStyleEdit}
+                      onPress={() =>
+                        navigation.navigate("DetalheContaBancaria")
+                      }
+                    >
+                      <Text>Edit</Text>
+                    </TouchableOpacity>
                 </View>
               );
             })}
