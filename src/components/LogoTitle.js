@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "../screens/Home/styles";
-import {Button} from 'react-native';
 
 import {
   View,
   Text,
   TouchableOpacity,
   TextInput,
+  Button,
+  Alert,
 } from "react-native";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
