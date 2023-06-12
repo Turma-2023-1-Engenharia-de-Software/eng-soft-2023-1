@@ -111,7 +111,7 @@ export function LogoTitle({ onToggleSaldo }) {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={fecharApp} style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <ExitIcon strokeWidth={2} width={24} height={24} />
+        <ExitIcon width={24} height={24} />
       </TouchableOpacity>
 
       </View>
