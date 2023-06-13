@@ -19,7 +19,7 @@ export default styles = StyleSheet.create({
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
   },
-  pagamento: {
+  despesa: {
     color: "black",
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -31,7 +31,7 @@ export default styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 1,
   },
-  recebimento: {
+  receita: {
     color: "black",
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -46,6 +46,7 @@ export default styles = StyleSheet.create({
 
   corPadrao: {
     backgroundColor: "black",
+    color: "white",
   },
   corBancoBDB: {
     backgroundColor: "#f4db2d",
