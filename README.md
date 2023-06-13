@@ -47,6 +47,3 @@ Inicie o servidor de desenvolvimento
 ## Licença
 
 [Unlicense/Domínio Público](https://choosealicense.com/licenses/#unlicense). Você pode utilizar o código como quiser.
-
-
-
