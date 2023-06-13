@@ -1,11 +1,12 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Home from "../screens/Home/Home.js";
-import {AdicionarRoute} from "./AdicionarConta.js";
-import Adicionar from "../screens/Adicionar/Adicionar";
+import { AdicionarRoute } from "./AdicionarConta.js";
 import { ExtratoRoute } from "./Extrato.js";
+
+import Adicionar from "../screens/Adicionar/Adicionar";
 import { LogoTitle } from "../components/LogoTitle.js";
 
 import HomeIcon from "../assets/home.svg";
@@ -23,7 +24,7 @@ export function MainRoute() {
   };
   return (
     <NavigationContainer>
-      <Tab.Navigator 
+      <Tab.Navigator
         screenOptions={({ route }) => ({
           headerShown: true,
           tabBarActiveTintColor: "white",
@@ -60,9 +61,11 @@ export function MainRoute() {
             headerTitleStyle: {
               fontWeight: "bold",
             },
-            headerTitle: (props) => <LogoTitle onToggleSaldo={handleToggleSaldo} {...props} />
+            headerTitle: (props) => (
+              <LogoTitle onToggleSaldo={handleToggleSaldo} {...props} />
+            ),
           }}
-          >
+        >
           {(props) => <Home saldoVisivel={saldoVisivel} {...props} />}
         </Tab.Screen>
         <Tab.Screen name="Extrato" component={ExtratoRoute} />

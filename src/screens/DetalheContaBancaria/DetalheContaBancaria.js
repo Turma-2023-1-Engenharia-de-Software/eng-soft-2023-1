@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button } from "react-native";
+
 import styles from "./styles";
 
 const DetalheContaBancaria = ({ route }) => {
@@ -18,9 +19,9 @@ const DetalheContaBancaria = ({ route }) => {
         saldo: parseFloat(saldo),
         tipo_conta,
       };
-    };
-    };
- return (
+    }
+  };
+  return (
     <View style={styles.container}>
       <Text style={styles.heading}>Editar Conta Bancária</Text>
       <TextInput

@@ -8,7 +8,7 @@ export default StyleSheet.create({
   },
   heading: {
     fontSize: 24,
-    marginBottom: 20
+    marginBottom: 20,
   },
   input: {
     height: 40,
@@ -16,7 +16,7 @@ export default StyleSheet.create({
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 20,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   button: {
     marginTop: 20,
@@ -25,11 +25,10 @@ export default StyleSheet.create({
     borderColor: "#000000",
     borderRadius: 5,
     padding: 10,
-    backgroundColor: "red"
+    backgroundColor: "red",
   },
   buttonText: {
     fontSize: 16,
     color: "white",
-    
-  }
+  },
 });

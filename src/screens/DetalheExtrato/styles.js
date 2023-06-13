@@ -1,65 +1,65 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 50,
     marginTop: 40,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   extrato: {
     paddingVertical: 12,
     paddingHorizontal: 20,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 1,
     marginVertical: 5,
     marginHorizontal: 1,
-    backgroundColor: '#D9D9D9',
+    backgroundColor: "#D9D9D9",
   },
   pagamento: {
-    color: 'black',
+    color: "black",
     paddingVertical: 12,
     paddingHorizontal: 20,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     borderRadius: 5,
-    borderColor: 'red',
+    borderColor: "red",
     borderWidth: 3,
     marginVertical: 5,
     marginHorizontal: 1,
   },
   recebimento: {
-    color: 'black',
+    color: "black",
     paddingVertical: 12,
     paddingHorizontal: 20,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     borderRadius: 5,
-    borderColor: 'green',
+    borderColor: "green",
     borderWidth: 3,
     marginVertical: 5,
     marginHorizontal: 1,
   },
 
   corPadrao: {
-    backgroundColor: 'black',
+    backgroundColor: "black",
   },
   corBancoBDB: {
-    backgroundColor: '#f4db2d',
+    backgroundColor: "#f4db2d",
   },
   corBancoBra: {
-    backgroundColor: '#d81842',
+    backgroundColor: "#d81842",
   },
   corBancoCax: {
-    backgroundColor: '#076ca9',
+    backgroundColor: "#076ca9",
   },
   corBancoItu: {
-    backgroundColor: '#243d80',
+    backgroundColor: "#243d80",
   },
   corBancoStd: {
-    backgroundColor: '#fb0404',
+    backgroundColor: "#fb0404",
   },
 });
