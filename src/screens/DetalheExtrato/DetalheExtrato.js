@@ -3,7 +3,7 @@ import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
 
 export default function DetalheExtrato({ route, navigation }) {
-  const { extrato } = route.params;
+  const { item } = route.params;
 
   const handleEditar = () => {
     navigation.navigate("FormularioEdicao", {
@@ -18,17 +18,17 @@ export default function DetalheExtrato({ route, navigation }) {
     // ...
   };
 
-  const getCorTexto = (extrato) => {
-    const banco = extrato.banco.toLowerCase();
-    if (banco === "banco do brasil") {
+  const getCorTexto = (item) => {
+    const conta = item.conta;
+    if (conta === "banco do brasil") {
       return styles.corBancoBDB;
-    } else if (banco === "bradesco") {
+    } else if (conta === "bradesco") {
       return styles.corBancoBra;
-    } else if (banco === "banco itau") {
+    } else if (conta === "banco itau") {
       return styles.corBancoItu;
-    } else if (banco === "caixa economica federal") {
+    } else if (conta === "caixa economica federal") {
       return styles.corBancoCax;
-    } else if (banco === "banco santander") {
+    } else if (conta === "banco santander") {
       return styles.corBancoStd;
     } else {
       return styles.corPadrao;
@@ -42,19 +42,19 @@ export default function DetalheExtrato({ route, navigation }) {
           <View>
             <Text
               style={[
-                getCorTexto(extrato),
-                extrato.tipo === "pagamento"
+                getCorTexto(item),
+                item.tipo === "pagamento"
                   ? styles.pagamento
                   : styles.recebimento,
               ]}
             >
-              {extrato.nome}
+              {item.nome}
               {"\n"}
-              {extrato.banco + " " + extrato.tipo_conta}
+              {item.banco + " " + item.tipo_conta}
               {"\n"}
-              {extrato.tipo}
+              {item.tipo}
               {"\n"}
-              {extrato.natureza + " de R$ " + extrato.valor}
+              {item.natureza + " de R$ " + item.valor}
             </Text>
           </View>
         </View>

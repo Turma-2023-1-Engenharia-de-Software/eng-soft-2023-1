@@ -40,6 +40,9 @@ export default function Extratos() {
                     ? styles.receita
                     : styles.despesa
                   }
+                  onPress={() =>
+                    navigation.navigate("DetalheExtrato", { item })
+                  }
                 >
                   {item.nome}
                   {"\n"}
