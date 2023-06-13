@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./styles";
 
@@ -9,6 +9,11 @@ function AdicionarCartao({ navigation }) {
   const [vencimento, setVencimento] = useState("");
 
   const handleAdicionarCartao = async () => {
+    if (nome === '' || numero === '' || vencimento === '') {
+      Alert.alert('Preencha os campos corretamente')
+      return
+    }
+
     if (nome && numero && vencimento) {
       const cartao = {
         nome,
@@ -18,7 +23,18 @@ function AdicionarCartao({ navigation }) {
 
       try {
         // Salvar os detalhes do cartão
-        // (lógica de salvamento aqui)
+        const oldCartoes = await AsyncStorage.getItem('@cartoes');
+        let cartoes = [];
+
+        if (oldCartoes) {
+          cartoes = JSON.parse(oldCartoes); // Converter para array se existir
+        }
+
+        // Adicionar o novo cartão aos cartões existentes
+        cartoes.push(cartao);
+
+        // Salvar os cartões atualizados no AsyncStorage
+        await AsyncStorage.setItem('@cartoes', JSON.stringify(cartoes));
 
         // Limpar os campos após adicionar o cartão
         setNome("");

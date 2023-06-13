@@ -25,7 +25,7 @@ export function MainRoute() {
     <NavigationContainer>
       <Tab.Navigator 
         screenOptions={({ route }) => ({
-          headerShown: true,
+          headerShown: false,
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#757de8",
           tabBarInactiveTintColor: "white",
