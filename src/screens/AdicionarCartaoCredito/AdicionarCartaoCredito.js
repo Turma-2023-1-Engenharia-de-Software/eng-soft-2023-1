@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./styles";
 
-function AdicionarCartao() {
+function AdicionarCartao({ navigation }) {
   const [nome, setNome] = useState("");
   const [numero, setNumero] = useState("");
   const [vencimento, setVencimento] = useState("");
@@ -25,6 +25,9 @@ function AdicionarCartao() {
         setNumero("");
         setVencimento("");
 
+        // Navegar para a tela "Cartao" e passar os parâmetros
+        navigation.navigate("Cartao", { cartao });
+
         console.log("Cartão adicionado com sucesso!");
       } catch (error) {
         console.log("Erro ao salvar o cartão:", error);
@@ -43,7 +46,7 @@ function AdicionarCartao() {
       />
       <TextInput
         style={styles.input}
-        placeholder="numero"
+        placeholder="Número"
         value={numero}
         onChangeText={(text) => setNumero(text)}
       />

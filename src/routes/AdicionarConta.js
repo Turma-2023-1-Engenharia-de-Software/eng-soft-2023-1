@@ -4,6 +4,7 @@ import AdicionarCartaoCredito from "../screens/AdicionarCartaoCredito/AdicionarC
 import Contas from "../screens/Contas/Contas"
 import AdicionarContaBancaria from "../screens/AdicionarContaBancaria/AdicionarContaBancaria"
 import DetalheContaBancaria from "../screens/DetalheContaBancaria/DetalheContaBancaria";
+import ViewCartao from "../screens/ViewCartao/ViewCartao";
 
 const Stack = createStackNavigator()
 export function AdicionarRoute (){
@@ -13,6 +14,7 @@ export function AdicionarRoute (){
       <Stack.Screen name="AdicionarContaBancaria" component={AdicionarContaBancaria} />
       <Stack.Screen name="AdicionarCartaoCredito" component={AdicionarCartaoCredito} />
       <Stack.Screen name="DetalheContaBancaria" component={DetalheContaBancaria} />
+      <Stack.Screen name="Cartao" component={ViewCartao} />
     </Stack.Navigator>
     )
 }
