@@ -1,40 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "./styles.js";
-import { extratos } from "../../utils/extratos.js";
+import { getReceitasEDespesas } from "../../utils/storage.js";
+import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
-const Stack = createStackNavigator();
 
 export default function Extratos() {
   const navigation = useNavigation();
+
+  const extrato = useExtratoStore((state) => state.extrato);
+  const fetchExtrato = useExtratoStore((state) => state.fetchExtrato);
+
+  useEffect(() => {
+    fetchExtrato();
+  }, []);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      fetchExtrato();
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
       <ScrollView>
         <View>
-          {extratos.map((extrato) => {
-            return (
-              <View key={extrato.id}>
-                <Text
+          {extrato.map((item, index) => {
+            return  (
+              <View key={index}>
+                <Text 
+                  key={index}
                   style={
-                    extrato.tipo === "pagamento"
-                      ? styles.pagamento
-                      : styles.recebimento
-                  }
-                  onPress={() =>
-                    navigation.navigate("DetalheExtrato", { extrato })
+                    item.opcaoSelecionada === "receita"
+                    ? styles.receita
+                    : styles.despesa
                   }
                 >
-                  {extrato.banco}
+                  {item.nome}
                   {"\n"}
                   {"R$"}
-                  {extrato.valor}
+                  {item.valor}
                   {"\n"}
-                  {extrato.natureza}
+                  {item.opcaoSelecionada}
                 </Text>
               </View>
             );

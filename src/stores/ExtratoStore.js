@@ -1,7 +1,11 @@
 import { create } from "zustand";
 
-import { extratos } from "../utils/extratos";
+import { getReceitasEDespesas } from "../utils/storage";
 
 export const useExtratoStore = create((set) => ({
-  extrato: extratos,
+  extrato: [],
+  fetchExtrato: async () => {
+    const data = await getReceitasEDespesas();
+    set({ extrato: data });
+  },
 }));
