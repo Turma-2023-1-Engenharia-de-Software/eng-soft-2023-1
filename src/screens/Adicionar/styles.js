@@ -63,6 +63,20 @@ export default styles = StyleSheet.create({
     backgroundColor: "#D9D9D9",
   },
 
+  dateInput: {
+    display: "flex",
+    alignItems: "left",
+    paddingVertical: 10,
+    fontSize: 16,
+    fontWeight: "bold",
+    borderRadius: 10,
+    borderColor: "black",
+    borderWidth: 1,
+    marginVertical: 5,
+    marginHorizontal: 1,
+    backgroundColor: "#D9D9D9",
+  },
+
   buttonRD: {
     flexDirection: "row",
     justifyContent: "space-between",

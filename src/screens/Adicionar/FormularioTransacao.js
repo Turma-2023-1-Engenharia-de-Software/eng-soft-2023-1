@@ -3,13 +3,14 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 
 import styles from "./styles.js";
 import { addReceitasEDespesas } from "../../utils/storage.js";
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function Formulario() {
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("");
   const [conta, setConta] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(new Date(Date.now()));
   const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
 
   const handleOpcaoSelecionada = (opcao) => {
@@ -21,7 +22,7 @@ export default function Formulario() {
       nome === "" ||
       valor === "" ||
       conta === "" ||
-      date === "" ||
+      date === null ||
       tipo === "" ||
       opcaoSelecionada === null
     ) {
@@ -71,12 +72,14 @@ export default function Formulario() {
         onChangeText={setConta}
       ></TextInput>
 
-      <TextInput
-        style={styles.input}
-        value={date}
-        placeholder="Data"
-        onChangeText={setDate}
-      ></TextInput>
+      <View style={styles.dateInput}>
+        <DateTimePicker
+          value={date}
+          onChange={(date) => setDate(date)}
+        />
+      </View>
+
+      
 
       <View style={styles.buttonRD}>
 

@@ -4,7 +4,12 @@ export async function getReceitasEDespesas() {
   try {
     const data = await AsyncStorage.getItem("@receitas_despesas");
     if (data !== null) {
-      return JSON.parse(data);
+      return JSON.parse(data).map(item => {
+        return {
+          ...item,
+          date: new Date(item.date)
+        }
+      }) 
     }
     jsonData = JSON.stringify([]);
     await AsyncStorage.setItem("@receitas_despesas", jsonData);
