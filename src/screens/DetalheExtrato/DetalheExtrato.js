@@ -1,18 +1,8 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import styles from "./styles.js";
 
-export default function DetalheExtrato({ route, navigation }) {
+export default function DetalheExtrato({ route }) {
   const { extrato } = route.params;
-
-  const handleEditar = () => {
-    navigation.navigate("FormularioEdicao", { item: extrato, onSave: handleSalvarEdicao });
-  };
-
-  const handleSalvarEdicao = (data) => {
-    // Lógica para salvar as alterações
-    console.log("Dados editados:", data);
-    // ...
-  };
 
   return (
     <View style={styles.container}>
@@ -35,10 +25,6 @@ export default function DetalheExtrato({ route, navigation }) {
             </Text>
           </View>
         </View>
-
-        <TouchableOpacity style={styles.buttonEditar} onPress={handleEditar}>
-          <Text style={styles.buttonLabel}>Editar</Text>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );
