@@ -86,7 +86,7 @@ class Contas extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView style={styles.containerScroll}>
           <View>
             {contas.map((conta, index) => {
               return (

@@ -3,9 +3,11 @@ import { StyleSheet } from 'react-native';
 export default styles = StyleSheet.create({
     container: {
        flex: 1,
-       padding: 50,
-       marginTop: 60,
+       padding: 20,
        backgroundColor: '#fff'
+    },
+    containerScroll: {
+        width: '100%'
     },
     conta_bancaria: {
         paddingVertical: 15,

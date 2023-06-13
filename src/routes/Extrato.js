@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 export function ExtratoRoute() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Extrato" component={Extrato} />
       <Stack.Screen name="DetalheExtrato" component={DetalheExtrato} />
       <Stack.Screen name="FormularioEdicao" component={FormularioEdicao} />
