@@ -14,24 +14,43 @@ export default function DetalheExtrato({ route, navigation }) {
     // ...
   };
 
+  const getCorTexto = (extrato) => {
+    const banco = extrato.banco.toLowerCase();
+    if (banco === 'banco do brasil') {
+      return styles.corBancoBDB;
+    } else if (banco === 'bradesco') {
+      return styles.corBancoBra;
+    } else if (banco === 'banco itau') {
+      return styles.corBancoItu;
+    } else if (banco === 'caixa economica federal') {
+      return styles.corBancoCax;
+    } else if (banco === 'banco santander') {
+      return styles.corBancoStd;
+    } else {
+      return styles.corPadrao;
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView>
         <View>
           <View>
             <Text
-              style={
-                extrato.tipo === "pagamento"
+              style={[
+                getCorTexto(extrato),
+                extrato.tipo === 'pagamento'
                   ? styles.pagamento
-                  : styles.recebimento
-              }
+                  : styles.recebimento,
+              ]}
             >
-              {extrato.banco}
-              {"\n"}
-              {"R$"}
-              {extrato.valor}
-              {"\n"}
-              {extrato.natureza}
+                {extrato.nome}
+                {'\n'}
+                {extrato.banco + ' ' + extrato.tipo_conta}
+                {'\n'}
+                {extrato.tipo}
+                {'\n'}
+                {extrato.natureza + ' de R$ ' + extrato.valor}
             </Text>
           </View>
         </View>
