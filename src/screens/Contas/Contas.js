@@ -6,6 +6,12 @@ import { View,Text,ScrollView,TouchableOpacity, Alert,} from "react-native";
 import styles from "./styles.js";
 const Stack = createStackNavigator();
 
+const showAlert = () => {
+  Alert.alert('ALERTA:', 'Botão em manutenção !',
+    [{text: 'OK',onPress: () => console.log('Alert closed'),},]
+  );
+};
+
 class Contas extends Component {
   constructor(props) {
     super(props);
@@ -135,6 +141,14 @@ class Contas extends Component {
           }
        >
           <AddIcon width={24} height={24} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.button, {marginRight :150}]}
+          //onPress={() => navigation.navigate("ViewCartao")}
+          onPress={() => showAlert()}
+        >
+          <Text style={{ color: 'white' }}>Cartões</Text>
         </TouchableOpacity>
 
       </View>
