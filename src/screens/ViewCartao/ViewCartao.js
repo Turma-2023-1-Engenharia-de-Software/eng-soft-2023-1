@@ -1,31 +1,28 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
+
 import styles from "./styles";
 
 const ViewCartao = ({ navigation, route }) => {
   const { cartao } = route.params;
 
   const handleDelete = () => {
-    Alert.alert(
-      "Deletar cartão",
-      "Deseja realmente deletar?",
-      [
-        {
-          text: "Cancelar",
-          style: "cancel"
-        },
-        {
-          text: "Confirmar",
-          onPress: () => {
-            // Perform delete logic here
+    Alert.alert("Deletar cartão", "Deseja realmente deletar?", [
+      {
+        text: "Cancelar",
+        style: "cancel",
+      },
+      {
+        text: "Confirmar",
+        onPress: () => {
+          // Perform delete logic here
 
-            // Navigate back to the "Contas" screen
-            navigation.goBack();
-          },
-          style: "destructive"
-        }
-      ]
-    );
+          // Navigate back to the "Contas" screen
+          navigation.goBack();
+        },
+        style: "destructive",
+      },
+    ]);
   };
 
   return (

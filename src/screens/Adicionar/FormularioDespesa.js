@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
+
 import styles from "./styles.js";
 import { addReceitasEDespesas } from "../../utils/storage.js";
 
 export default function FormularioD() {
-
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("");
@@ -36,7 +36,7 @@ export default function FormularioD() {
       date,
       opcaoSelecionada,
     };
-    
+
     addReceitasEDespesas(data);
   }
 
@@ -48,7 +48,7 @@ export default function FormularioD() {
         placeholder="Nome"
         onChangeText={setNome}
       ></TextInput>
-      
+
       <TextInput
         style={styles.input}
         value={valor}
@@ -74,25 +74,26 @@ export default function FormularioD() {
         onChangeText={setDate}
       ></TextInput>
       <View style={styles.buttonRD}>
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "Receita", styles.buttonSelecionadoR,
-        ]}
-        onPress={() => handleOpcaoSelecionada("receita")}
-      >
-        <Text style={styles.buttonLabel}>Receita</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "Despesa",
-           styles.buttonSelecionadoD,
-        ]}
-        onPress={() => handleOpcaoSelecionada("despesa")}
-      >
-        <Text style={styles.buttonLabel}>Despesa</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "Receita",
+            styles.buttonSelecionadoR,
+          ]}
+          onPress={() => handleOpcaoSelecionada("receita")}
+        >
+          <Text style={styles.buttonLabel}>Receita</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "Despesa",
+            styles.buttonSelecionadoD,
+          ]}
+          onPress={() => handleOpcaoSelecionada("despesa")}
+        >
+          <Text style={styles.buttonLabel}>Despesa</Text>
+        </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Adicionar</Text>
