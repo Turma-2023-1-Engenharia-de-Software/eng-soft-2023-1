@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import styles from "./styles.js";
-import { addReceitasEDespesas } from "../../utils/storage.js";
 
-export default function FormularioD() {
 
+export default function FormularioEdicao({ item, onSave }) {
   const [nome, setNome] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("");
@@ -12,9 +11,26 @@ export default function FormularioD() {
   const [date, setDate] = useState("");
   const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
 
+  useEffect(() => {
+    setNome(item.nome);
+    setValor(item.valor);
+    setTipo(item.tipo);
+    setConta(item.conta);
+    setDate(item.date);
+    setOpcaoSelecionada(item.opcaoSelecionada);
+
+    (async () => {
+      const data = await getReceitasEDespesas();
+      console.log(data)
+    })()
+  }, [item]);
+
+  
+
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
   };
+
   function handleSubmit() {
     if (
       nome === "" ||
@@ -36,8 +52,15 @@ export default function FormularioD() {
       date,
       opcaoSelecionada,
     };
-    
-    addReceitasEDespesas(data);
+    onSave(data);
+    Alert.alert("Sucesso", "As alterações foram salvas com sucesso!");
+
+    setNome("");
+    setValor("");
+    setTipo("");
+    setConta("");
+    setDate("");
+    setOpcaoSelecionada(null);
   }
 
   return (
@@ -48,7 +71,6 @@ export default function FormularioD() {
         placeholder="Nome"
         onChangeText={setNome}
       ></TextInput>
-      
       <TextInput
         style={styles.input}
         value={valor}
@@ -73,11 +95,11 @@ export default function FormularioD() {
         placeholder="Data"
         onChangeText={setDate}
       ></TextInput>
-      <View style={styles.buttonRD}>
+
       <TouchableOpacity
         style={[
           styles.button,
-          opcaoSelecionada === "Receita", styles.buttonSelecionadoR,
+          opcaoSelecionada === "receita" ? styles.buttonSelecionadoR : null,
         ]}
         onPress={() => handleOpcaoSelecionada("receita")}
       >
@@ -86,16 +108,18 @@ export default function FormularioD() {
       <TouchableOpacity
         style={[
           styles.button,
-          opcaoSelecionada === "Despesa",
-           styles.buttonSelecionadoD,
+          opcaoSelecionada === "despesa" ? styles.buttonSelecionadoD : null,
         ]}
         onPress={() => handleOpcaoSelecionada("despesa")}
       >
         <Text style={styles.buttonLabel}>Despesa</Text>
       </TouchableOpacity>
-      </View>
-      <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Adicionar</Text>
+
+      <TouchableOpacity
+        style={styles.inputAdicionar}
+        onPress={handleSubmit}
+      >
+        <Text style={styles.buttonText}>Salvar</Text>
       </TouchableOpacity>
     </View>
   );
