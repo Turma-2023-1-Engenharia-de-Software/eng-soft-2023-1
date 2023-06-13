@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 export function AdicionarRoute() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: true }}>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="MainContas" component={Contas} />
       <Stack.Screen
         name="AdicionarContaBancaria"
