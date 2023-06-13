@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { BackHandler, Alert, View, Text, Button } from "react-native";
 
@@ -8,10 +8,16 @@ import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
 export default function Home({ saldoVisivel }) {
   const extrato = useExtratoStore((state) => state.extrato);
+  const fetchExtrato = useExtratoStore((state) => state.fetchExtrato);
+
+  useEffect(() => {
+    fetchExtrato();
+  }, []);
+
   let saldoValor = calcularSomaValores(extrato);
 
   if (saldoVisivel === false) {
-    saldo = <Text style={styles.text}>R$ {saldoValor.toFixed(2)}</Text>;
+    saldo = <Text style={styles.text}>R$ {saldoValor}</Text>;
   } else {
     saldo = <View style={styles.rectangle}></View>;
   }
