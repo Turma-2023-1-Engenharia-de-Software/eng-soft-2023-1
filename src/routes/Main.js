@@ -68,9 +68,24 @@ export function MainRoute() {
         >
           {(props) => <Home saldoVisivel={saldoVisivel} {...props} />}
         </Tab.Screen>
-        <Tab.Screen name="Extrato" component={ExtratoRoute} />
-        <Tab.Screen name="Contas" component={AdicionarRoute} />
-        <Tab.Screen name="Adicionar" component={Adicionar} />
+        <Tab.Screen name="Extrato" 
+          options={{
+              headerStyle:{backgroundColor:"#2196f3"},
+              headerTintColor: "#fff"
+              }}
+          component={ExtratoRoute} />
+        <Tab.Screen name="Contas"
+          options={{
+            headerStyle:{backgroundColor:"#2196f3"},
+            headerTintColor: "#fff"
+            }}
+          component={AdicionarRoute} />
+        <Tab.Screen name="Adicionar" 
+          options={{
+            headerStyle:{backgroundColor:"#2196f3"},
+            headerTintColor: "#fff"
+            }}
+          component={Adicionar} />
       </Tab.Navigator>
     </NavigationContainer>
   );
