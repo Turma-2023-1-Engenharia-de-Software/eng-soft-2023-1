@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Home from "../screens/Home/Home.js";
 import { AdicionarRoute } from "./AdicionarConta.js";
-import { ExtratoRoute } from "./Extrato.js";
+import { ExtratoRoute } from "./ExtratoRoute.js";
 
 import Adicionar from "../screens/Adicionar/Adicionar";
 import { LogoTitle } from "../components/LogoTitle.js";
