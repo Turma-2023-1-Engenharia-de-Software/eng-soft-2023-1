@@ -19,7 +19,7 @@ export default styles = StyleSheet.create({
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
   },
-  pagamento: {
+  despesa: {
     color: "red",
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -32,7 +32,7 @@ export default styles = StyleSheet.create({
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
   },
-  recebimento: {
+  receita: {
     color: "green",
     paddingVertical: 12,
     paddingHorizontal: 20,
