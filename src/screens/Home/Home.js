@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 
-import {
-  BackHandler,
-  Alert,
-  View,
-  Text,
-  Button,
-} from "react-native";
+import { BackHandler, Alert, View, Text, Button } from "react-native";
 
 import styles from "./styles.js";
-import { calcularSomaValores } from '../../utils/calculaSaldo.js';
+import { calcularSomaValores } from "../../utils/calculaSaldo.js";
 import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
-export default function Home({saldoVisivel}) {
+export default function Home({ saldoVisivel }) {
   const extrato = useExtratoStore((state) => state.extrato);
   let saldoValor = calcularSomaValores(extrato);
 

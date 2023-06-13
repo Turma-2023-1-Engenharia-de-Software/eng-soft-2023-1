@@ -41,7 +41,6 @@ export default styles = StyleSheet.create({
     color: "white",
   },
 
-
   label: {
     paddingTop: 50,
     fontSize: 30,
@@ -68,7 +67,6 @@ export default styles = StyleSheet.create({
   buttonRD: {
     flexDirection: "row",
     justifyContent: "space-between",
-
   },
 
   buttonSelecionadoR: {
@@ -88,5 +86,4 @@ export default styles = StyleSheet.create({
   buttonLabel: {
     color: "white",
   },
-
 });

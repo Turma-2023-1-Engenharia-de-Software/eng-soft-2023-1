@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
-import AddIcon from "../../assets/add.svg"
-import { View,Text,ScrollView,TouchableOpacity, Alert,} from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
+
+import AddIcon from "../../assets/add.svg";
 import styles from "./styles.js";
-const Stack = createStackNavigator();
 
 const showAlert = () => {
-  Alert.alert('ALERTA:', 'Botão em manutenção !',
-    [{text: 'OK',onPress: () => console.log('Alert closed'),},]
-  );
+  Alert.alert("ALERTA:", "Botão em manutenção !", [
+    { text: "OK", onPress: () => console.log("Alert closed") },
+  ]);
 };
 
 class Contas extends Component {
@@ -55,7 +53,6 @@ class Contas extends Component {
       ],
     };
   }
-  
 
   onDelete = (id) => {
     this.setState((prevState) => {
@@ -64,28 +61,21 @@ class Contas extends Component {
     });
   };
 
-  dialogDetails = (conta) =>{
-    return Alert.alert(
-      conta.nome,
-      conta.tipo_conta
-    )
-  }
+  dialogDetails = (conta) => {
+    return Alert.alert(conta.nome, conta.tipo_conta);
+  };
 
-  dialogDelete = (id) =>{
-    return Alert.alert(
-      "Deletar conta",
-      "Deseja realmente deletar?",
-      [
-        {
-          text: "Cancelar"
-        },
-        {
-          text: "Confirmar",
-          onPress: () => this.onDelete(id)
-        }
-      ]
-    )
-  }
+  dialogDelete = (id) => {
+    return Alert.alert("Deletar conta", "Deseja realmente deletar?", [
+      {
+        text: "Cancelar",
+      },
+      {
+        text: "Confirmar",
+        onPress: () => this.onDelete(id),
+      },
+    ]);
+  };
   /*navigateToAdicionarConta = () => {
     this.props.navigation.navigate("AdicionarConta", {Contas});
   };
@@ -102,24 +92,24 @@ class Contas extends Component {
               return (
                 <View key={index}>
                   <TouchableOpacity onPress={() => this.dialogDetails(conta)}>
-                  <Text style={styles.conta_bancaria}>
-                    {conta.banco}: {conta.saldo}
-                  </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      style={styles.btnStyle}
-                      onPress={() => this.dialogDelete(conta.id)}
-                    >
-                      <Text>Delete</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      style={styles.btnStyleEdit}
-                      onPress={() =>
-                        navigation.navigate("DetalheContaBancaria", {conta})
-                      }
-                    >
-                      <Text>Edit</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.conta_bancaria}>
+                      {conta.banco}: {conta.saldo}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.btnStyle}
+                    onPress={() => this.dialogDelete(conta.id)}
+                  >
+                    <Text>Delete</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.btnStyleEdit}
+                    onPress={() =>
+                      navigation.navigate("DetalheContaBancaria", { conta })
+                    }
+                  >
+                    <Text>Edit</Text>
+                  </TouchableOpacity>
                 </View>
               );
             })}
@@ -127,34 +117,28 @@ class Contas extends Component {
         </ScrollView>
         <TouchableOpacity
           style={styles.button}
-          onPress={() =>
-            navigation.navigate("AdicionarContaBancaria")
-          }
-       >
+          onPress={() => navigation.navigate("AdicionarContaBancaria")}
+        >
           <AddIcon width={24} height={24} />
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, {marginRight :300}]}
-          onPress={() =>
-            navigation.navigate("AdicionarCartaoCredito")
-          }
-       >
+          style={[styles.button, { marginRight: 300 }]}
+          onPress={() => navigation.navigate("AdicionarCartaoCredito")}
+        >
           <AddIcon width={24} height={24} />
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, {marginRight :150}]}
+          style={[styles.button, { marginRight: 150 }]}
           //onPress={() => navigation.navigate("ViewCartao")}
           onPress={() => showAlert()}
         >
-          <Text style={{ color: 'white' }}>Cartões</Text>
+          <Text style={{ color: "white" }}>Cartões</Text>
         </TouchableOpacity>
-
       </View>
     );
   }
 }
-
 
 export default Contas;

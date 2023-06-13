@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
-import styles from "./styles.js";
 
+import styles from "./styles.js";
 
 export default function FormularioEdicao({ item, onSave }) {
   const [nome, setNome] = useState("");
@@ -21,11 +21,9 @@ export default function FormularioEdicao({ item, onSave }) {
 
     (async () => {
       const data = await getReceitasEDespesas();
-      console.log(data)
-    })()
+      console.log(data);
+    })();
   }, [item]);
-
-  
 
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
@@ -115,10 +113,7 @@ export default function FormularioEdicao({ item, onSave }) {
         <Text style={styles.buttonLabel}>Despesa</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.inputAdicionar}
-        onPress={handleSubmit}
-      >
+      <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Salvar</Text>
       </TouchableOpacity>
     </View>
