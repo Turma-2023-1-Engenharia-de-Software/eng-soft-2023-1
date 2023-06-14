@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 
 import styles from "./styles.js";
+import { useNavigation } from '@react-navigation/native';
 
 export default function DetalheExtrato({ route, navigation }) {
   const { item } = route.params;
@@ -10,6 +11,22 @@ export default function DetalheExtrato({ route, navigation }) {
       item: extrato,
       onSave: handleSalvarEdicao,
     });
+  };
+
+  const BackButton = () => {
+    const navigation = useNavigation();
+  
+    const handlePress = () => {
+      navigation.goBack();
+    };
+  
+    return (
+      <TouchableOpacity style={styles.button} onPress={handlePress}>
+        <View>
+          <Text style={styles.buttonText}>Voltar</Text>
+        </View>
+      </TouchableOpacity>
+    );
   };
 
   const handleSalvarEdicao = (data) => {
@@ -37,6 +54,7 @@ export default function DetalheExtrato({ route, navigation }) {
 
   return (
     <View style={styles.container}>
+      <BackButton />
       <ScrollView>
         <View>
           <View>
@@ -50,11 +68,13 @@ export default function DetalheExtrato({ route, navigation }) {
             >
               {item.nome}
               {"\n"}
-              {item.banco + " " + item.tipo_conta}
+              {item.conta}
               {"\n"}
               {item.tipo}
               {"\n"}
-              {item.natureza + " de R$ " + item.valor}
+              {item.opcaoSelecionada + " de R$ " + item.valor}
+              {"\n"}
+              {item.date.toString()}
             </Text>
           </View>
         </View>
