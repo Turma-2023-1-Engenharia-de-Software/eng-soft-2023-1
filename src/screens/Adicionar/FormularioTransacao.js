@@ -94,10 +94,10 @@ export default function Formulario() {
       <View style={styles.dateInput}>
         {Platform.OS === 'android' && (
           <TouchableOpacity
-            style={styles.dateInput}
+            style={{paddingVertical: 10, paddingLeft: 10}}
             onPress={() => showDatepicker()}
           >
-            <Text style={styles.buttonLabel}>
+            <Text>
               {!date ? ('Selecionar data') : (`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`)}
             </Text>
           </TouchableOpacity>
@@ -119,6 +119,7 @@ export default function Formulario() {
           />
         )}
       </View>
+
       
 
       <View style={styles.buttonRD}>
