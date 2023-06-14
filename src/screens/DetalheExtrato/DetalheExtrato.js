@@ -78,10 +78,6 @@ export default function DetalheExtrato({ route, navigation }) {
             </Text>
           </View>
         </View>
-
-        // <TouchableOpacity style={styles.buttonEditar} onPress={handleEditar}>
-        //   <Text style={styles.buttonLabel}>Editar</Text>
-        // </TouchableOpacity>
       </ScrollView>
     </View>
   );

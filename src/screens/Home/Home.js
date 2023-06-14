@@ -17,20 +17,15 @@ export default function Home({ saldoVisivel }) {
   let saldoValor = calcularSomaValores(extrato);
 
   if (saldoVisivel === false) {
-    saldo = <Text style={styles.text}>R$ {saldoValor}</Text>;
+    saldo = <Text style={styles.textSaldo}>R$ {saldoValor}</Text>;
   } else {
     saldo = <View style={styles.rectangle}></View>;
   }
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        // <Button title="Exportar para PDF" color="#841504" />
         <View style={styles.innerContainer}>
           {saldo}
-          // <View style={styles.receitaDespesaMensal}>
-          //   <Text style={styles.text}>R$ 20,00</Text>
-          //   <Text style={styles.text}>R$ 20,00</Text>
-          // </View>
         </View>
       </View>
     </View>
