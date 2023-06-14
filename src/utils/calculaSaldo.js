@@ -4,7 +4,12 @@ export const calcularSomaValores = (extratos) => {
   for (let i = 0; i < extratos.length; i++) {
     const extrato = extratos[i];
     if (extrato.valor) {
-      soma += extrato.valor;
+      const valor = parseFloat(extrato.valor);
+      if (extrato.opcaoSelecionada === "despesa") {
+        soma -= valor;
+      } else {
+        soma += valor;
+      }
     }
   }
 
