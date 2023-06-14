@@ -44,9 +44,10 @@ export default function Formulario() {
       conta === "" ||
       date === null ||
       tipo === "" ||
-      opcaoSelecionada === null
+      opcaoSelecionada === null ||
+      !Number(valor)
     ) {
-      alert("Preencha todos os campos");
+      alert("Preencha todos os campos de forma válida");
       return;
     }
 
