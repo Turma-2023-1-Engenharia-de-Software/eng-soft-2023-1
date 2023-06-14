@@ -1,113 +1,30 @@
-import { BackHandler, Alert, View, Text, Button, TouchableOpacity, TextInput } from 'react-native';
-import styles from './styles.js'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-const defaultName = 'unknown'
+import { BackHandler, Alert, View, Text, Button } from "react-native";
 
-const fecharApp = () => {
-  Alert.alert(
-      'Fechar App',
-      'Você deseja sair do app?',
-     [
-        {text: 'Não', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'Sim', onPress: () => BackHandler.exitApp()},
-      ],
-      { cancelable: false });
-}
+import styles from "./styles.js";
+import { calcularSomaValores } from "../../utils/calculaSaldo.js";
+import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
-export function LogoTitle() {
-  const [nomeUsuario, setNomeUsuario] = useState('');
-  const [nomeUsuarioEditavel, setNomeUsuarioEditavel] = useState(false);
+export default function Home({ saldoVisivel }) {
+  const extrato = useExtratoStore((state) => state.extrato);
+  const fetchExtrato = useExtratoStore((state) => state.fetchExtrato);
 
   useEffect(() => {
-    const getUserNameFromStorage = async () => {
-      try {
-        const storedName = await AsyncStorage.getItem('nomeUsuario');
-        if (storedName !== null)
-          setNomeUsuario(storedName);
-        else setNomeUsuario(defaultName)
-      } catch (error) {
-        console.error('Erro ao obter o nome do usuário do AsyncStorage:', error);
-      }
-    };
-    getUserNameFromStorage();
+    fetchExtrato();
   }, []);
 
-  const editarNomeUsuario = () => {
-    setNomeUsuarioEditavel(true);
-  };
+  let saldoValor = calcularSomaValores(extrato);
 
-  const salvarNomeUsuario = async () => {
-    try {
-      await AsyncStorage.setItem('nomeUsuario', nomeUsuario.trim());
-      console.log('Nome do usuário salvo com sucesso!');
-    } catch (error) {
-      console.log('Erro ao salvar o nome do usuário:', error);
-    }
-  };
-
-  const salvarNomeEditado = () => {
-    if (nomeUsuario.trim() !== '') {
-      setNomeUsuarioEditavel(false);
-      salvarNomeUsuario();
-    }
-  };
-
-  let nomeUsuarioComponente;
-  if (nomeUsuarioEditavel) {
-    nomeUsuarioComponente = (
-      <View style={styles.nomeUsuarioEditavel}>
-        <TextInput
-          style={styles.input}
-          placeholder="Digite seu nome"
-          value={nomeUsuario}
-          onChangeText={(text) => setNomeUsuario(text)}
-          onBlur={salvarNomeEditado}
-          autoFocus
-        />
-      </View>
-    );
+  if (saldoVisivel === false) {
+    saldo = <Text style={styles.text}>R$ {saldoValor}</Text>;
   } else {
-    nomeUsuarioComponente = (
-      <TouchableOpacity onPress={editarNomeUsuario}>
-        <Text style={styles.text}>Olá, mestre {nomeUsuario}!</Text>
-      </TouchableOpacity>
-    );
+    saldo = <View style={styles.rectangle}></View>;
   }
-
-  return (
-    <View>
-      {nomeUsuarioComponente}
-    </View>
-  );
-}
-
-export default function Home() {
-  const [saldoEscondido, esconderSaldo] = useState(false);
-
-  const onPressEsconderSaldo = () => {
-    esconderSaldo(!saldoEscondido)
-  }
-
-  if (saldoEscondido === false) {
-    saldo = <Text style={styles.text}>R$ 100,00</Text>
-  } else {
-    saldo = <View style={styles.rectangle}></View>
-  }
-
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <Button
-          title="Exportar para PDF"
-          color="#841504"
-        />
-        <Button
-          onPress={onPressEsconderSaldo}
-          title="Esconder Saldo"
-          color="#841584"
-        />
+        <Button title="Exportar para PDF" color="#841504" />
         <View style={styles.innerContainer}>
           {saldo}
           <View style={styles.receitaDespesaMensal}>
@@ -115,14 +32,6 @@ export default function Home() {
             <Text style={styles.text}>R$ 20,00</Text>
           </View>
         </View>
-        <Button
-                
-                    onPress={fecharApp}
-                    title="Fechar saveMe"
-                    color="#B51000"
-                    buttonStyle={{ width: 70 }}
-                    
-                />
       </View>
     </View>
   );
