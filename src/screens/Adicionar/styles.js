@@ -65,7 +65,6 @@ export default styles = StyleSheet.create({
 
   dateInput: {
     display: "flex",
-    alignItems: "left",
     paddingVertical: 10,
     fontSize: 16,
     fontWeight: "bold",
