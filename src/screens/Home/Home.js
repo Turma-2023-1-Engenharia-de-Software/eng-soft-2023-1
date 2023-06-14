@@ -24,13 +24,13 @@ export default function Home({ saldoVisivel }) {
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <Button title="Exportar para PDF" color="#841504" />
+        // <Button title="Exportar para PDF" color="#841504" />
         <View style={styles.innerContainer}>
           {saldo}
-          <View style={styles.receitaDespesaMensal}>
-            <Text style={styles.text}>R$ 20,00</Text>
-            <Text style={styles.text}>R$ 20,00</Text>
-          </View>
+          // <View style={styles.receitaDespesaMensal}>
+          //   <Text style={styles.text}>R$ 20,00</Text>
+          //   <Text style={styles.text}>R$ 20,00</Text>
+          // </View>
         </View>
       </View>
     </View>
