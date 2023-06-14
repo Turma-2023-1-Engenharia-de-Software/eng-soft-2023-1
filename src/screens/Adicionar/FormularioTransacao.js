@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 
 import styles from "./styles.js";
@@ -10,12 +10,32 @@ export default function Formulario() {
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("");
   const [conta, setConta] = useState("");
-  const [date, setDate] = useState(new Date(Date.now()));
   const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
+
+  const [date, setDate] = useState(new Date(Date.now()));
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;
+    setShow(false);
+    setDate(currentDate);
+  };
+
+  const showDatepicker = () => {
+      setShow(true);
+  };
 
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
   };
+
+  useEffect(() => {
+    if (Platform.OS === 'android') {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  }, [])
 
   function handleSubmit() {
     if (
@@ -24,9 +44,10 @@ export default function Formulario() {
       conta === "" ||
       date === null ||
       tipo === "" ||
-      opcaoSelecionada === null
+      opcaoSelecionada === null ||
+      !Number(valor)
     ) {
-      alert("Preencha todos os campos");
+      alert("Preencha todos os campos de forma válida");
       return;
     }
 
@@ -38,7 +59,6 @@ export default function Formulario() {
       date,
       opcaoSelecionada,
     };
-
     addReceitasEDespesas(data);
   }
 
@@ -73,10 +93,32 @@ export default function Formulario() {
       ></TextInput>
 
       <View style={styles.dateInput}>
-        <DateTimePicker
-          value={date}
-          onChange={(date) => setDate(date)}
-        />
+        {Platform.OS === 'android' && (
+          <TouchableOpacity
+            style={{paddingVertical: 10, paddingLeft: 10}}
+            onPress={() => showDatepicker()}
+          >
+            <Text>
+              {!date ? ('Selecionar data') : (`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`)}
+            </Text>
+          </TouchableOpacity>
+        )}
+
+        {(Platform.OS === 'android' && show) && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
+
+        {(Platform.OS !== 'android') && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
       </View>
 
       
