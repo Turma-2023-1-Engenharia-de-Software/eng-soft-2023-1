@@ -43,10 +43,23 @@ export default styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 1,
   },
-
+  button: {
+    backgroundColor: '#378be6',
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    borderRadius: 10,
+    marginVertical: 10,
+  },
+  buttonText: {
+    color: '#333',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: "center",
+  },
   corPadrao: {
-    backgroundColor: "black",
+    backgroundColor: "#2f3133",
     color: "white",
+    paddingHorizontal: 8,
   },
   corBancoBDB: {
     backgroundColor: "#f4db2d",

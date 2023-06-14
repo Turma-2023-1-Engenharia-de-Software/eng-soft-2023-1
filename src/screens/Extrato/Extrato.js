@@ -49,7 +49,7 @@ export default function Extratos() {
                   {"R$"}
                   {item.valor}
                   {"\n"}
-                  {item.opcaoSelecionada}
+                  {item.tipo}
                 </Text>
               </View>
             );
