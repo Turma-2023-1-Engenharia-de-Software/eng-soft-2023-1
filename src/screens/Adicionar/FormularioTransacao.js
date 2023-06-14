@@ -37,6 +37,15 @@ export default function Formulario() {
     }
   }, [])
 
+  function resetForm() {
+    setNome("");
+    setValor("");
+    setTipo("");
+    setConta("");
+    setOpcaoSelecionada(null);
+    setDate(new Date(Date.now()));
+  }
+
   function handleSubmit() {
     if (
       nome === "" ||
@@ -60,6 +69,8 @@ export default function Formulario() {
       opcaoSelecionada,
     };
     addReceitasEDespesas(data);
+
+    resetForm();
   }
 
   return (
