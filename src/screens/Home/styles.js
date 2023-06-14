@@ -8,8 +8,8 @@ export default styles = StyleSheet.create({
     justifyContent: "center",
   },
   rectangle: {
-    width: 30,
-    height: 22,
+    width: 170,
+    height: 70,
     backgroundColor: "lightgray",
   },
   innerContainer: {
@@ -27,4 +27,8 @@ export default styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
   },
+  textSaldo: {
+  fontSize: 60,
+  color: "white",
+},
 });
