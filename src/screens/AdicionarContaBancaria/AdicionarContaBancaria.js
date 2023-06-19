@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button } from "react-native";
+import { addContas } from "../../utils/storageContas.js";
 
 import styles from "./styles";
 
 function AdicionarContaBancaria() {
   const [nome, setNome] = useState("");
   const [banco, setbanco] = useState("");
-  const [saldo, setsaldo] = useState("");
+  const [saldo, setsaldo] = useState(0.00);
   const [tipo_conta, settipo] = useState("");
 
   const handleAdicionarCartao = async () => {
@@ -20,12 +21,12 @@ function AdicionarContaBancaria() {
 
       try {
         // Salvar os detalhes do cartão
-        // (lógica de salvamento aqui)
+        addContas(cartao)
 
         // Limpar os campos após adicionar o cartão
         setNome("");
         setbanco("");
-        setsaldo("");
+        setsaldo(0.00);
         settipo("");
         console.log("Cartão adicionado com sucesso!");
       } catch (error) {
@@ -59,7 +60,7 @@ function AdicionarContaBancaria() {
         style={styles.input}
         placeholder="Tipo de Conta"
         value={tipo_conta}
-        onChangeText={(text) => setsaldo(text)}
+        onChangeText={(text) => settipo(text)}
       />
       <Button title="Adicionar" onPress={handleAdicionarCartao} />
     </View>
