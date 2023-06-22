@@ -7,19 +7,19 @@ export default styles = StyleSheet.create({
        backgroundColor: '#fff'
     },
     containerScroll: {
-        width: '100%'
+        width: '45%',
     },
     conta_bancaria: {
         paddingVertical: 15,
         paddingHorizontal: 20,
         fontSize: 16,
-       fontWeight: 'bold',
-       borderRadius: 10,
-       borderColor: 'black',
-       borderWidth:1,
-       marginVertical: 5,
-       marginHorizontal: 1,
-       backgroundColor: '#D9D9D9',
+        fontWeight: 'bold',
+        borderRadius: 10,
+        borderColor: 'black',
+        borderWidth: 1,
+        marginVertical: 5,
+        marginHorizontal: 1,
+        backgroundColor: '#D9D9D9',
     },
     btnStyle: {
         alignItems: 'center',
@@ -31,7 +31,7 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         width: 50,
         fontWeight: 'bold',
-        borderRadius: 10,
+        borderRadius: 0, // Alterado para 0 para criar botões quadrados
     },
     btnStyleEdit: {
         alignItems: 'center',
@@ -43,13 +43,12 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         width: 50,
         fontWeight: 'bold',
-        borderRadius: 10,
+        borderRadius: 0,
     },
     button: {
-        position: 'absolute',
-        width: 70,
+        width: "100%",
         height: 70,
-        borderRadius: 100 / 2,
+        borderRadius: 0,
         alignItems: 'center',
         alignContent: 'center',
         justifyContent: 'center',
@@ -57,5 +56,25 @@ export default styles = StyleSheet.create({
         bottom: 10,
         backgroundColor: '#1a7bd5',
         borderColor: 'blue',
-      },
-});
+    },
+    viewbutton: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+    },
+    viewsContainer: {
+      flexDirection: 'row',
+    },
+    viewbanco: {
+      width: '100%',
+      padding: 2,
+      backgroundColor: 'white',
+    },
+    ViewCartão:{
+        width: '45%',
+        left :5,
+        backgroundColor: "#D9D99",
+        
+    },
+  });
+  

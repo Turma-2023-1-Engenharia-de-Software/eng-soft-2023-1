@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Alert, ViewBase } from "react-native";
 
 import AddIcon from "../../assets/add.svg";
 import styles from "./styles.js";
@@ -43,9 +43,21 @@ const Contas = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={{flex: 1, flexDirection: 'row-reverse'}}>    
       <ScrollView style={styles.containerScroll}>
-        <View>
+
+      <View style={styles.viewbutton}>
+       <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            navigation.navigate("AdicionarContaBancaria")
+          }
+       >
+          <AddIcon width={24} height={24} />
+        </TouchableOpacity>
+       </View>
+        <View style={styles.viewbanco}>
+          
           {listaContas.map((conta, index) => {
             return (
               <View key={index}>
@@ -75,28 +87,30 @@ const Contas = ({ navigation }) => {
               </View>
             );
           })}
-        </View>
+        </View> 
+      
       </ScrollView>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("AdicionarContaBancaria")}
-      >
-        <AddIcon width={24} height={24} />
-      </TouchableOpacity>
+       <ScrollView style={styles.ViewCartão}>
 
-      <TouchableOpacity
-        style={[styles.button, { marginRight: 300 }]}
-        onPress={() => navigation.navigate("AdicionarCartaoCredito")}
-      >
-        <AddIcon width={24} height={24} />
-      </TouchableOpacity>
+       <View style={styles.viewbutton}>
+        <TouchableOpacity
+          style={[styles.button]}
+          onPress={() =>
+            navigation.navigate("AdicionarCartaoCredito")
+          }
+       >
+          <AddIcon width={24} height={24} />
+        </TouchableOpacity>
+       </View>
+      
+        <View> 
+          <Text> Colocar a view do cartão de credito</Text>
+          </View> 
+          <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} 
+        /> 
 
-      <TouchableOpacity
-        style={[styles.button, { marginRight: 150 }]}
-        onPress={showAlert}
-      >
-        <Text style={{ color: "white" }}>Cartões</Text>
-      </TouchableOpacity>
+        
+        </ScrollView>
     </View>
   );
 };
