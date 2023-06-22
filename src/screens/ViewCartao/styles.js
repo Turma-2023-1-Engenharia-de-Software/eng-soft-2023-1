@@ -19,13 +19,6 @@ export default StyleSheet.create({
     color: "#fff",
     marginBottom: 5,
   },
-  button: {
-    backgroundColor: "#ff0000",
-    borderRadius: 5,
-    padding: 8,
-    marginTop: 20,
-    alignItems: "center",
-  },
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
@@ -36,6 +29,25 @@ export default StyleSheet.create({
     fontSize: 22,
     paddingBottom: 5,
     fontWeight: "bold",
-
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
+  },
+  buttonTextEdit: {
+    fontSize: 15,
+    color: "white",
+    backgroundColor: "#0A1CB4",
+    borderRadius: 5,
+    padding: 5,
+    
+  },
+  buttonTextDelete: {
+    fontSize: 15,
+    color: "white",
+    backgroundColor: "#E32204",
+    borderRadius: 5,
+    padding: 5,
   }
 });
