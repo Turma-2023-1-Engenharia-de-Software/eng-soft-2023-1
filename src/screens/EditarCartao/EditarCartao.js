@@ -2,22 +2,23 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import styles from "./styles";
 
-function AdicionarCartao({ navigation }) {
-  const [nome, setNome] = useState("");
-  const [numero, setNumero] = useState("");
-  const [vencimento, setVencimento] = useState("");
-  const [codigo, setCodigo] = useState("");
 
-  const handleAdicionarCartao = async () => {
+const EditarCartao = ({ navigation, route }) => {
+  const { cartao } = route.params;
+  const [nome, setNome] = useState(cartao.nome);
+  const [numero, setNumero] = useState(cartao.numero);
+  const [vencimento, setVencimento] = useState(cartao.vencimento);
+  const [codigo, setCodigo] = useState(cartao.codigo);
+
+  const handleEditarCartao = async () => {
     if (nome === "" || numero === "" || vencimento === "" || codigo === "") {
       Alert.alert("Preencha os campos corretamente");
       return;
     }
 
     if (nome && numero && vencimento && codigo) {
-      const cartao = {
+      const editedCartao = {
         nome,
         numero,
         vencimento,
@@ -25,7 +26,7 @@ function AdicionarCartao({ navigation }) {
       };
 
       try {
-        // Salvar os detalhes do cartão
+        // Atualizar os detalhes do cartão
         const oldCartoes = await AsyncStorage.getItem("@cartoes");
         let cartoes = [];
 
@@ -33,31 +34,30 @@ function AdicionarCartao({ navigation }) {
           cartoes = JSON.parse(oldCartoes); // Converter para array se existir
         }
 
-        // Adicionar o novo cartão aos cartões existentes
-        cartoes.push(cartao);
+        // Encontrar o índice do cartão a ser editado
+        const cartaoIndex = cartoes.findIndex((c) => c.numero === cartao.numero);
 
-        // Salvar os cartões atualizados no AsyncStorage
-        await AsyncStorage.setItem("@cartoes", JSON.stringify(cartoes));
+        if (cartaoIndex !== -1) {
+          // Atualizar o cartão existente com os novos detalhes
+          cartoes[cartaoIndex] = editedCartao;
 
-        // Limpar os campos após adicionar o cartão
-        setNome("");
-        setNumero("");
-        setVencimento("");
-        setCodigo("");
+          // Salvar os cartões atualizados no AsyncStorage
+          await AsyncStorage.setItem("@cartoes", JSON.stringify(cartoes));
 
-        // Navegar para a tela "Cartao" e passar os parâmetros
-        navigation.navigate("Cartao", { cartao });
+          // Navegar para a tela "Cartao" e passar os parâmetros do cartão editado
+          navigation.navigate("Cartao", { cartao: editedCartao });
 
-        console.log("Cartão adicionado com sucesso!");
+          console.log("Cartão editado com sucesso!");
+        }
       } catch (error) {
-        console.log("Erro ao salvar o cartão:", error);
+        console.log("Erro ao editar o cartão:", error);
       }
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Adicionar Cartão de Crédito</Text>
+      <Text style={styles.heading}>Editar Cartão de Crédito</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome"
@@ -78,13 +78,13 @@ function AdicionarCartao({ navigation }) {
       />
       <TextInput
         style={styles.input}
-        placeholder="Codigo"
+        placeholder="Código"
         value={codigo}
         onChangeText={(text) => setCodigo(text)}
       />
-      <Button title="Adicionar" onPress={handleAdicionarCartao} />
+      <Button title="Editar" onPress={handleEditarCartao} />
     </View>
   );
-}
+};
 
-export default AdicionarCartao;
+export default EditarCartao;

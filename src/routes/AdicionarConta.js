@@ -7,6 +7,8 @@ import AdicionarCartaoCredito from "../screens/AdicionarCartaoCredito/AdicionarC
 import AdicionarContaBancaria from "../screens/AdicionarContaBancaria/AdicionarContaBancaria";
 import DetalheContaBancaria from "../screens/DetalheContaBancaria/DetalheContaBancaria";
 import ViewCartao from "../screens/ViewCartao/ViewCartao";
+import EditarCartao from "../screens/EditarCartao/EditarCartao";
+
 
 const Stack = createStackNavigator();
 
@@ -27,6 +29,8 @@ export function AdicionarRoute() {
         component={DetalheContaBancaria}
       />
       <Stack.Screen name="Cartao" component={ViewCartao} />
+      <Stack.Screen name="EditarCartao" component={EditarCartao} />
+      
     </Stack.Navigator>
   );
 }
