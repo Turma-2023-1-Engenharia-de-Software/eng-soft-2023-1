@@ -6,6 +6,8 @@ import styles from "./styles";
 const ViewCartao = ({ navigation, route }) => {
   const { cartao } = route.params;
 
+  
+
   const handleDelete = () => {
     Alert.alert("Deletar cartão", "Deseja realmente deletar?", [
       {
@@ -26,12 +28,14 @@ const ViewCartao = ({ navigation, route }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>Detalhes do Cartão:</Text>
-      <Text style={styles.text}>Nome: {cartao.nome}</Text>
-      <Text style={styles.text}>Número: {cartao.numero}</Text>
-      <Text style={styles.text}>Vencimento: {cartao.vencimento}</Text>
 
+    
+    <View style={styles.container}>
+      
+      <Text style={styles.textName}>{cartao.nome}</Text>
+      <Text style={styles.text}>{cartao.numero}</Text>
+      <Text style={styles.text}>Vencimento: {cartao.vencimento}</Text>
+      <Text style={styles.text}>Codigo: {cartao.codigo}</Text>
       <TouchableOpacity onPress={handleDelete} style={styles.button}>
         <Text style={styles.buttonText}>Deletar Cartão</Text>
       </TouchableOpacity>

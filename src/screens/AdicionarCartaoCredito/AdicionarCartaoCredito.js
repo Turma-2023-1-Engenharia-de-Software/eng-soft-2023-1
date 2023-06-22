@@ -8,18 +8,20 @@ function AdicionarCartao({ navigation }) {
   const [nome, setNome] = useState("");
   const [numero, setNumero] = useState("");
   const [vencimento, setVencimento] = useState("");
+  const [codigo, setCodigo] = useState("");
 
   const handleAdicionarCartao = async () => {
-    if (nome === "" || numero === "" || vencimento === "") {
+    if (nome === "" || numero === "" || vencimento === "" || codigo === "") {
       Alert.alert("Preencha os campos corretamente");
       return;
     }
 
-    if (nome && numero && vencimento) {
+    if (nome && numero && vencimento && codigo) {
       const cartao = {
         nome,
         numero,
         vencimento,
+        codigo,
       };
 
       try {
@@ -41,6 +43,7 @@ function AdicionarCartao({ navigation }) {
         setNome("");
         setNumero("");
         setVencimento("");
+        setCodigo("");
 
         // Navegar para a tela "Cartao" e passar os parâmetros
         navigation.navigate("Cartao", { cartao });
@@ -72,6 +75,12 @@ function AdicionarCartao({ navigation }) {
         placeholder="Vencimento"
         value={vencimento}
         onChangeText={(text) => setVencimento(text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Codigo"
+        value={codigo}
+        onChangeText={(text) => setCodigo(text)}
       />
       <Button title="Adicionar" onPress={handleAdicionarCartao} />
     </View>
