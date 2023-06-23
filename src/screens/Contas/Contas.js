@@ -5,19 +5,54 @@ import AddIcon from "../../assets/add.svg";
 import styles from "./styles.js";
 
 import { useContaStore } from "../../stores/ContasStore.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Contas = ({ navigation }) => {
   const listaContas = useContaStore((state) => state.listaContas);
   const fetchContas = useContaStore((state) => state.fetchContas);
+  const [listaCartoes, setListaCartoes] = useState([])
 
-  console.log(listaContas)
-
+  
   useEffect(() => {
+    const getCartaoDeCredito =  async() => {
+      const cartoesList = await AsyncStorage.getItem("@cartoes");
+      setListaCartoes(JSON.parse(cartoesList));
+    }
+
     fetchContas();
+    getCartaoDeCredito();
   }, []);
+
+  const reload = () => {
+    const getCartaoDeCredito =  async() => {
+      const cartoesList = await AsyncStorage.getItem("@cartoes");
+      setListaCartoes(JSON.parse(cartoesList));
+    }
+
+    fetchContas();
+    getCartaoDeCredito();
+    Alert.alert('Recarregado com sucesso!')
+  }
 
   const onDelete = (id) => {
     setContas((prevContas) => prevContas.filter((conta) => conta.id !== id));
+  };
+
+  const onDeleteCartao = async (numero) => {
+    setListaCartoes((prevCartao) => prevCartao.filter((cartao) => cartao.numero !== numero));
+    await AsyncStorage.setItem("@cartoes", JSON.stringify(listaCartoes.filter((cartao) => cartao.numero !== numero)));
+  };
+
+  const dialogDeleteCartao = (numero) => {
+    Alert.alert("Deletar cartão", "Deseja realmente deletar?", [
+      {
+        text: "Cancelar",
+      },
+      {
+        text: "Confirmar",
+        onPress: () => onDeleteCartao(numero),
+      },
+    ]);
   };
 
   const dialogDetails = (conta) => {
@@ -36,82 +71,120 @@ const Contas = ({ navigation }) => {
     ]);
   };
 
-  const showAlert = () => {
-    Alert.alert("ALERTA:", "Botão em manutenção!", [
-      { text: "OK", onPress: () => console.log("Alert closed") },
-    ]);
-  };
-
   return (
-    <View style={{flex: 1, flexDirection: 'row-reverse'}}>    
-      <ScrollView style={styles.containerScroll}>
+    <>
+      <TouchableOpacity 
+        style={{ width: '100%', justifyContent: 'center', alignItems: 'center' }}
+        onPress={reload}>
+        <Text>Recarregar</Text>
+      </TouchableOpacity>
+      <View style={{flex: 1, flexDirection: 'row'}}>
+        <ScrollView style={styles.ViewCartão}>
 
-      <View style={styles.viewbutton}>
-       <TouchableOpacity
-          style={styles.button}
-          onPress={() =>
-            navigation.navigate("AdicionarContaBancaria")
-          }
-       >
-          <AddIcon width={24} height={24} />
-        </TouchableOpacity>
-       </View>
-        <View style={styles.viewbanco}>
-          
-          {listaContas.map((conta, index) => {
-            return (
-              <View key={index}>
+          <View style={styles.viewbutton}>
+          <TouchableOpacity
+            style={[styles.button]}
+            onPress={() =>
+              navigation.navigate("AdicionarCartaoCredito")
+            }
+          >
+            <AddIcon width={24} height={24} />
+          </TouchableOpacity>
+          </View>
 
-                <TouchableOpacity onPress={() => dialogDetails(conta)}>
-                  <Text style={styles.conta_bancaria}>
-                    {conta.banco}: {conta.saldo}
-                  </Text>
-                </TouchableOpacity>
+          {listaCartoes.map((item, index) => {
+              return (
+                <View key={index}>
 
-                <TouchableOpacity
-                  style={styles.btnStyle}
-                  onPress={() => dialogDelete(conta.id)}
-                >
-                  <Text>Delete</Text>
-                </TouchableOpacity>
+                  {index != 0 && (
+                    <View style={{ height: 1, width: '100%', backgroundColor: 'black', marginVertical: 4 }} />
+                  )}
 
-                <TouchableOpacity
-                  style={styles.btnStyleEdit}
-                  onPress={() =>
-                    navigation.navigate("DetalheContaBancaria", { conta })
-                  }
-                >
-                  <Text>Edit</Text>
-                </TouchableOpacity>
-                
-              </View>
-            );
-          })}
-        </View> 
-      
-      </ScrollView>
-       <ScrollView style={styles.ViewCartão}>
+                  <TouchableOpacity onPress={() => dialogDetails(conta)}>
+                    <Text style={styles.conta_bancaria}>
+                      {item.nome}
+                    </Text>
+                    <Text style={styles.conta_bancaria}>
+                      Número: {'\n'}{item.numero}
+                    </Text>
+                    <Text style={styles.conta_bancaria}>
+                      Vencimento: {item.vencimento}
+                    </Text>
+                  </TouchableOpacity>
 
-       <View style={styles.viewbutton}>
-        <TouchableOpacity
-          style={[styles.button]}
-          onPress={() =>
-            navigation.navigate("AdicionarCartaoCredito")
-          }
-       >
-          <AddIcon width={24} height={24} />
-        </TouchableOpacity>
-       </View>
-      
-        <View> 
-          <Text> Colocar a view do cartão de credito</Text>
-          </View> 
-          <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} 
-        /> 
+                  <TouchableOpacity
+                    style={styles.btnStyle}
+                    onPress={() => dialogDeleteCartao(item.numero)}
+                  >
+                    <Text>Delete</Text>
+                  </TouchableOpacity>
 
+                  {/* <TouchableOpacity
+                    style={styles.btnStyleEdit}
+                    onPress={() =>
+                      navigation.navigate("DetalheContaBancaria", { conta })
+                    }
+                  >
+                    <Text>Edit</Text>
+                  </TouchableOpacity> */}
+                  
+                </View>
+              );
+            })}
         
         </ScrollView>
-    </View>
+
+        <ScrollView style={styles.containerScroll}>
+          <View style={styles.viewbutton}>
+          <TouchableOpacity
+              style={styles.button}
+              onPress={() =>
+                navigation.navigate("AdicionarContaBancaria")
+              }
+          >
+              <AddIcon width={24} height={24} />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.viewbanco}>
+            
+            {listaContas.map((conta, index) => {
+              return (
+                <View key={index}>
+
+                  {index != 0 && (
+                    <View style={{ height: 1, width: '100%', backgroundColor: 'black', marginVertical: 4 }} />
+                  )}
+
+
+                  <TouchableOpacity onPress={() => dialogDetails(conta)}>
+                    <Text style={styles.conta_bancaria}>
+                      {conta.banco}: {conta.saldo}
+                    </Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    style={styles.btnStyle}
+                    onPress={() => dialogDelete(conta.id)}
+                  >
+                    <Text>Delete</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    style={styles.btnStyleEdit}
+                    onPress={() =>
+                      navigation.navigate("DetalheContaBancaria", { conta })
+                    }
+                  >
+                    <Text>Edit</Text>
+                  </TouchableOpacity>
+                  
+                </View>
+              );
+            })}
+          </View>    
+        </ScrollView>
+      </View>
+    </>
   );
 };
 

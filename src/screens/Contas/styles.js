@@ -10,6 +10,7 @@ export default styles = StyleSheet.create({
         width: '45%',
     },
     conta_bancaria: {
+        width: '80%',
         paddingVertical: 15,
         paddingHorizontal: 20,
         fontSize: 16,
@@ -68,7 +69,6 @@ export default styles = StyleSheet.create({
     viewbanco: {
       width: '100%',
       padding: 2,
-      backgroundColor: 'white',
     },
     ViewCartão:{
         width: '45%',
