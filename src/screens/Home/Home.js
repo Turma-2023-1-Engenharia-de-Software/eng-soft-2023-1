@@ -12,6 +12,23 @@ import styles from "./styles.js";
 import { calcularSomaValores } from '../../utils/calculaSaldo.js';
 import { useExtratoStore } from "../../stores/ExtratoStore.js";
 
+import ExportIcon from "../../assets/export.svg";
+
+const exportarDados = () => {
+  Alert.alert(
+    "Exportar PDF",
+    "Você deseja exportar os dados do app?",
+    [
+      {
+        text: "Não"
+      },
+      //AQUI A CONFIRMAÇÃO DE EXPORTAR PDF VAI FECHAR O APP, SUBSTITUA PELA FUNÇÃO DE EXPORTAÇÃO DE PDF
+      { text: "Sim", onPress: () => BackHandler.exitApp() },
+    ],
+    { cancelable: false }
+  );
+};
+
 export default function Home({saldoVisivel}) {
   const extrato = useExtratoStore((state) => state.extrato);
   let saldoValor = calcularSomaValores(extrato);
@@ -19,12 +36,12 @@ export default function Home({saldoVisivel}) {
   if (saldoVisivel === false) {
     saldo = <Text style={styles.text}>R$ {saldoValor.toFixed(2)}</Text>;
   } else {
-    saldo = <View style={styles.rectangle}></View>;
+    saldo = <Text style={styles.text}>R$ * * * * *</Text>;
   }
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <Button title="Exportar para PDF" color="#841504" />
+
         <View style={styles.innerContainer}>
           {saldo}
           <View style={styles.receitaDespesaMensal}>

@@ -27,4 +27,13 @@ export default styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
   },
+  exportText: {
+    fontSize: 15,
+    color: "white",
+  },
+  exportContainer: {
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 10,
+  },
 });
