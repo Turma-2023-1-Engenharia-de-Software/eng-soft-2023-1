@@ -19,7 +19,7 @@ export default function Home({ saldoVisivel }) {
   if (saldoVisivel === false) {
     saldo = <Text style={styles.textSaldo}>R$ {saldoValor}</Text>;
   } else {
-    saldo = <View style={styles.rectangle}></View>;
+    saldo = <Text style={styles.textSaldo}>R$ * * * * *</Text>;
   }
   return (
     <View style={styles.container}>
