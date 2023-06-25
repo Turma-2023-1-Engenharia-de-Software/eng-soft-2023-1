@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 
 import styles from "./styles.js";
 import { addReceitasEDespesas } from "../../utils/storage.js";
@@ -56,7 +56,7 @@ export default function Formulario() {
       opcaoSelecionada === null ||
       !Number(valor)
     ) {
-      alert("Preencha todos os campos de forma válida");
+      Alert.alert("Preencha todos os campos de forma válida!");
       return;
     }
 

@@ -7,9 +7,7 @@ import Formulario from "./FormularioTransacao.js";
 export default function Adicionar() {
   return (
     <View style={styles.container}>
-      <View style={styles.container}>
-        <Formulario />
-      </View>
+      <Formulario />
     </View>
   );
 }
