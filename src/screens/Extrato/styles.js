@@ -5,7 +5,6 @@ export default styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-
   extrato: {
     color: "black",
     paddingVertical: 12,
@@ -13,25 +12,25 @@ export default styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-
   despesa: {
     color: "red",
   },
-
   receita: {
     color: "green",
   },
-
   transacao: {
-    backgroundColor: "lightgrey",
-    marginBottom: 10,
+    marginVertical: 4,
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
-
   dataStyle: {
-    fontSize: 13,
+    fontSize: 14,
     paddingVertical: 12,
-    paddingRight: 20,
+    paddingRight: 18,
+  },
+  eu: {
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "lightgrey",
   },
 });
