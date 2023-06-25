@@ -4,44 +4,34 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#fff",
   },
+
   extrato: {
+    color: "black",
     paddingVertical: 12,
-    paddingHorizontal: 20,
+    paddingLeft: 20,
     fontSize: 16,
     fontWeight: "bold",
-    borderRadius: 10,
-    borderColor: "black",
-    borderWidth: 1,
-    marginVertical: 5,
-    marginHorizontal: 1,
-    backgroundColor: "#D9D9D9",
   },
+
   despesa: {
     color: "red",
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    fontSize: 16,
-    fontWeight: "bold",
-    borderRadius: 10,
-    borderColor: "black",
-    borderWidth: 1,
-    marginVertical: 5,
-    marginHorizontal: 1,
-    backgroundColor: "#D9D9D9",
   },
+
   receita: {
     color: "green",
+  },
+
+  transacao: {
+    backgroundColor: "lightgrey",
+    marginBottom: 10,
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+
+  dataStyle: {
+    fontSize: 13,
     paddingVertical: 12,
-    paddingHorizontal: 20,
-    fontSize: 16,
-    fontWeight: "bold",
-    borderRadius: 10,
-    borderColor: "black",
-    borderWidth: 1,
-    marginVertical: 5,
-    marginHorizontal: 1,
-    backgroundColor: "#D9D9D9",
+    paddingRight: 20,
   },
 });
