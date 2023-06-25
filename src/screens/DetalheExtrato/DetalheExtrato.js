@@ -1,25 +1,28 @@
+import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
-
 import styles from "./styles.js";
 import { useNavigation } from '@react-navigation/native';
 
-export default function DetalheExtrato({ route, navigation }) {
+export default function DetalheExtrato({ route, index, navigation }) {
   const { item } = route.params;
+
+  console.log(index)
 
   const handleEditar = () => {
     navigation.navigate("FormularioEdicao", {
-      item: extrato,
+      item: item,
       onSave: handleSalvarEdicao,
+      index: index,
     });
   };
 
   const BackButton = () => {
     const navigation = useNavigation();
-  
+
     const handlePress = () => {
       navigation.goBack();
     };
-  
+
     return (
       <TouchableOpacity style={styles.button} onPress={handlePress}>
         <View>
@@ -79,6 +82,11 @@ export default function DetalheExtrato({ route, navigation }) {
           </View>
         </View>
       </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={handleEditar}>
+        <View>
+          <Text style={styles.buttonText}>Editar</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
