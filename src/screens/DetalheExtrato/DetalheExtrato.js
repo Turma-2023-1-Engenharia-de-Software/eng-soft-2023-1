@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 export default function DetalheExtrato({ route, index, navigation }) {
   const { item } = route.params;
 
-  console.log(index)
+  console.log("console:", index);
 
   const handleEditar = () => {
     navigation.navigate("FormularioEdicao", {
@@ -61,23 +61,17 @@ export default function DetalheExtrato({ route, index, navigation }) {
       <ScrollView>
         <View>
           <View>
-            <Text
-              style={[
-                getCorTexto(item),
-                item.tipo === "pagamento"
-                  ? styles.pagamento
-                  : styles.recebimento,
-              ]}
-            >
+            <Text style={[styles.extrato]}>
               {item.nome}
               {"\n"}
               {item.conta}
               {"\n"}
               {item.tipo}
               {"\n"}
-              {item.opcaoSelecionada + " de R$ " + item.valor}
+              <Text>{item.opcaoSelecionada + " de R$ " + item.valor}</Text>
               {"\n"}
-              {item.date.toString()}
+              {item.date.getDate()}/{item.date.getMonth()}/
+              {item.date.getFullYear()}
             </Text>
           </View>
         </View>
