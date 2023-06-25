@@ -41,15 +41,10 @@ export default function Extratos() {
                     : styles.despesa
                   }
                   onPress={() =>
-                    navigation.navigate("DetalheExtrato", { item })
+                    navigation.navigate("DetalheExtrato", { item, index })
                   }
                 >
-                  {item.nome}
-                  {"\n"}
-                  {"R$"}
-                  {item.valor}
-                  {"\n"}
-                  {item.tipo}
+                  {item.nome}{"\n"}{"R$"}{item.valor}{"\n"}{item.tipo}
                 </Text>
               </View>
             );
