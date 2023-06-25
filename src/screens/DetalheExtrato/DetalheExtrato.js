@@ -1,12 +1,10 @@
 import React from "react";
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, Button } from "react-native";
+
 import styles from "./styles.js";
-import { useNavigation } from "@react-navigation/native";
 
 export default function DetalheExtrato({ route, index, navigation }) {
   const { item } = route.params;
-
-  console.log("console:", index);
 
   const handleEditar = () => {
     navigation.navigate("FormularioEdicao", {
@@ -16,20 +14,8 @@ export default function DetalheExtrato({ route, index, navigation }) {
     });
   };
 
-  const BackButton = () => {
-    const navigation = useNavigation();
-
-    const handlePress = () => {
-      navigation.goBack();
-    };
-
-    return (
-      <TouchableOpacity style={styles.button} onPress={handlePress}>
-        <View>
-          <Text style={styles.buttonText}>Voltar</Text>
-        </View>
-      </TouchableOpacity>
-    );
+  const handlePress = () => {
+    navigation.goBack();
   };
 
   const handleSalvarEdicao = (data) => {
@@ -38,49 +24,34 @@ export default function DetalheExtrato({ route, index, navigation }) {
     // ...
   };
 
-  const getCorTexto = (item) => {
-    const conta = item.conta;
-    if (conta === "banco do brasil") {
-      return styles.corBancoBDB;
-    } else if (conta === "bradesco") {
-      return styles.corBancoBra;
-    } else if (conta === "banco itau") {
-      return styles.corBancoItu;
-    } else if (conta === "caixa economica federal") {
-      return styles.corBancoCax;
-    } else if (conta === "banco santander") {
-      return styles.corBancoStd;
-    } else {
-      return styles.corPadrao;
-    }
-  };
-
   return (
     <View style={styles.container}>
-      <BackButton />
-      <ScrollView>
-        <View>
-          <View>
-            <Text style={[styles.extrato]}>
-              {item.nome}
-              {"\n"}
-              {item.conta}
-              {"\n"}
-              {item.tipo}
-              {"\n"}
-              <Text>{item.opcaoSelecionada + " de R$ " + item.valor}</Text>
-              {"\n"}
-              {item.date.getDate()}/{item.date.getMonth()}/
-              {item.date.getFullYear()}
-            </Text>
-          </View>
-        </View>
-      </ScrollView>
-      <TouchableOpacity style={styles.button} onPress={handleEditar}>
-        <View>
-          <Text style={styles.buttonText}>Editar</Text>
-        </View>
-      </TouchableOpacity>
+      <Text style={styles.textTitle}>{item.nome}</Text>
+      <View style={styles.divider}></View>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Conta: </Text>
+        {item.conta}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Tipo: </Text>
+        {item.tipo}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={[styles.textBold, { textTransform: "capitalize" }]}>
+          {item.opcaoSelecionada}
+        </Text>
+        {" de R$ " + item.valor}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Data: </Text>
+        {item.date.getDate()}/{item.date.getMonth()}/{item.date.getFullYear()}
+      </Text>
+
+      <View style={styles.buttonsView}>
+        <Button title="Editar" onPress={handleEditar}></Button>
+        <Button color="red" title="Apagar" onPress={handleEditar}></Button>
+        <Button color="#757de8" title="Voltar" onPress={handlePress}></Button>
+      </View>
     </View>
   );
 }
