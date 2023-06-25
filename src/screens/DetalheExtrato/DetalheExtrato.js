@@ -14,10 +14,6 @@ export default function DetalheExtrato({ route, index, navigation }) {
     });
   };
 
-  const handlePress = () => {
-    navigation.goBack();
-  };
-
   const handleSalvarEdicao = (data) => {
     // Lógica para salvar as alterações
     console.log("Dados editados:", data);
@@ -50,7 +46,7 @@ export default function DetalheExtrato({ route, index, navigation }) {
       <View style={styles.buttonsView}>
         <Button title="Editar" onPress={handleEditar}></Button>
         <Button color="red" title="Apagar" onPress={handleEditar}></Button>
-        <Button color="#757de8" title="Voltar" onPress={handlePress}></Button>
+        <Button color="#757de8" title="Voltar" onPress={() => {navigation.goBack()}}></Button>
       </View>
     </View>
   );

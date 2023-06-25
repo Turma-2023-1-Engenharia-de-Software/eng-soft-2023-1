@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import AddIcon from "../../assets/add.svg";
 import EditIcon from "../../assets/edit.svg";
@@ -9,13 +10,17 @@ import styles from "./styles.js";
 
 import { useContaStore } from "../../stores/ContasStore.js";
 import { useCartaoStore } from "../../stores/CartoesStore.js";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { removeContas } from "../../utils/storageContas";
+import { removeCartoes } from "../../utils/storageCartoes";
 
 const Contas = ({ navigation }) => {
   const listaContas = useContaStore((state) => state.listaContas);
   const fetchContas = useContaStore((state) => state.fetchContas);
   const listaCartoes = useCartaoStore((state) => state.listaCartoes);
   const fetchCartoes = useCartaoStore((state) => state.fetchCartoes);
+
+  const [contasAtualizadas, setContasAtualizadas] = useState(false);
 
   useEffect(() => {
     fetchContas();
@@ -26,42 +31,17 @@ const Contas = ({ navigation }) => {
     React.useCallback(() => {
       fetchContas();
       fetchCartoes();
-    }, [])
+    }, [contasAtualizadas])
   );
 
-  const reload = () => {
-    const getCartaoDeCredito = async () => {
-      const cartoesList = await AsyncStorage.getItem("@cartoes");
-      setListaCartoes(JSON.parse(cartoesList));
-    };
-
-    fetchContas();
-    getCartaoDeCredito();
-    Alert.alert("Recarregado com sucesso!");
-  };
-
-  const onDelete = (id) => {
-    setContas((prevContas) => prevContas.filter((conta) => conta.id !== id));
-  };
-
-  const onDeleteCartao = async (numero) => {
-    setListaCartoes((prevCartao) =>
-      prevCartao.filter((cartao) => cartao.numero !== numero)
-    );
-    await AsyncStorage.setItem(
-      "@cartoes",
-      JSON.stringify(listaCartoes.filter((cartao) => cartao.numero !== numero))
-    );
-  };
-
-  const dialogDeleteCartao = (numero) => {
+  const dialogDeleteCartao = (index) => {
     Alert.alert("Deletar cartão", "Deseja realmente deletar?", [
       {
         text: "Cancelar",
       },
       {
         text: "Confirmar",
-        onPress: () => onDeleteCartao(numero),
+        onPress: () => removeCartoes(index),
       },
     ]);
   };
@@ -70,31 +50,23 @@ const Contas = ({ navigation }) => {
     Alert.alert(conta.nome, conta.tipo_conta);
   };
 
-  const dialogDelete = (id) => {
-    Alert.alert("Deletar conta", "Deseja realmente deletar?", [
+  const dialogDeleteConta = (index) => {
+    Alert.alert("Apagar conta", "Deseja realmente apagar?", [
       {
         text: "Cancelar",
       },
       {
         text: "Confirmar",
-        onPress: () => onDelete(id),
+        onPress: () => {
+          removeContas(index);
+          setContasAtualizadas(true);
+        },
       },
     ]);
   };
 
   return (
     <>
-      {/* <TouchableOpacity
-        style={{
-          width: "100%",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        onPress={reload}
-      >
-        <Text>Recarregar</Text>
-      </TouchableOpacity> */}
-
       <View style={{ flex: 1, flexDirection: "row" }}>
         <ScrollView style={styles.containerScroll}>
           <Text style={styles.textTitle}>Contas Bancárias</Text>
@@ -106,25 +78,23 @@ const Contas = ({ navigation }) => {
                 onPress={() => dialogDetails(conta)}
               >
                 <View style={styles.contaBancaria}>
-                  <TouchableOpacity>
-                    <Text style={[styles.cardText, styles.cardTextTitle]}>
-                      {conta.banco}
-                    </Text>
-                    <Text style={styles.cardText}>R$ {conta.saldo}</Text>
-                  </TouchableOpacity>
+                  <Text style={[styles.cardText, styles.cardTextTitle]}>
+                    {conta.banco}
+                  </Text>
+                  <Text style={styles.cardText}>R$ {conta.saldo}</Text>
 
                   <View style={styles.cardIcons}>
                     {/* Edit button*/}
                     <TouchableOpacity
                       onPress={() =>
-                        navigation.navigate("DetalheContaBancaria", { conta })
+                        navigation.navigate("EditarContaBancaria", { conta })
                       }
                     >
                       <EditIcon width={20} height={20} />
                     </TouchableOpacity>
 
                     {/* Delete button */}
-                    <TouchableOpacity onPress={() => dialogDelete(conta.id)}>
+                    <TouchableOpacity onPress={() => dialogDeleteConta(index)}>
                       <DeleteIcon width={20} height={20} />
                     </TouchableOpacity>
                   </View>
@@ -149,26 +119,15 @@ const Contas = ({ navigation }) => {
             return (
               <TouchableOpacity
                 key={index}
-                onPress={() => dialogDetails(conta)}
+                onPress={() =>
+                  navigation.navigate("DetalheCartaoCredito", { item, index })
+                }
               >
                 <View style={styles.cardCartao}>
-                  {index != 0 && (
-                    <View
-                      style={{
-                        height: 1,
-                        width: "100%",
-                        backgroundColor: "black",
-                        marginVertical: 4,
-                      }}
-                    />
-                  )}
-
-                  <TouchableOpacity>
-                    <Text style={[styles.cardText, styles.cardTextTitle]}>
-                      {item.nome}
-                    </Text>
-                    <Text style={styles.cardText}>R$ {item.numero}</Text>
-                  </TouchableOpacity>
+                  <Text style={[styles.cardText, styles.cardTextTitle]}>
+                    {item.nome}
+                  </Text>
+                  <Text style={styles.cardText}>R$ {item.numero}</Text>
 
                   <View style={styles.cardIcons}>
                     {/* Edit button*/}
@@ -181,9 +140,7 @@ const Contas = ({ navigation }) => {
                     </TouchableOpacity>
 
                     {/* Delete button */}
-                    <TouchableOpacity
-                      onPress={() => dialogDeleteCartao(item.numero)}
-                    >
+                    <TouchableOpacity onPress={() => dialogDeleteCartao(index)}>
                       <DeleteIcon width={20} height={20} />
                     </TouchableOpacity>
                   </View>

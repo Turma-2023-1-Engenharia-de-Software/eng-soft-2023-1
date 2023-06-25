@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { addCartoes } from "../../utils/storageCartoes";
 
 import styles from "./styles";
 
@@ -12,7 +13,7 @@ function AdicionarCartao({ navigation }) {
 
   const handleAdicionarCartao = async () => {
     if (nome === "" || numero === "" || vencimento === "" || codigo === "") {
-      Alert.alert("Preencha os campos corretamente");
+      Alert.alert("Preencha os campos corretamente!");
       return;
     }
 
@@ -25,19 +26,7 @@ function AdicionarCartao({ navigation }) {
       };
 
       try {
-        // Salvar os detalhes do cartão
-        const oldCartoes = await AsyncStorage.getItem("@cartoes");
-        let cartoes = [];
-
-        if (oldCartoes) {
-          cartoes = JSON.parse(oldCartoes); // Converter para array se existir
-        }
-
-        // Adicionar o novo cartão aos cartões existentes
-        cartoes.push(cartao);
-
-        // Salvar os cartões atualizados no AsyncStorage
-        await AsyncStorage.setItem("@cartoes", JSON.stringify(cartoes));
+        addCartoes(cartao);
 
         // Limpar os campos após adicionar o cartão
         setNome("");
@@ -46,7 +35,7 @@ function AdicionarCartao({ navigation }) {
         setCodigo("");
 
         // Navegar para a tela "Cartao" e passar os parâmetros
-        navigation.navigate("Cartao", { cartao });
+        navigation.navigate("DetalheCartaoCredito", { cartao });
 
         console.log("Cartão adicionado com sucesso!");
       } catch (error) {
@@ -81,8 +70,19 @@ function AdicionarCartao({ navigation }) {
         placeholder="Codigo"
         value={codigo}
         onChangeText={(text) => setCodigo(text)}
+        d
       />
-      <Button title="Adicionar" onPress={handleAdicionarCartao} />
+
+      <View style={styles.buttonsView}>
+        <Button title="Adicionar" onPress={handleAdicionarCartao} />
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 }

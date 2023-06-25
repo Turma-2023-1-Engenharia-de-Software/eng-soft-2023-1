@@ -4,9 +4,8 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    justifyContent: "center",
     alignItems: "center",
-    padding: 16,
+    padding: 20,
   },
   heading: {
     fontSize: 20,
@@ -20,5 +19,12 @@ export default styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 16,
     paddingHorizontal: 8,
+  },
+  buttonsView: {
+    flexDirection: "row",
+    gap: 20,
+    justifyContent: "center",
+    marginBottom: 50,
+    marginTop: 50,
   },
 });
