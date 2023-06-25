@@ -7,7 +7,38 @@ export default styles = StyleSheet.create({
        backgroundColor: '#fff'
     },
     containerScroll: {
+        padding: 10,
         width: '45%',
+    },
+    cardText: {
+        color: 'white',
+        fontSize: 20,
+        textAlign: 'center',
+    },
+    cardTextTitle: {
+        fontWeight: 'bold',
+    },
+    cardIcons: {
+        flexDirection: 'row',
+        gap: 15,
+    },
+    contaBancaria: {
+        gap: 4,
+        paddingBottom: 10,
+        paddingTop: 10,
+        marginBottom: 16,
+        alignItems: 'center',
+        borderRadius: 10,
+        backgroundColor: '#1a7bd5',
+    },
+    cardCartao: {
+        gap: 4,
+        paddingBottom: 10,
+        paddingTop: 10,
+        marginBottom: 16,
+        alignItems: 'center',
+        borderRadius: 10,
+        backgroundColor: '#757de8',
     },
     conta_bancaria: {
         width: '80%',
