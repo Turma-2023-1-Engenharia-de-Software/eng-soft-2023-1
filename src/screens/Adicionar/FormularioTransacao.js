@@ -104,18 +104,20 @@ export default function Formulario() {
       ></TextInput>
 
       <View style={styles.dateInput}>
-        {Platform.OS === 'android' && (
+        {Platform.OS === "android" && (
           <TouchableOpacity
-            style={{paddingVertical: 10, paddingLeft: 10}}
+            style={{ paddingVertical: 10, paddingLeft: 10 }}
             onPress={() => showDatepicker()}
           >
             <Text>
-              {!date ? ('Selecionar data') : (`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`)}
+              {!date
+                ? "Selecionar data"
+                : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
             </Text>
           </TouchableOpacity>
         )}
 
-        {(Platform.OS === 'android' && show) && (
+        {Platform.OS === "android" && show && (
           <DateTimePicker
             testID="dateTimePicker"
             value={date}
@@ -123,7 +125,7 @@ export default function Formulario() {
           />
         )}
 
-        {(Platform.OS !== 'android') && (
+        {Platform.OS !== "android" && (
           <DateTimePicker
             testID="dateTimePicker"
             value={date}
@@ -132,15 +134,13 @@ export default function Formulario() {
         )}
       </View>
 
-      
-
       <View style={styles.buttonRD}>
-
         <TouchableOpacity
           style={[
             styles.button,
-            opcaoSelecionada === "Receita",
-            styles.buttonSelecionadoR,
+            opcaoSelecionada === "despesa"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoR,
           ]}
           onPress={() => handleOpcaoSelecionada("receita")}
         >
@@ -150,16 +150,16 @@ export default function Formulario() {
         <TouchableOpacity
           style={[
             styles.button,
-            opcaoSelecionada === "Despesa",
-            styles.buttonSelecionadoD,
+            opcaoSelecionada === "receita"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoD,
           ]}
           onPress={() => handleOpcaoSelecionada("despesa")}
         >
           <Text style={styles.buttonLabel}>Despesa</Text>
         </TouchableOpacity>
-
       </View>
-      
+
       <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Adicionar</Text>
       </TouchableOpacity>

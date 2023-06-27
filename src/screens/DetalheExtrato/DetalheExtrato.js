@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, Alert } from "react-native";
 
 import styles from "./styles.js";
+import { removeReceitasEDespesas } from "../../utils/storage.js";
 
-export default function DetalheExtrato({ route, index, navigation }) {
-  const { item } = route.params;
+export default function DetalheExtrato({ route, navigation }) {
+  const { item, index } = route.params;
 
   const handleEditar = () => {
     navigation.navigate("FormularioEdicao", {
@@ -18,6 +19,21 @@ export default function DetalheExtrato({ route, index, navigation }) {
     // Lógica para salvar as alterações
     console.log("Dados editados:", data);
     // ...
+  };
+
+  const dialogDeleteTransacao = (index) => {
+    Alert.alert("Apagar transação", "Deseja realmente apagar?", [
+      {
+        text: "Cancelar",
+      },
+      {
+        text: "Confirmar",
+        onPress: () => {
+          removeReceitasEDespesas(index);
+          navigation.goBack();
+        },
+      },
+    ]);
   };
 
   return (
@@ -45,8 +61,18 @@ export default function DetalheExtrato({ route, index, navigation }) {
 
       <View style={styles.buttonsView}>
         <Button title="Editar" onPress={handleEditar}></Button>
-        <Button color="red" title="Apagar" onPress={handleEditar}></Button>
-        <Button color="#757de8" title="Voltar" onPress={() => {navigation.goBack()}}></Button>
+        <Button
+          color="red"
+          title="Apagar"
+          onPress={() => dialogDeleteTransacao(index)}
+        ></Button>
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
       </View>
     </View>
   );

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import styles from "./styles";
 
-
-const EditarCartao = ({ navigation, route }) => {
+const EditarCartaoCredito = ({ route, navigation }) => {
   const { cartao } = route.params;
   const [nome, setNome] = useState(cartao.nome);
   const [numero, setNumero] = useState(cartao.numero);
@@ -35,7 +35,9 @@ const EditarCartao = ({ navigation, route }) => {
         }
 
         // Encontrar o índice do cartão a ser editado
-        const cartaoIndex = cartoes.findIndex((c) => c.numero === cartao.numero);
+        const cartaoIndex = cartoes.findIndex(
+          (c) => c.numero === cartao.numero
+        );
 
         if (cartaoIndex !== -1) {
           // Atualizar o cartão existente com os novos detalhes
@@ -82,9 +84,19 @@ const EditarCartao = ({ navigation, route }) => {
         value={codigo}
         onChangeText={(text) => setCodigo(text)}
       />
-      <Button title="Editar" onPress={handleEditarCartao} />
+
+      <View style={styles.buttonsView}>
+        <Button title="Salvar" onPress={handleEditarCartao} />
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 };
 
-export default EditarCartao;
+export default EditarCartaoCredito;

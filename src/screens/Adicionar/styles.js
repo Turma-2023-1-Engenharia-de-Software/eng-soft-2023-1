@@ -8,14 +8,12 @@ export default styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: "#fff",
   },
-
   fixToText: {
     flex: 1,
     flexDirection: "row",
     padding: 20,
     alignItems: "center",
   },
-
   button: {
     flex: 1,
     backgroundColor: "#1a7bd5",
@@ -25,7 +23,6 @@ export default styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-
   inputAdicionar: {
     backgroundColor: "#1a7bd5",
     color: "white",
@@ -35,21 +32,17 @@ export default styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
   },
-
   buttonText: {
     color: "white",
   },
-
   label: {
     paddingTop: 50,
     fontSize: 30,
     alignItems: "center",
   },
-
   text: {
     fontSize: 20,
   },
-
   input: {
     paddingVertical: 15,
     paddingHorizontal: 20,
@@ -62,7 +55,6 @@ export default styles = StyleSheet.create({
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
   },
-
   dateInput: {
     display: "flex",
     paddingVertical: 10,
@@ -75,27 +67,29 @@ export default styles = StyleSheet.create({
     marginHorizontal: 1,
     backgroundColor: "#D9D9D9",
   },
-
   buttonRD: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-
   buttonSelecionadoR: {
     backgroundColor: "green",
     paddingVertical: 15,
     paddingHorizontal: 10,
     color: "#000",
   },
-
   buttonSelecionadoD: {
     backgroundColor: "red",
     paddingVertical: 15,
     paddingHorizontal: 10,
     color: "#000",
   },
-
   buttonLabel: {
     color: "white",
   },
+  inactiveOpcaao: {
+    backgroundColor: "grey",
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+    color: "#000",
+  }
 });

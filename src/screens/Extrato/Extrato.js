@@ -32,15 +32,14 @@ export default function Extratos() {
         <View>
           {extrato.map((item, index) => {
             return (
-              <>
+              <View key={index}>
                 <TouchableOpacity
-                  onPress={() =>
-                    navigation.navigate("DetalheExtrato", { item, index })
-                  }
-                  key={index}
+                  onPress={() => {
+                    navigation.navigate("DetalheExtrato", { item, index });
+                  }}
                 >
-                  <View key={index} style={styles.transacao}>
-                    <Text key={index} style={styles.extrato}>
+                  <View style={styles.transacao}>
+                    <Text style={styles.extrato}>
                       {item.nome}
                       {"\n"}
                       <Text
@@ -62,7 +61,7 @@ export default function Extratos() {
                   </View>
                 </TouchableOpacity>
                 <View style={styles.eu}></View>
-              </>
+              </View>
             );
           })}
         </View>
