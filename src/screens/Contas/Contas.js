@@ -115,25 +115,25 @@ const Contas = ({ navigation }) => {
 
         <ScrollView style={styles.containerScroll}>
           <Text style={styles.textTitle}>Cartões de Crédito</Text>
-          {listaCartoes.map((item, index) => {
+          {listaCartoes.map((cartao, index) => {
             return (
               <TouchableOpacity
                 key={index}
                 onPress={() =>
-                  navigation.navigate("DetalheCartaoCredito", { item, index })
+                  navigation.navigate("DetalheCartaoCredito", { cartao, index })
                 }
               >
                 <View style={styles.cardCartao}>
                   <Text style={[styles.cardText, styles.cardTextTitle]}>
-                    {item.nome}
+                    {cartao.nome}
                   </Text>
-                  <Text style={styles.cardText}>R$ {item.numero}</Text>
+                  <Text style={styles.cardText}>R$ {cartao.numero}</Text>
 
                   <View style={styles.cardIcons}>
                     {/* Edit button*/}
                     <TouchableOpacity
                       onPress={() =>
-                        navigation.navigate("DetalheContaBancaria", { conta })
+                        navigation.navigate("EditarCartaoCredito", { cartao })
                       }
                     >
                       <EditIcon width={20} height={20} />

@@ -8,8 +8,8 @@ import AdicionarContaBancaria from "../screens/AdicionarContaBancaria/AdicionarC
 import DetalheContaBancaria from "../screens/DetalheContaBancaria/DetalheContaBancaria";
 import DetalheCartaoCredito from "../screens/DetalheCartaoCredito/DetalheCartaoCredito";
 import EditarContaBancaria from "../screens/EditarContaBancaria/EditarContaBancaria";
+import EditarCartaoCredito from "../screens/EditarCartaoCredito/EditarCartaoCredito";
 import ViewCartao from "../screens/ViewCartao/ViewCartao";
-import EditarCartao from "../screens/EditarCartao/EditarCartao";
 
 const Stack = createStackNavigator();
 
@@ -37,8 +37,11 @@ export function AdicionarRoute() {
         name="EditarContaBancaria"
         component={EditarContaBancaria}
       />
+      <Stack.Screen
+        name="EditarCartaoCredito"
+        component={EditarCartaoCredito}
+      />
       <Stack.Screen name="Cartao" component={ViewCartao} />
-      <Stack.Screen name="EditarCartao" component={EditarCartao} />
     </Stack.Navigator>
   );
 }
