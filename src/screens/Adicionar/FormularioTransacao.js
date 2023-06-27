@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { Picker } from "@react-native-picker/picker";
 
 import styles from "./styles.js";
 import { addReceitasEDespesas } from "../../utils/storage.js";
-import DateTimePicker from '@react-native-community/datetimepicker';
+import { useContasCartoesStore } from "../../stores/CartoesStore.js";
 
 export default function Formulario() {
   const [nome, setNome] = useState("");
@@ -15,6 +17,17 @@ export default function Formulario() {
   const [date, setDate] = useState(new Date(Date.now()));
   const [show, setShow] = useState(false);
 
+  const listaContasCartoes = useContasCartoesStore(
+    (state) => state.listaContasCartoes
+  );
+  const fetchContasCartoes = useContasCartoesStore(
+    (state) => state.fetchContasCartoes
+  );
+
+  useEffect(() => {
+    fetchContasCartoes();
+  }, []);
+
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
     setShow(false);
@@ -22,7 +35,7 @@ export default function Formulario() {
   };
 
   const showDatepicker = () => {
-      setShow(true);
+    setShow(true);
   };
 
   const handleOpcaoSelecionada = (opcao) => {
@@ -30,12 +43,12 @@ export default function Formulario() {
   };
 
   useEffect(() => {
-    if (Platform.OS === 'android') {
+    if (Platform.OS === "android") {
       setShow(false);
     } else {
       setShow(true);
     }
-  }, [])
+  }, []);
 
   function resetForm() {
     setNome("");
@@ -97,12 +110,19 @@ export default function Formulario() {
         onChangeText={setTipo}
       ></TextInput>
 
-      <TextInput
-        style={styles.input}
-        value={conta}
-        placeholder="Conta"
-        onChangeText={setConta}
-      ></TextInput>
+      <Text>Selecione a conta: </Text>
+      <View style={styles.input}>
+        <Picker
+          selectedValue={conta}
+          onValueChange={(itemValue, itemIndex) => setConta(itemValue)}
+        >
+          {listaContasCartoes.map((item, index) => {
+            return (
+              <Picker.Item value={item.nome} label={item.nome} key={index} />
+            );
+          })}
+        </Picker>
+      </View>
 
       <View style={styles.dateInput}>
         {Platform.OS === "android" && (

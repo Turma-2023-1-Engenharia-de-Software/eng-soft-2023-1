@@ -11,6 +11,18 @@ const EditarContaBancaria = ({ route, navigation }) => {
   const [tipo_conta, setTipoConta] = useState(conta.tipo_conta);
 
   const handleEditarConta = async () => {
+    if (
+      nome === "" ||
+      banco === "" ||
+      saldo === "" ||
+      tipo_conta === "" ||
+      !Number(valor) ||
+      Number(valor) < 0
+    ) {
+      Alert.alert("Preencha os campos corretamente!");
+      return;
+    }
+
     if (nome && banco && saldo && tipo_conta) {
       const contaEditada = {
         id: conta.id,
@@ -21,6 +33,8 @@ const EditarContaBancaria = ({ route, navigation }) => {
       };
     }
   };
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Editar Conta Bancária</Text>

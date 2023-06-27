@@ -75,7 +75,7 @@ const Contas = ({ navigation }) => {
             return (
               <TouchableOpacity
                 key={index}
-                onPress={() => dialogDetails(conta)}
+                onPress={() =>  navigation.navigate("DetalheContaBancaria", { conta })}
               >
                 <View style={styles.contaBancaria}>
                   <Text style={[styles.cardText, styles.cardTextTitle]}>

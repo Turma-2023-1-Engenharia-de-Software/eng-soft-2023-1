@@ -12,7 +12,12 @@ function AdicionarCartao({ navigation }) {
   const [codigo, setCodigo] = useState("");
 
   const handleAdicionarCartao = async () => {
-    if (nome === "" || numero === "" || vencimento === "" || codigo === "") {
+    if (
+      nome === "" ||
+      numero === "" ||
+      vencimento === "" ||
+      codigo === ""
+    ) {
       Alert.alert("Preencha os campos corretamente!");
       return;
     }
@@ -33,9 +38,6 @@ function AdicionarCartao({ navigation }) {
         setNumero("");
         setVencimento("");
         setCodigo("");
-
-        // Navegar para a tela "Cartao" e passar os parâmetros
-        navigation.navigate("DetalheCartaoCredito", { cartao });
 
         console.log("Cartão adicionado com sucesso!");
       } catch (error) {

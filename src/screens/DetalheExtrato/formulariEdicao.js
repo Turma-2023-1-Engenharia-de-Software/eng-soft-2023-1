@@ -43,7 +43,9 @@ export default function FormularioEdicao({ route, navigation }) {
       conta === "" ||
       date === "" ||
       tipo === "" ||
-      opcaoSelecionada === null
+      opcaoSelecionada === null ||
+      !Number(valor) ||
+      Number(valor) < 0
     ) {
       Alert.alert("Preencha todos os campos");
       return;

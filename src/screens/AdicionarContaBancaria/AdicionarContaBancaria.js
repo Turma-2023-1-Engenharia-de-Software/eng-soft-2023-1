@@ -12,7 +12,14 @@ function AdicionarContaBancaria({ navigation }) {
   const [tipo_conta, settipo] = useState("");
 
   const handleAdicionarConta = async () => {
-    if (nome === "" || banco === "" || saldo === "" || tipo_conta === "") {
+    if (
+      nome === "" ||
+      banco === "" ||
+      saldo === "" ||
+      tipo_conta === "" ||
+      !Number(saldo) ||
+      Number(saldo) < 0
+    ) {
       Alert.alert("Preencha os campos corretamente!");
       return;
     }

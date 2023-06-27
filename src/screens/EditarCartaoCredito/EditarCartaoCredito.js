@@ -12,8 +12,15 @@ const EditarCartaoCredito = ({ route, navigation }) => {
   const [codigo, setCodigo] = useState(cartao.codigo);
 
   const handleEditarCartao = async () => {
-    if (nome === "" || numero === "" || vencimento === "" || codigo === "") {
-      Alert.alert("Preencha os campos corretamente");
+    if (
+      nome === "" ||
+      numero === "" ||
+      vencimento === "" ||
+      codigo === "" ||
+      !Number(valor) ||
+      Number(valor) < 0
+    ) {
+      Alert.alert("Preencha os campos corretamente!");
       return;
     }
 
