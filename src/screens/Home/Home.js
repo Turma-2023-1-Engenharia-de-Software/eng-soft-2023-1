@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-import { BackHandler, Alert, View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 
 import styles from "./styles.js";
 import { calcularSomaValores } from "../../utils/calculaSaldo.js";
@@ -24,9 +24,7 @@ export default function Home({ saldoVisivel }) {
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <View style={styles.innerContainer}>
-          {saldo}
-        </View>
+        <View style={styles.innerContainer}>{saldo}</View>
       </View>
     </View>
   );

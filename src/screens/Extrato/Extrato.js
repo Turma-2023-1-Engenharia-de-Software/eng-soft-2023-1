@@ -30,33 +30,33 @@ export default function Extratos() {
     <View style={styles.container}>
       <ScrollView>
         <View>
-          {extrato.map((item, index) => {
+          {extrato.map((transacao, index) => {
             return (
               <View key={index}>
                 <TouchableOpacity
                   onPress={() => {
-                    navigation.navigate("DetalheExtrato", { item, index });
+                    navigation.navigate("DetalheExtrato", { transacao, index });
                   }}
                 >
                   <View style={styles.transacao}>
                     <Text style={styles.extrato}>
-                      {item.nome}
+                      {transacao.nome}
                       {"\n"}
                       <Text
                         style={
-                          item.opcaoSelecionada === "receita"
+                          transacao.opcaoSelecionada === "receita"
                             ? styles.receita
                             : styles.despesa
                         }
                       >
                         {"R$"}
-                        {item.valor}
+                        {transacao.valor}
                       </Text>
                     </Text>
 
                     <Text style={styles.dataStyle}>
-                      {item.date.getDate()}/{item.date.getMonth()}/
-                      {item.date.getFullYear()}
+                      {transacao.date.getDate()}/{transacao.date.getMonth()}/
+                      {transacao.date.getFullYear()}
                     </Text>
                   </View>
                 </TouchableOpacity>

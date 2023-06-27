@@ -54,7 +54,8 @@ export default function Formulario() {
       date === null ||
       tipo === "" ||
       opcaoSelecionada === null ||
-      !Number(valor)
+      !Number(valor) ||
+      Number(valor) < 0
     ) {
       Alert.alert("Preencha todos os campos de forma válida!");
       return;
