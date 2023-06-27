@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../screens/Home/styles";
 
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Button,
-  Alert,
-} from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Alert, BackHandler } from "react-native";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -18,7 +11,6 @@ import ShowIcon from "../assets/show.svg";
 import ExportIcon from "../assets/export.svg";
 import EditIcon from "../assets/edit.svg";
 
-
 const defaultName = "usuário";
 
 const exportarDados = () => {
@@ -27,7 +19,7 @@ const exportarDados = () => {
     "Você deseja exportar os dados do app?",
     [
       {
-        text: "Não"
+        text: "Não",
       },
       //AQUI A CONFIRMAÇÃO DE EXPORTAR PDF VAI FECHAR O APP, SUBSTITUA PELA FUNÇÃO DE EXPORTAÇÃO DE PDF
       { text: "Sim", onPress: () => BackHandler.exitApp() },
@@ -38,8 +30,8 @@ const exportarDados = () => {
 
 const fecharApp = () => {
   Alert.alert(
-    "Fechar App",
-    "Você deseja sair do app?",
+    "Fechar aplicativo",
+    "Você deseja sair do aplicativo?",
     [
       {
         text: "Não",
@@ -111,34 +103,61 @@ export function LogoTitle({ onToggleSaldo }) {
       <Text style={styles.text}>Olá, {nomeUsuario}!</Text>
     );
   }
-  return<View style={{ flexDirection: 'row', justifyContent: 'space-between',width:'100%' }}>
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
+      }}
+    >
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "45%",
+        }}
+      >
+        <AppIcon width={24} height={24} color={"#000000"} />
 
-      <View style = {{flexDirection: 'row',justifyContent: 'space-between', width:'45%'}}>
-      <AppIcon width={24} height={24} color={'#000000'}/>
+        {nomeUsuarioComponente}
 
-      {nomeUsuarioComponente}
-
-      <TouchableOpacity onPress={editarNomeUsuario} style={{ flexDirection: 'row', alignItems: 'center'}}>
-        <EditIcon width={24} height={24} />
-      </TouchableOpacity>
-
+        <TouchableOpacity
+          onPress={editarNomeUsuario}
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <EditIcon width={24} height={24} />
+        </TouchableOpacity>
       </View>
 
-      <View style={{ flexDirection: 'row',justifyContent: 'space-between', width:'30%'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "30%",
+        }}
+      >
+        <TouchableOpacity
+          onPress={onToggleSaldo}
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <ShowIcon width={24} height={24} />
+        </TouchableOpacity>
 
-      <TouchableOpacity onPress={onToggleSaldo} style={{ flexDirection: 'row', alignItems: 'center'}}>
-        <ShowIcon width={24} height={24} />
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={exportarDados}
+          style={{ flexDirection: "row", alignItems: "center", padding: 5 }}
+        >
+          <ExportIcon width={24} height={24} />
+        </TouchableOpacity>
 
-      <TouchableOpacity onPress={exportarDados} style={{ flexDirection: 'row', alignItems: 'center', padding: 5}}>
-        <ExportIcon width={24} height={24} />
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={fecharApp} style={{ flexDirection: 'row', alignItems: 'center'}}>
-        <ExitIcon width={24} height={24} />
-      </TouchableOpacity>
-
+        <TouchableOpacity
+          onPress={fecharApp}
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <ExitIcon width={24} height={24} />
+        </TouchableOpacity>
       </View>
-
-    </View>;
+    </View>
+  );
 }

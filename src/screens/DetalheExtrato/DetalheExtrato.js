@@ -5,15 +5,13 @@ import styles from "./styles.js";
 import { removeReceitasEDespesas } from "../../utils/storage.js";
 
 export default function DetalheExtrato({ route, navigation }) {
-  const { item, index } = route.params;
+  const { transacao, index } = route.params;
 
   const handleEditar = () => {
-    navigation.navigate("FormularioEdicao", {
-      item: item,
-      onSave: handleSalvarEdicao,
-      index: index,
-    });
+    navigation.navigate("FormularioEdicao", { transacao });
   };
+
+  console.log(transacao)
 
   const handleSalvarEdicao = (data) => {
     // Lógica para salvar as alterações
@@ -38,25 +36,25 @@ export default function DetalheExtrato({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textTitle}>{item.nome}</Text>
+      <Text style={styles.textTitle}>{transacao.nome}</Text>
       <View style={styles.divider}></View>
       <Text style={styles.text}>
         <Text style={styles.textBold}>Conta: </Text>
-        {item.conta}
+        {transacao.conta}
       </Text>
       <Text style={styles.text}>
         <Text style={styles.textBold}>Tipo: </Text>
-        {item.tipo}
+        {transacao.tipo}
       </Text>
       <Text style={styles.text}>
         <Text style={[styles.textBold, { textTransform: "capitalize" }]}>
-          {item.opcaoSelecionada}
+          {transacao.opcaoSelecionada}
         </Text>
-        {" de R$ " + item.valor}
+        {" de R$ " + transacao.valor}
       </Text>
       <Text style={styles.text}>
         <Text style={styles.textBold}>Data: </Text>
-        {item.date.getDate()}/{item.date.getMonth()}/{item.date.getFullYear()}
+        {transacao.date.getDate()}/{transacao.date.getMonth()}/{transacao.date.getFullYear()}
       </Text>
 
       <View style={styles.buttonsView}>

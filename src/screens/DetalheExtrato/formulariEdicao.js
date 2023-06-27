@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+  Button,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-
-import styles from "./styles.js";
+import styles from "./stylesForms.js";
 import { updateReceitasEDespesas } from "../../utils/storage.js";
 
-export default function FormularioEdicao({ item, onSave, index }) {
-  const [nome, setNome] = useState("");
-  const [valor, setValor] = useState("");
-  const [tipo, setTipo] = useState("");
-  const [conta, setConta] = useState("");
-  const [date, setDate] = useState("");
-  const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
+export default function FormularioEdicao({ route, navigation }) {
+  const { transacao } = route.params;
+  const [nome, setNome] = useState(transacao.nome);
+  const [valor, setValor] = useState(transacao.valor.toString());
+  const [tipo, setTipo] = useState(transacao.tipo);
+  const [conta, setConta] = useState(transacao.conta);
+  const [date, setDate] = useState(transacao.date);
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState(transacao.opcaoSelecionada);
 
   useEffect(() => {
-    if (item) {
-      setNome(item.nome);
-      setValor(item.valor);
-      setTipo(item.tipo);
-      setConta(item.conta);
-      setDate(item.date);
-      setOpcaoSelecionada(item.opcaoSelecionada);
+    if (transacao) {
+      setNome(transacao.nome);
+      setValor(transacao.valor);
+      setTipo(transacao.tipo);
+      setConta(transacao.conta);
+      setDate(transacao.date);
+      setOpcaoSelecionada(transacao.opcaoSelecionada);
     }
-  }, [item]);
+  }, [transacao]);
 
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
   };
-
-  const navigation = useNavigation();
 
   async function handleSubmit() {
     if (
@@ -69,11 +74,11 @@ export default function FormularioEdicao({ item, onSave, index }) {
     setOpcaoSelecionada(null);
 
     navigation.goBack();
-
   }
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.heading}>Editar Transação</Text>
       <TextInput
         style={styles.input}
         value={nome}
@@ -105,36 +110,42 @@ export default function FormularioEdicao({ item, onSave, index }) {
         onChangeText={setDate}
       ></TextInput>
 
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "receita" ? styles.buttonSelecionadoR : null,
-        ]}
-        onPress={() => handleOpcaoSelecionada("receita")}
-      >
-        <Text style={styles.buttonLabel}>Receita</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "despesa" ? styles.buttonSelecionadoD : null,
-        ]}
-        onPress={() => handleOpcaoSelecionada("despesa")}
-      >
-        <Text style={styles.buttonLabel}>Despesa</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonRD}>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "despesa"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoR,
+          ]}
+          onPress={() => handleOpcaoSelecionada("receita")}
+        >
+          <Text style={styles.buttonLabel}>Receita</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Salvar</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "receita"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoD,
+          ]}
+          onPress={() => handleOpcaoSelecionada("despesa")}
+        >
+          <Text style={styles.buttonLabel}>Despesa</Text>
+        </TouchableOpacity>
+      </View>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.goBack()}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonsView}>
+        <Button title="Salvar" onPress={handleSubmit} />
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 }
-
