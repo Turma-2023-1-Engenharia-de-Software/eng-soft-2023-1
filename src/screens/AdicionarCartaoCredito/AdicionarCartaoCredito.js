@@ -7,27 +7,26 @@ import styles from "./styles";
 
 function AdicionarCartao({ navigation }) {
   const [nome, setNome] = useState("");
-  const [numero, setNumero] = useState("");
-  const [vencimento, setVencimento] = useState("");
-  const [codigo, setCodigo] = useState("");
+  const [banco, setBanco] = useState("");
+  const [faturasTotais, setFaturasTotais] = useState(0.0);
 
   const handleAdicionarCartao = async () => {
     if (
       nome === "" ||
-      numero === "" ||
-      vencimento === "" ||
-      codigo === ""
+      banco === "" ||
+      faturasTotais === "" ||
+      !Number(faturasTotais) ||
+      Number(faturasTotais) < 0
     ) {
       Alert.alert("Preencha os campos corretamente!");
       return;
     }
 
-    if (nome && numero && vencimento && codigo) {
+    if (nome && banco && faturasTotais) {
       const cartao = {
         nome,
-        numero,
-        vencimento,
-        codigo,
+        banco,
+        faturasTotais,
       };
 
       try {
@@ -35,14 +34,14 @@ function AdicionarCartao({ navigation }) {
 
         // Limpar os campos após adicionar o cartão
         setNome("");
-        setNumero("");
-        setVencimento("");
-        setCodigo("");
+        setBanco("");
+        setFaturasTotais(0.0);
 
-        console.log("Cartão adicionado com sucesso!");
+        Alert.alert("Cartão adicionado com sucesso!");
       } catch (error) {
-        console.log("Erro ao salvar o cartão:", error);
+        Alert.alert("Erro ao salvar o cartão:", error);
       }
+      navigation.goBack()
     }
   };
 
@@ -57,22 +56,15 @@ function AdicionarCartao({ navigation }) {
       />
       <TextInput
         style={styles.input}
-        placeholder="Número"
-        value={numero}
-        onChangeText={(text) => setNumero(text)}
+        placeholder="Banco"
+        value={banco}
+        onChangeText={(text) => setBanco(text)}
       />
       <TextInput
         style={styles.input}
-        placeholder="Vencimento"
-        value={vencimento}
-        onChangeText={(text) => setVencimento(text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Codigo"
-        value={codigo}
-        onChangeText={(text) => setCodigo(text)}
-        d
+        placeholder="Valor total das faturas do cartão"
+        value={faturasTotais}
+        onChangeText={(text) => setFaturasTotais(text)}
       />
 
       <View style={styles.buttonsView}>

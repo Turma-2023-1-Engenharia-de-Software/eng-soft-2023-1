@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, Button, ScrollView } from "react-native";
+import { View, Text, TextInput, Button, ScrollView, Alert } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 import styles from "./styles";
@@ -70,10 +70,10 @@ const DetalheContaBancaria = ({ route, navigation }) => {
         ></Button>
       </View>
 
-      <View style={{ backgroundColor: "yellow" }}>
+      <View style={{ backgroundColor: "#fff" }}>
         <ScrollView>
           <View>
-            {extrato.map((transacao, index) => {
+            {extrato.filter((item) => item.conta == conta.nome).map((transacao, index) => {
               return (
                 <View key={index}>
                   <TouchableOpacity

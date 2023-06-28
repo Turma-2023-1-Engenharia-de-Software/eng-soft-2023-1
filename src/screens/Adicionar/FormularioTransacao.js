@@ -87,6 +87,8 @@ export default function Formulario() {
     resetForm();
   }
 
+  console.log(conta)
+
   return (
     <View>
       <TextInput
@@ -113,7 +115,7 @@ export default function Formulario() {
       <Text>Selecione a conta: </Text>
       <View style={styles.input}>
         <Picker
-          selectedValue={conta}
+          selectedValue={listaContasCartoes[0]}
           onValueChange={(itemValue, itemIndex) => setConta(itemValue)}
         >
           {listaContasCartoes.map((item, index) => {

@@ -130,13 +130,13 @@ const Contas = ({ navigation }) => {
                   <Text style={[styles.cardText, styles.cardTextTitle]}>
                     {cartao.nome}
                   </Text>
-                  <Text style={styles.cardText}>R$ {cartao.numero}</Text>
+                  <Text style={styles.cardText}>R$ {cartao.faturasTotais}</Text>
 
                   <View style={styles.cardIcons}>
                     {/* Edit button*/}
                     <TouchableOpacity
                       onPress={() =>
-                        navigation.navigate("EditarCartaoCredito", { cartao })
+                        navigation.navigate("EditarCartaoCredito", { index, cartao })
                       }
                     >
                       <EditIcon width={20} height={20} />
