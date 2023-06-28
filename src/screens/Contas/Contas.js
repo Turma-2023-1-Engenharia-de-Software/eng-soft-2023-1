@@ -41,7 +41,10 @@ const Contas = ({ navigation }) => {
       },
       {
         text: "Confirmar",
-        onPress: () => removeCartoes(index),
+        onPress: () => {
+          fetchCartoes();
+          removeCartoes(index);
+        },
       },
     ]);
   };
@@ -57,7 +60,7 @@ const Contas = ({ navigation }) => {
       },
       {
         text: "Confirmar",
-        onPress: () => {
+        onPress: async () => {
           removeContas(index);
           setContasAtualizadas(true);
         },
@@ -87,7 +90,7 @@ const Contas = ({ navigation }) => {
                     {/* Edit button*/}
                     <TouchableOpacity
                       onPress={() =>
-                        navigation.navigate("EditarContaBancaria", { conta })
+                        navigation.navigate("EditarContaBancaria", { index, conta })
                       }
                     >
                       <EditIcon width={20} height={20} />

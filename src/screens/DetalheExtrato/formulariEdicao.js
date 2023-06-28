@@ -7,19 +7,30 @@ import {
   Alert,
   Button,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 import styles from "./stylesForms.js";
 import { updateReceitasEDespesas } from "../../utils/storage.js";
 
 export default function FormularioEdicao({ route, navigation }) {
-  const { transacao } = route.params;
+  const { transacao, index } = route.params;
   const [nome, setNome] = useState(transacao.nome);
   const [valor, setValor] = useState(transacao.valor.toString());
   const [tipo, setTipo] = useState(transacao.tipo);
   const [conta, setConta] = useState(transacao.conta);
   const [date, setDate] = useState(transacao.date);
   const [opcaoSelecionada, setOpcaoSelecionada] = useState(transacao.opcaoSelecionada);
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;
+    setShow(false);
+    setDate(currentDate);
+  };
+
+  const showDatepicker = () => {
+    setShow(true);
+  };
 
   useEffect(() => {
     if (transacao) {
@@ -103,12 +114,36 @@ export default function FormularioEdicao({ route, navigation }) {
         placeholder="Conta"
         onChangeText={setConta}
       ></TextInput>
-      <TextInput
-        style={styles.input}
-        value={date}
-        placeholder="Data"
-        onChangeText={setDate}
-      ></TextInput>
+      <View>
+        {Platform.OS === "android" && (
+          <TouchableOpacity
+            style={{ paddingVertical: 10, paddingLeft: 10 }}
+            onPress={() => showDatepicker()}
+          >
+            <Text>
+              {!date
+                ? "Selecionar data"
+                : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
+            </Text>
+          </TouchableOpacity>
+        )}
+
+        {Platform.OS === "android" && show && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
+
+        {Platform.OS !== "android" && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
+      </View>
 
       <View style={styles.buttonRD}>
         <TouchableOpacity
