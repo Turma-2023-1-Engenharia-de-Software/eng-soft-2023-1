@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button } from "react-native";
 
+import {updateContas} from "../../utils/storageContas";
+
 import styles from "./styles";
 
 const EditarContaBancaria = ({ route, navigation }) => {
-  const { conta } = route.params;
+  const { index, conta } = route.params;
   const [nome, setNome] = useState(conta.nome);
   const [banco, setBanco] = useState(conta.banco);
   const [saldo, setSaldo] = useState(conta.saldo.toString());
@@ -31,6 +33,12 @@ const EditarContaBancaria = ({ route, navigation }) => {
         saldo: parseFloat(saldo),
         tipo_conta,
       };
+
+      try {
+        updateContas(index, contaEditada);
+      } catch (error) {
+        console.log("Erro ao salvar a conta:", error);
+      }
     }
   };
 

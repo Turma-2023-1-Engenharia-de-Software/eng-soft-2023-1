@@ -8,13 +8,12 @@ export default function DetalheExtrato({ route, navigation }) {
   const { transacao, index } = route.params;
 
   const handleEditar = () => {
-    navigation.navigate("FormularioEdicao", { transacao });
+    navigation.navigate("FormularioEdicao", { transacao, index });
   };
 
   console.log(transacao)
 
   const handleSalvarEdicao = (data) => {
-    // Lógica para salvar as alterações
     console.log("Dados editados:", data);
     // ...
   };
