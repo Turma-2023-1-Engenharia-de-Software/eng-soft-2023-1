@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "./styles.js";
 import { getReceitasEDespesas } from "../../utils/storage.js";
 import { useExtratoStore } from "../../stores/ExtratoStore.js";
-
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function Extratos() {
   const navigation = useNavigation();
@@ -30,27 +30,37 @@ export default function Extratos() {
     <View style={styles.container}>
       <ScrollView>
         <View>
-          {extrato.map((item, index) => {
-            return  (
+          {extrato.map((transacao, index) => {
+            return (
               <View key={index}>
-                <Text 
-                  key={index}
-                  style={
-                    item.opcaoSelecionada === "receita"
-                    ? styles.receita
-                    : styles.despesa
-                  }
-                  onPress={() =>
-                    navigation.navigate("DetalheExtrato", { item })
-                  }
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate("DetalheExtrato", { transacao, index });
+                  }}
                 >
-                  {item.nome}
-                  {"\n"}
-                  {"R$"}
-                  {item.valor}
-                  {"\n"}
-                  {item.tipo}
-                </Text>
+                  <View style={styles.transacao}>
+                    <Text style={styles.extrato}>
+                      {transacao.nome}
+                      {"\n"}
+                      <Text
+                        style={
+                          transacao.opcaoSelecionada === "receita"
+                            ? styles.receita
+                            : styles.despesa
+                        }
+                      >
+                        {"R$"}
+                        {transacao.valor}
+                      </Text>
+                    </Text>
+
+                    <Text style={styles.dataStyle}>
+                      {transacao.date.getDate()}/{transacao.date.getMonth()}/
+                      {transacao.date.getFullYear()}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.eu}></View>
               </View>
             );
           })}

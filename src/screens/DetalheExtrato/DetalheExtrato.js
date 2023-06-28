@@ -1,84 +1,76 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import React from "react";
+import { View, Text, Button, Alert } from "react-native";
 
 import styles from "./styles.js";
-import { useNavigation } from '@react-navigation/native';
+import { removeReceitasEDespesas } from "../../utils/storage.js";
 
 export default function DetalheExtrato({ route, navigation }) {
-  const { item } = route.params;
+  const { transacao, index } = route.params;
 
   const handleEditar = () => {
-    navigation.navigate("FormularioEdicao", {
-      item: extrato,
-      onSave: handleSalvarEdicao,
-    });
+    navigation.navigate("FormularioEdicao", { transacao, index });
   };
 
-  const BackButton = () => {
-    const navigation = useNavigation();
-  
-    const handlePress = () => {
-      navigation.goBack();
-    };
-  
-    return (
-      <TouchableOpacity style={styles.button} onPress={handlePress}>
-        <View>
-          <Text style={styles.buttonText}>Voltar</Text>
-        </View>
-      </TouchableOpacity>
-    );
-  };
+  console.log(transacao)
 
   const handleSalvarEdicao = (data) => {
-    // Lógica para salvar as alterações
     console.log("Dados editados:", data);
     // ...
   };
 
-  const getCorTexto = (item) => {
-    const conta = item.conta;
-    if (conta === "banco do brasil") {
-      return styles.corBancoBDB;
-    } else if (conta === "bradesco") {
-      return styles.corBancoBra;
-    } else if (conta === "banco itau") {
-      return styles.corBancoItu;
-    } else if (conta === "caixa economica federal") {
-      return styles.corBancoCax;
-    } else if (conta === "banco santander") {
-      return styles.corBancoStd;
-    } else {
-      return styles.corPadrao;
-    }
+  const dialogDeleteTransacao = (index) => {
+    Alert.alert("Apagar transação", "Deseja realmente apagar?", [
+      {
+        text: "Cancelar",
+      },
+      {
+        text: "Confirmar",
+        onPress: () => {
+          removeReceitasEDespesas(index);
+          navigation.goBack();
+        },
+      },
+    ]);
   };
 
   return (
     <View style={styles.container}>
-      <BackButton />
-      <ScrollView>
-        <View>
-          <View>
-            <Text
-              style={[
-                getCorTexto(item),
-                item.tipo === "pagamento"
-                  ? styles.pagamento
-                  : styles.recebimento,
-              ]}
-            >
-              {item.nome}
-              {"\n"}
-              {item.conta}
-              {"\n"}
-              {item.tipo}
-              {"\n"}
-              {item.opcaoSelecionada + " de R$ " + item.valor}
-              {"\n"}
-              {item.date.toString()}
-            </Text>
-          </View>
-        </View>
-      </ScrollView>
+      <Text style={styles.textTitle}>{transacao.nome}</Text>
+      <View style={styles.divider}></View>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Conta: </Text>
+        {transacao.conta}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Tipo: </Text>
+        {transacao.tipo}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={[styles.textBold, { textTransform: "capitalize" }]}>
+          {transacao.opcaoSelecionada}
+        </Text>
+        {" de R$ " + transacao.valor}
+      </Text>
+      <Text style={styles.text}>
+        <Text style={styles.textBold}>Data: </Text>
+        {transacao.date.getDate()}/{transacao.date.getMonth()}/{transacao.date.getFullYear()}
+      </Text>
+
+      <View style={styles.buttonsView}>
+        <Button title="Editar" onPress={handleEditar}></Button>
+        <Button
+          color="red"
+          title="Apagar"
+          onPress={() => dialogDeleteTransacao(index)}
+        ></Button>
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 }

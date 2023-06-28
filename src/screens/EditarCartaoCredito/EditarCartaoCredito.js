@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
 
-import { addCartoes } from "../../utils/storageCartoes";
-
+import { updateCartoes } from "../../utils/storageCartoes";
 import styles from "./styles";
 
-function AdicionarCartao({ navigation }) {
-  const [nome, setNome] = useState("");
-  const [banco, setBanco] = useState("");
-  const [faturasTotais, setFaturasTotais] = useState(0.0);
+const EditarCartaoCredito = ({ route, navigation }) => {
+  const { index, cartao } = route.params;
+  const [nome, setNome] = useState(cartao.nome);
+  const [banco, setBanco] = useState(cartao.banco);
+  const [faturasTotais, setFaturasTotais] = useState(cartao.faturasTotais);
 
-  const handleAdicionarCartao = async () => {
+  const handleEditarCartao = async () => {
     if (
       nome === "" ||
       banco === "" ||
@@ -23,23 +23,18 @@ function AdicionarCartao({ navigation }) {
     }
 
     if (nome && banco && faturasTotais) {
-      const cartao = {
+      const editedCartao = {
         nome,
         banco,
         faturasTotais,
       };
 
       try {
-        addCartoes(cartao);
-
-        // Limpar os campos após adicionar o cartão
-        setNome("");
-        setBanco("");
-        setFaturasTotais(0.0);
-
-        Alert.alert("Cartão adicionado com sucesso!");
+        // Atualizar os detalhes do cartão
+        updateCartoes(index, editedCartao)
+          Alert.alert("Cartão editado com sucesso!");
       } catch (error) {
-        Alert.alert("Erro ao salvar o cartão:", error);
+        Alert.alert("Erro ao editar o cartão:", error);
       }
       navigation.goBack()
     }
@@ -47,7 +42,7 @@ function AdicionarCartao({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Adicionar Cartão de Crédito</Text>
+      <Text style={styles.heading}>Editar Cartão de Crédito</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome"
@@ -56,7 +51,7 @@ function AdicionarCartao({ navigation }) {
       />
       <TextInput
         style={styles.input}
-        placeholder="Banco"
+        placeholder="Número"
         value={banco}
         onChangeText={(text) => setBanco(text)}
       />
@@ -68,7 +63,7 @@ function AdicionarCartao({ navigation }) {
       />
 
       <View style={styles.buttonsView}>
-        <Button title="Adicionar" onPress={handleAdicionarCartao} />
+        <Button title="Salvar" onPress={handleEditarCartao} />
         <Button
           color="#757de8"
           title="Voltar"
@@ -79,6 +74,6 @@ function AdicionarCartao({ navigation }) {
       </View>
     </View>
   );
-}
+};
 
-export default AdicionarCartao;
+export default EditarCartaoCredito;

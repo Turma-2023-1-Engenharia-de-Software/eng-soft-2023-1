@@ -1,144 +1,169 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import AddIcon from "../../assets/add.svg";
+import EditIcon from "../../assets/edit.svg";
+import DeleteIcon from "../../assets/delete_white.svg";
 import styles from "./styles.js";
 
-const showAlert = () => {
-  Alert.alert("ALERTA:", "Botão em manutenção !", [
-    { text: "OK", onPress: () => console.log("Alert closed") },
-  ]);
-};
+import { useContaStore } from "../../stores/ContasStore.js";
+import { useCartaoStore } from "../../stores/CartoesStore.js";
 
-class Contas extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contas: [
-        {
-          id: "0",
-          nome: "Conta 00",
-          banco: "Banco do Brasil",
-          saldo: 1002.89,
-          tipo_conta: "poupança",
-        },
-        {
-          id: "1",
-          nome: "Conta 01",
-          banco: "Bradesco",
-          saldo: 322.89,
-          tipo_conta: "conta corrente",
-        },
-        {
-          id: "2",
-          nome: "conta 03",
-          banco: "Caixa Econômica Federal",
-          saldo: 124.54,
-          tipo_conta: "Corrente",
-        },
-        {
-          id: "3",
-          nome: "conta 04",
-          banco: "Banco do Brasil",
-          saldo: 1002.89,
-          tipo_conta: "poupança",
-        },
-        {
-          id: "5",
-          nome: "conta 09",
-          banco: "Banco Itau",
-          saldo: 69.85,
-          tipo_conta: "Corrente",
-        },
-      ],
-    };
-  }
+import { removeContas } from "../../utils/storageContas";
+import { removeCartoes } from "../../utils/storageCartoes";
 
-  onDelete = (id) => {
-    this.setState((prevState) => {
-      const updatedContas = prevState.contas.filter((conta) => conta.id !== id);
-      return { contas: updatedContas };
-    });
-  };
+const Contas = ({ navigation }) => {
+  const listaContas = useContaStore((state) => state.listaContas);
+  const fetchContas = useContaStore((state) => state.fetchContas);
+  const listaCartoes = useCartaoStore((state) => state.listaCartoes);
+  const fetchCartoes = useCartaoStore((state) => state.fetchCartoes);
 
-  dialogDetails = (conta) => {
-    return Alert.alert(conta.nome, conta.tipo_conta);
-  };
+  const [contasAtualizadas, setContasAtualizadas] = useState(false);
 
-  dialogDelete = (id) => {
-    return Alert.alert("Deletar conta", "Deseja realmente deletar?", [
+  useEffect(() => {
+    fetchContas();
+    fetchCartoes();
+  }, []);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      fetchContas();
+      fetchCartoes();
+    }, [contasAtualizadas])
+  );
+
+  const dialogDeleteCartao = (index) => {
+    Alert.alert("Deletar cartão", "Deseja realmente deletar?", [
       {
         text: "Cancelar",
       },
       {
         text: "Confirmar",
-        onPress: () => this.onDelete(id),
+        onPress: () => {
+          fetchCartoes();
+          removeCartoes(index);
+        },
       },
     ]);
   };
-  /*navigateToAdicionarConta = () => {
-    this.props.navigation.navigate("AdicionarConta", {Contas});
-  };
-  */
 
-  render() {
-    const { contas } = this.state;
-    const { navigation } = this.props;
-    return (
-      <View style={styles.container}>
+  const dialogDetails = (conta) => {
+    Alert.alert(conta.nome, conta.tipo_conta);
+  };
+
+  const dialogDeleteConta = (index) => {
+    Alert.alert("Apagar conta", "Deseja realmente apagar?", [
+      {
+        text: "Cancelar",
+      },
+      {
+        text: "Confirmar",
+        onPress: async () => {
+          removeContas(index);
+          setContasAtualizadas(true);
+        },
+      },
+    ]);
+  };
+
+  return (
+    <>
+      <View style={{ flex: 1, flexDirection: "row" }}>
         <ScrollView style={styles.containerScroll}>
-          <View>
-            {contas.map((conta, index) => {
-              return (
-                <View key={index}>
-                  <TouchableOpacity onPress={() => this.dialogDetails(conta)}>
-                    <Text style={styles.conta_bancaria}>
-                      {conta.banco}: {conta.saldo}
-                    </Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={styles.btnStyle}
-                    onPress={() => this.dialogDelete(conta.id)}
-                  >
-                    <Text>Delete</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={styles.btnStyleEdit}
-                    onPress={() =>
-                      navigation.navigate("DetalheContaBancaria", { conta })
-                    }
-                  >
-                    <Text>Edit</Text>
-                  </TouchableOpacity>
+          <Text style={styles.textTitle}>Contas Bancárias</Text>
+
+          {listaContas.map((conta, index) => {
+            return (
+              <TouchableOpacity
+                key={index}
+                onPress={() =>  navigation.navigate("DetalheContaBancaria", { conta })}
+              >
+                <View style={styles.contaBancaria}>
+                  <Text style={[styles.cardText, styles.cardTextTitle]}>
+                    {conta.banco}
+                  </Text>
+                  <Text style={styles.cardText}>R$ {conta.saldo}</Text>
+
+                  <View style={styles.cardIcons}>
+                    {/* Edit button*/}
+                    <TouchableOpacity
+                      onPress={() =>
+                        navigation.navigate("EditarContaBancaria", { index, conta })
+                      }
+                    >
+                      <EditIcon width={20} height={20} />
+                    </TouchableOpacity>
+
+                    {/* Delete button */}
+                    <TouchableOpacity onPress={() => dialogDeleteConta(index)}>
+                      <DeleteIcon width={20} height={20} />
+                    </TouchableOpacity>
+                  </View>
                 </View>
-              );
-            })}
+              </TouchableOpacity>
+            );
+          })}
+
+          <View style={styles.addButtonContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("AdicionarContaBancaria")}
+            >
+              <AddIcon width={24} height={24} />
+            </TouchableOpacity>
           </View>
         </ScrollView>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("AdicionarContaBancaria")}
-        >
-          <AddIcon width={24} height={24} />
-        </TouchableOpacity>
 
-        <TouchableOpacity
-          style={[styles.button, { marginRight: 300 }]}
-          onPress={() => navigation.navigate("AdicionarCartaoCredito")}
-        >
-          <AddIcon width={24} height={24} />
-        </TouchableOpacity>
+        <ScrollView style={styles.containerScroll}>
+          <Text style={styles.textTitle}>Cartões de Crédito</Text>
+          {listaCartoes.map((cartao, index) => {
+            return (
+              <TouchableOpacity
+                key={index}
+                onPress={() =>
+                  navigation.navigate("DetalheCartaoCredito", { cartao, index })
+                }
+              >
+                <View style={styles.cardCartao}>
+                  <Text style={[styles.cardText, styles.cardTextTitle]}>
+                    {cartao.nome}
+                  </Text>
+                  <Text style={styles.cardText}>R$ {cartao.faturasTotais}</Text>
 
-        <TouchableOpacity
-          style={[styles.button, { marginRight: 150 }]}
-          //onPress={() => navigation.navigate("ViewCartao")}
-          onPress={() => showAlert()}
-        >
-          <Text style={{ color: "white" }}>Cartões</Text>
-        </TouchableOpacity>
+                  <View style={styles.cardIcons}>
+                    {/* Edit button*/}
+                    <TouchableOpacity
+                      onPress={() =>
+                        navigation.navigate("EditarCartaoCredito", { index, cartao })
+                      }
+                    >
+                      <EditIcon width={20} height={20} />
+                    </TouchableOpacity>
+
+                    {/* Delete button */}
+                    <TouchableOpacity onPress={() => dialogDeleteCartao(index)}>
+                      <DeleteIcon width={20} height={20} />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </TouchableOpacity>
+            );
+          })}
+
+          <View style={styles.addButtonContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("AdicionarCartaoCredito")}
+            >
+              <AddIcon width={24} height={24} />
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default Contas;

@@ -1,17 +1,31 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, Button, Alert } from "react-native";
+
+import { addContas } from "../../utils/storageContas.js";
 
 import styles from "./styles";
 
-function AdicionarContaBancaria() {
+function AdicionarContaBancaria({ navigation }) {
   const [nome, setNome] = useState("");
   const [banco, setbanco] = useState("");
-  const [saldo, setsaldo] = useState("");
+  const [saldo, setsaldo] = useState(0.0);
   const [tipo_conta, settipo] = useState("");
 
-  const handleAdicionarCartao = async () => {
+  const handleAdicionarConta = async () => {
+    if (
+      nome === "" ||
+      banco === "" ||
+      saldo === "" ||
+      tipo_conta === "" ||
+      !Number(saldo) ||
+      Number(saldo) < 0
+    ) {
+      Alert.alert("Preencha os campos corretamente!");
+      return;
+    }
+
     if (nome && banco && saldo && tipo_conta) {
-      const cartao = {
+      const conta = {
         nome,
         banco,
         saldo,
@@ -20,14 +34,13 @@ function AdicionarContaBancaria() {
 
       try {
         // Salvar os detalhes do cartão
-        // (lógica de salvamento aqui)
+        addContas(conta);
 
         // Limpar os campos após adicionar o cartão
         setNome("");
         setbanco("");
-        setsaldo("");
+        setsaldo(0.0);
         settipo("");
-        console.log("Cartão adicionado com sucesso!");
       } catch (error) {
         console.log("Erro ao salvar o cartão:", error);
       }
@@ -59,9 +72,19 @@ function AdicionarContaBancaria() {
         style={styles.input}
         placeholder="Tipo de Conta"
         value={tipo_conta}
-        onChangeText={(text) => setsaldo(text)}
+        onChangeText={(text) => settipo(text)}
       />
-      <Button title="Adicionar" onPress={handleAdicionarCartao} />
+
+      <View style={styles.buttonsView}>
+        <Button title="Adicionar" onPress={handleAdicionarConta} />
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 }

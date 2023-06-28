@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { Picker } from "@react-native-picker/picker";
 
 import styles from "./styles.js";
 import { addReceitasEDespesas } from "../../utils/storage.js";
-import DateTimePicker from '@react-native-community/datetimepicker';
+import { useContasCartoesStore } from "../../stores/CartoesStore.js";
 
 export default function Formulario() {
   const [nome, setNome] = useState("");
@@ -15,6 +17,17 @@ export default function Formulario() {
   const [date, setDate] = useState(new Date(Date.now()));
   const [show, setShow] = useState(false);
 
+  const listaContasCartoes = useContasCartoesStore(
+    (state) => state.listaContasCartoes
+  );
+  const fetchContasCartoes = useContasCartoesStore(
+    (state) => state.fetchContasCartoes
+  );
+
+  useEffect(() => {
+    fetchContasCartoes();
+  }, []);
+
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
     setShow(false);
@@ -22,7 +35,7 @@ export default function Formulario() {
   };
 
   const showDatepicker = () => {
-      setShow(true);
+    setShow(true);
   };
 
   const handleOpcaoSelecionada = (opcao) => {
@@ -30,12 +43,12 @@ export default function Formulario() {
   };
 
   useEffect(() => {
-    if (Platform.OS === 'android') {
+    if (Platform.OS === "android") {
       setShow(false);
     } else {
       setShow(true);
     }
-  }, [])
+  }, []);
 
   function resetForm() {
     setNome("");
@@ -54,9 +67,10 @@ export default function Formulario() {
       date === null ||
       tipo === "" ||
       opcaoSelecionada === null ||
-      !Number(valor)
+      !Number(valor) ||
+      Number(valor) < 0
     ) {
-      alert("Preencha todos os campos de forma válida");
+      Alert.alert("Preencha todos os campos de forma válida!");
       return;
     }
 
@@ -72,6 +86,8 @@ export default function Formulario() {
 
     resetForm();
   }
+
+  console.log(conta)
 
   return (
     <View>
@@ -96,26 +112,35 @@ export default function Formulario() {
         onChangeText={setTipo}
       ></TextInput>
 
-      <TextInput
-        style={styles.input}
-        value={conta}
-        placeholder="Conta"
-        onChangeText={setConta}
-      ></TextInput>
+      <Text>Selecione a conta: </Text>
+      <View style={styles.input}>
+        <Picker
+          selectedValue={listaContasCartoes[0]}
+          onValueChange={(itemValue, itemIndex) => setConta(itemValue)}
+        >
+          {listaContasCartoes.map((item, index) => {
+            return (
+              <Picker.Item value={item.nome} label={item.nome} key={index} />
+            );
+          })}
+        </Picker>
+      </View>
 
       <View style={styles.dateInput}>
-        {Platform.OS === 'android' && (
+        {Platform.OS === "android" && (
           <TouchableOpacity
-            style={{paddingVertical: 10, paddingLeft: 10}}
+            style={{ paddingVertical: 10, paddingLeft: 10 }}
             onPress={() => showDatepicker()}
           >
             <Text>
-              {!date ? ('Selecionar data') : (`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`)}
+              {!date
+                ? "Selecionar data"
+                : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
             </Text>
           </TouchableOpacity>
         )}
 
-        {(Platform.OS === 'android' && show) && (
+        {Platform.OS === "android" && show && (
           <DateTimePicker
             testID="dateTimePicker"
             value={date}
@@ -123,7 +148,7 @@ export default function Formulario() {
           />
         )}
 
-        {(Platform.OS !== 'android') && (
+        {Platform.OS !== "android" && (
           <DateTimePicker
             testID="dateTimePicker"
             value={date}
@@ -132,15 +157,13 @@ export default function Formulario() {
         )}
       </View>
 
-      
-
       <View style={styles.buttonRD}>
-
         <TouchableOpacity
           style={[
             styles.button,
-            opcaoSelecionada === "Receita",
-            styles.buttonSelecionadoR,
+            opcaoSelecionada === "despesa"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoR,
           ]}
           onPress={() => handleOpcaoSelecionada("receita")}
         >
@@ -150,16 +173,16 @@ export default function Formulario() {
         <TouchableOpacity
           style={[
             styles.button,
-            opcaoSelecionada === "Despesa",
-            styles.buttonSelecionadoD,
+            opcaoSelecionada === "receita"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoD,
           ]}
           onPress={() => handleOpcaoSelecionada("despesa")}
         >
           <Text style={styles.buttonLabel}>Despesa</Text>
         </TouchableOpacity>
-
       </View>
-      
+
       <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Adicionar</Text>
       </TouchableOpacity>

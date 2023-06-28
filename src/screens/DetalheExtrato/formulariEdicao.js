@@ -1,44 +1,64 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+  Button,
+} from "react-native";
+import DateTimePicker from '@react-native-community/datetimepicker';
 
-import styles from "./styles.js";
+import styles from "./stylesForms.js";
+import { updateReceitasEDespesas } from "../../utils/storage.js";
 
-export default function FormularioEdicao({ item, onSave }) {
-  const [nome, setNome] = useState("");
-  const [valor, setValor] = useState("");
-  const [tipo, setTipo] = useState("");
-  const [conta, setConta] = useState("");
-  const [date, setDate] = useState("");
-  const [opcaoSelecionada, setOpcaoSelecionada] = useState(null);
+export default function FormularioEdicao({ route, navigation }) {
+  const { transacao, index } = route.params;
+  const [nome, setNome] = useState(transacao.nome);
+  const [valor, setValor] = useState(transacao.valor.toString());
+  const [tipo, setTipo] = useState(transacao.tipo);
+  const [conta, setConta] = useState(transacao.conta);
+  const [date, setDate] = useState(transacao.date);
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState(transacao.opcaoSelecionada);
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;
+    setShow(false);
+    setDate(currentDate);
+  };
+
+  const showDatepicker = () => {
+    setShow(true);
+  };
 
   useEffect(() => {
-    setNome(item.nome);
-    setValor(item.valor);
-    setTipo(item.tipo);
-    setConta(item.conta);
-    setDate(item.date);
-    setOpcaoSelecionada(item.opcaoSelecionada);
-
-    (async () => {
-      const data = await getReceitasEDespesas();
-      console.log(data);
-    })();
-  }, [item]);
+    if (transacao) {
+      setNome(transacao.nome);
+      setValor(transacao.valor);
+      setTipo(transacao.tipo);
+      setConta(transacao.conta);
+      setDate(transacao.date);
+      setOpcaoSelecionada(transacao.opcaoSelecionada);
+    }
+  }, [transacao]);
 
   const handleOpcaoSelecionada = (opcao) => {
     setOpcaoSelecionada(opcao);
   };
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if (
       nome === "" ||
       valor === "" ||
       conta === "" ||
       date === "" ||
       tipo === "" ||
-      opcaoSelecionada === null
+      opcaoSelecionada === null ||
+      !Number(valor) ||
+      Number(valor) < 0
     ) {
-      alert("Preencha todos os campos");
+      Alert.alert("Preencha todos os campos");
       return;
     }
 
@@ -50,7 +70,13 @@ export default function FormularioEdicao({ item, onSave }) {
       date,
       opcaoSelecionada,
     };
+
+    console.log(data);
+
+    await updateReceitasEDespesas(index, data); // Chame a função de atualização do AsyncStorage
+
     onSave(data);
+
     Alert.alert("Sucesso", "As alterações foram salvas com sucesso!");
 
     setNome("");
@@ -59,10 +85,13 @@ export default function FormularioEdicao({ item, onSave }) {
     setConta("");
     setDate("");
     setOpcaoSelecionada(null);
+
+    navigation.goBack();
   }
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.heading}>Editar Transação</Text>
       <TextInput
         style={styles.input}
         value={nome}
@@ -87,35 +116,73 @@ export default function FormularioEdicao({ item, onSave }) {
         placeholder="Conta"
         onChangeText={setConta}
       ></TextInput>
-      <TextInput
-        style={styles.input}
-        value={date}
-        placeholder="Data"
-        onChangeText={setDate}
-      ></TextInput>
+      <View>
+        {Platform.OS === "android" && (
+          <TouchableOpacity
+            style={{ paddingVertical: 10, paddingLeft: 10 }}
+            onPress={() => showDatepicker()}
+          >
+            <Text>
+              {!date
+                ? "Selecionar data"
+                : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
+            </Text>
+          </TouchableOpacity>
+        )}
 
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "receita" ? styles.buttonSelecionadoR : null,
-        ]}
-        onPress={() => handleOpcaoSelecionada("receita")}
-      >
-        <Text style={styles.buttonLabel}>Receita</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[
-          styles.button,
-          opcaoSelecionada === "despesa" ? styles.buttonSelecionadoD : null,
-        ]}
-        onPress={() => handleOpcaoSelecionada("despesa")}
-      >
-        <Text style={styles.buttonLabel}>Despesa</Text>
-      </TouchableOpacity>
+        {Platform.OS === "android" && show && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
 
-      <TouchableOpacity style={styles.inputAdicionar} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Salvar</Text>
-      </TouchableOpacity>
+        {Platform.OS !== "android" && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            onChange={onChange}
+          />
+        )}
+      </View>
+
+      <View style={styles.buttonRD}>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "despesa"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoR,
+          ]}
+          onPress={() => handleOpcaoSelecionada("receita")}
+        >
+          <Text style={styles.buttonLabel}>Receita</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[
+            styles.button,
+            opcaoSelecionada === "receita"
+              ? styles.inactiveOpcaao
+              : styles.buttonSelecionadoD,
+          ]}
+          onPress={() => handleOpcaoSelecionada("despesa")}
+        >
+          <Text style={styles.buttonLabel}>Despesa</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.buttonsView}>
+        <Button title="Salvar" onPress={handleSubmit} />
+        <Button
+          color="#757de8"
+          title="Voltar"
+          onPress={() => {
+            navigation.goBack();
+          }}
+        ></Button>
+      </View>
     </View>
   );
 }
